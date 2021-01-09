@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -91,6 +92,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 6
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+# ACCOUNT_SIGNUP_REDIRECT_URL (=``settings.LOGIN_REDIRECT_URL``)
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
