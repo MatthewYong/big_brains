@@ -1,6 +1,6 @@
 /*Hero section*/
 .image-hero{
-    background-image: url("../static/images/landing/image-banner1.jpg");
+    background-image: url("../images/landing/image-banner1.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -10,5 +10,6 @@
 }
 
 .test{
-    font-size: 20rem;
+    font-size: 10rem;
+    color: green;
 }
