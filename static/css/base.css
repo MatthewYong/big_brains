@@ -42,8 +42,23 @@ body {
 
 
 
-
-
-
-
 /*Footer*/
+
+footer {
+    background-color:#CFCFCF;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+footer a {
+    font-weight: 600;
+    color: #0f0f0f;    
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.75rem;
+}
+
+.copyright {
+    margin-top: 1rem;
+
+}
