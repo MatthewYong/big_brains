@@ -14,3 +14,12 @@
     color: green;
     font-family: 'Space Grotesk', sans-serif;
 }
+
+.landing-text p{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-shop {
+    margin-top: 10rem;
+}
