@@ -1,5 +1,5 @@
 /*Hero section*/
-.image-hero{
+.image-hero {
     background-image: url("../images/landing/image-banner1.jpg");
     background-attachment: fixed;
     background-size: cover;
@@ -9,18 +9,46 @@
     height: 75vh;
 }
 
-.test{
+.test {
     font-size: 2rem;
     color: green;
     font-family: 'Space Grotesk', sans-serif;
 }
 
-.landing-text p{
-
+.landing-text p {
     text-transform: uppercase;
     text-align: center;
 }
 
+.landing-decoration {
+    border: 0.2rem solid #AB8E66;
+    padding: 0.5rem;
+}
+
+.landing-hor {
+    display: flex;
+    flex-direction: row; 
+
+}
+
+/*Code used from https://www.geeksforgeeks.org/how-to-make-horizontal-line-with-words-in-the-middle-using-css/*/
+.landing-hor::before, .landing-hor::after {
+    content: ""; 
+    flex: 1 1; 
+    border-bottom: 0.2rem solid #0f0f0f; 
+    margin: auto; 
+}
+
+
+
+
+
 .section-shop {
     margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.section-lesson {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
