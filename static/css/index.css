@@ -49,6 +49,15 @@
 
 .section-space {
     margin-top: 10rem;
+}
+
+
+.payment-section {
+    margin-top: 5rem;
     margin-bottom: 10rem;
 }
 
+.payment-method {
+    font-size: 5rem;
+    color: #AB8E66;
+}
