@@ -9,10 +9,15 @@
     height: 75vh;
 }
 
-.test {
-    font-size: 2rem;
-    color: green;
-    font-family: 'Space Grotesk', sans-serif;
+.banner-text {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #FFFFD9;  
+    background-color: #97132965;  
+    text-align: center;
+    margin-top: 20vh;
+    border: 0.2rem solid #AB8E66;
+    border-radius: 0.5rem;
 }
 
 .landing-text span, .landing-text p {
@@ -72,7 +77,7 @@
 }
 
 .image-product-3 {
-    background-image: url("../images/landing/image-lesson.jpg");
+    background-image: url("../images/landing/image-product.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
