@@ -17,6 +17,7 @@ class Age(models.Model):
 
 
 class Toy(models.Model):
+
     class Meta:
         verbose_name_plural = 'Toys'    
 

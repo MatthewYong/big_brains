@@ -11,4 +11,4 @@ def all_toys(request):
         'toys': toys,
     }
 
-    return render(request, 'toys/toys.html')
+    return render(request, 'toys/toys.html', context)
