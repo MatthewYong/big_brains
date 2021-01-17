@@ -4,11 +4,14 @@ from .models import Toys, Age
 
 class ToysAdmin(admin.ModelAdmin):
     list_display = (
+        'sku',
         'name',
         'age',
         'price',
         'image',
     )
+
+    ordering = ('name',)
 
 
 class AgeAdmin(admin.ModelAdmin):
@@ -16,5 +19,6 @@ class AgeAdmin(admin.ModelAdmin):
         'frontend_name',
     )
 
-admin.site.register(Toys)
-admin.site.register(Age)
+
+admin.site.register(Toys, ToysAdmin)
+admin.site.register(Age, AgeAdmin)

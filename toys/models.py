@@ -19,8 +19,9 @@ class Age(models.Model):
 class Toys(models.Model):
     class Meta:
         verbose_name_plural = 'Toys'    
-        
+
     age = models.ForeignKey('Age', null=True, blank=True, on_delete=models.SET_NULL)
+    sku = models.CharField(max_length=200, null=True, blank=True)
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=2)
