@@ -16,7 +16,7 @@ class Age(models.Model):
         return self.frontend_name
 
 
-class Toys(models.Model):
+class Toy(models.Model):
     class Meta:
         verbose_name_plural = 'Toys'    
 

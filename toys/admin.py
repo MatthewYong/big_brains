@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Toys, Age
+from .models import Toy, Age
 
 
-class ToysAdmin(admin.ModelAdmin):
+class ToyAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
@@ -20,5 +20,5 @@ class AgeAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Toys, ToysAdmin)
+admin.site.register(Toy, ToyAdmin)
 admin.site.register(Age, AgeAdmin)
