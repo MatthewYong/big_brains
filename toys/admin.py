@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Toys, Age
 
-# Register your models here.
+admin.site.register(Toys)
+admin.site.register(Age)
