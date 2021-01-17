@@ -2,6 +2,10 @@ from django.db import models
 
 
 class Age(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Age'
+
     name = models.CharField(max_length=200)
     frontend_name = models.CharField(max_length=200, null=True, blank=True)
 
@@ -13,6 +17,9 @@ class Age(models.Model):
 
 
 class Toys(models.Model):
+    class Meta:
+        verbose_name_plural = 'Toys'    
+        
     age = models.ForeignKey('Age', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
