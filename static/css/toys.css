@@ -1,11 +1,22 @@
 /*All toys*/
-.product-box {
+.toypage-header {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.toy-box {
     text-align: center;
     width: 20rem;
     height: 30rem;
-    border: 0.1rem solid #0f0f0f;
     padding: 1rem;
     margin: 2rem;
+}
+
+.toy-image {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 

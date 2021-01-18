@@ -4,22 +4,26 @@
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4"></div>
-        <div class="col-4"></div>                
+    <div class="row toypage-header">
+        <div class="col-4 toypage-path">path/path</div>
+        <div class="col-4 toypage-quantity">
+            <p>... Products found</p>
+        </div>
+        <div class="col-4 toypage-filter">Add Sorting & Filter</div>                
     </div>
     <div class="row">
         {% for toy in toys %}  
-        <a href="" class=" product-box  mx-auto">
-            <div class="col-4">
-                <img src="../media/{{ toy.image }}" alt="">
+        <div class="col-4">
+            <a href="" class="toy-box  mx-auto">              
+                <div>
+                    <img src="../media/{{ toy.image }}" class="toy-image" alt="{{ toy.name }}">
+                </div>
                 <p>{{ toy.name }}</p>           
                 <p>{{ toy.age }}</p>                      
-                <p>{{ toy.description }}</p>  
-                <p>{{ toy.price }}</p>                 
-            </div>
-        </a>            
+                <p class="toy.price">£{{ toy.price }}</p>  
+                <button>button</button> 
+            </a>                    
+        </div>
         {% endfor %}         
     </div>
 </div>
