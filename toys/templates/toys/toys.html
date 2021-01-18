@@ -5,13 +5,22 @@
 
 <div class="container">
     <div class="row">
-        <div class="col">
-            {% for toy in toys %}
-            {{ toy.name }}    
-            {{ toy.sku }}               
-            {{ toy.description }}              
-            {% endfor %}       
-        </div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>                
+    </div>
+    <div class="row">
+        {% for toy in toys %}  
+        <a href="" class=" product-box  mx-auto">
+            <div class="col-4">
+                <img src="..media/0-2 year motorhippo.jpg" alt="">
+                <p>{{ toy.name }}</p>           
+                <p>{{ toy.age }}</p>                      
+                <p>{{ toy.description }}</p>  
+                <p>{{ toy.price }}</p>                 
+            </div>
+        </a>            
+        {% endfor %}         
     </div>
 </div>
 

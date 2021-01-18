@@ -1,0 +1,12 @@
+/*All toys*/
+.product-box {
+    text-align: center;
+    width: 20rem;
+    height: 30rem;
+    border: 0.1rem solid #0f0f0f;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+
+/*Toy detail*/
