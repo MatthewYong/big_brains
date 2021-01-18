@@ -6,11 +6,19 @@
 }
 
 .toy-box {
+    color: #0f0f0f;
+    text-decoration: none;
     text-align: center;
     width: 20rem;
     height: 30rem;
     padding: 1rem;
-    margin: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.toy-box:hover {
+    color: #0f0f0f;
+
 }
 
 .toy-image {
@@ -18,6 +26,13 @@
     width: 100%;
     height: auto;
 }
+
+.buy-button {
+    border-radius: 0.2rem;
+}
+
+
+
 
 
 /*Toy detail*/

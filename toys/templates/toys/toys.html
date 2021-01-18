@@ -14,7 +14,7 @@
     <div class="row">
         {% for toy in toys %}  
         <div class="col-4">
-            <a href="" class="toy-box  mx-auto">  
+            <a href="" class="toy-box mx-auto">  
                 {% if toy.image %}            
                     <div>
                         <img src="../media/{{ toy.image }}" class="toy-image" 
@@ -28,7 +28,10 @@
                 <p>{{ toy.name }}</p>           
                 <p>{{ toy.age }}</p>                      
                 <p class="toy.price">£{{ toy.price }}</p>  
-                <button>button</button> 
+                <div>
+                    <button class="buy-button">button</button> 
+                </div>
+
             </a>                    
         </div>
         {% endfor %}         
