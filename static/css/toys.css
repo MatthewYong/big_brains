@@ -27,6 +27,20 @@
     height: auto;
 }
 
+.toy-name {
+    font-weight: 600;
+}
+
+.toy-price {
+    font-weight: 500;
+}
+
+
+
+
+
+
+
 .buy-button {
     border-radius: 0.2rem;
 }
