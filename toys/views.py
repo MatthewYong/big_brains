@@ -15,7 +15,7 @@ def all_toys(request):
 
 
 def toy_detail(request, toy_id):
-    """A view that shows a single toys page"""
+    """A view that shows a single toy page"""
 
     toy = get_object_or_404(Toy, pk=toy_id)
 
