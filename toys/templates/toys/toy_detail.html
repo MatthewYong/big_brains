@@ -31,21 +31,22 @@
             <p>{{ toy.age }} | Item # {{ toy.sku }}</p>                      
             <p class="toy-price md-font">£{{ toy.price }}</p>  
             <p class="toy-price md-font">{{ toy.description }}</p> 
+            <!--Add to cart button-->
             <div>
                 <p>Qty:</p>
             </div>  
-            <div>
+            <div class="quantity">
                 <button>-</button>
-                <input type="text">
-                <button>+</button>
-            </div>           
-            <div>
-                <button class="buy-button">Add to cart</button> 
+                <input type="text" class="quantity-input">
+                <button>+</button>   
+            </div>       
+            <div class="add-to-cart">
+                <button>Add to cart</button> 
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 review">
             <p>Reviews</p>
             <div>
                 <p>If no review, show text 'Write the First Review'</p>
