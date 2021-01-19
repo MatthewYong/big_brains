@@ -14,7 +14,7 @@
     <div class="row">
         {% for toy in toys %}  
         <div class="col-4">
-            <a href="{{ toy_detail }}" class="toy-box mx-auto">  
+            <a href="{% url 'toy_detail' toy.id %}" class="toy-box mx-auto">  
                 {% if toy.image %}            
                     <div>
                         <img src="../media/{{ toy.image }}" class="toy-image" 

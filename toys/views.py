@@ -14,7 +14,7 @@ def all_toys(request):
     return render(request, 'toys/toys.html', context)
 
 
-def toys_detail(request, toy_id):
+def toy_detail(request, toy_id):
     """A view that shows a single toys page"""
 
     toy = get_object_or_404(Toy, pk=toy_id)
