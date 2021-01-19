@@ -30,12 +30,19 @@
             <p class="toy-name md-font">{{ toy.name }}</p>           
             <p>{{ toy.age }} | Item # {{ toy.sku }}</p>                      
             <p class="toy-price md-font">£{{ toy.price }}</p>  
-            <p class="toy-price md-font">{{ toy.description }}</p>              
+            <p class="toy-price md-font">{{ toy.description }}</p> 
+            <div>
+                <p>Qty:</p>
+            </div>  
+            <div>
+                <button>-</button>
+                <input type="text">
+                <button>+</button>
+            </div>           
             <div>
                 <button class="buy-button">Add to cart</button> 
             </div>
         </div>
-       
     </div>
 </div>
 
