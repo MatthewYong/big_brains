@@ -1,8 +1,8 @@
 /*All toys*/
 .toypage-header {
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .toy-box {
@@ -18,7 +18,6 @@
 
 .toy-box:hover {
     color: #0f0f0f;
-
 }
 
 .toy-image {

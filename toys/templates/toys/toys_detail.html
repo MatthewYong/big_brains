@@ -12,12 +12,12 @@
         <div class="col-4 toypage-filter">Add Sorting & Filter</div>                
     </div>
     <div class="row">
-        {% for toy in toys %}  
+
         <div class="col-4">
             <a href="/" class="toy-box mx-auto">  
                 {% if toy.image %}            
                     <div>
-                        <img src="../media/{{ toy.image }}" class="toy-image" 
+                        <img src="../media/toy.image" class="toy-image" 
                         alt="{{ toy.name }}">
                     </div>
                 {% else %}  
@@ -25,15 +25,15 @@
                         <img src="../media/no_image_available.jpg" class="toy-image" alt="no image">
                     </div>                
                 {% endif %}
-                <p class="toy-name md-font">{{ toy.name }}</p>           
-                <p>{{ toy.age }}</p>                      
-                <p class="toy-price md-font">£{{ toy.price }}</p>  
+                <p class="toy-name md-font">toy.name</p>           
+                <p>toy.age</p>                      
+                <p class="toy-price md-font">£toy.price</p>  
                 <div>
                     <button class="buy-button">button</button> 
                 </div>
             </a>                    
         </div>
-        {% endfor %}         
+       
     </div>
 </div>
 

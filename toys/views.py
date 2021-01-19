@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Toy
 
 
@@ -12,3 +12,15 @@ def all_toys(request):
     }
 
     return render(request, 'toys/toys.html', context)
+
+
+def toys_detail(request, toy_id):
+    """A view that shows a single toys page"""
+
+    toy = get_object_or_404(Toy, pk=toy_id)
+
+    context = {
+        'toy': toy,
+    }
+
+    return render(request, toys/toys_detail.html, context)
