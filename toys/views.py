@@ -23,4 +23,4 @@ def toys_detail(request, toy_id):
         'toy': toy,
     }
 
-    return render(request, toys/toys_detail.html, context)
+    return render(request, 'toys/toy_detail.html', context)
