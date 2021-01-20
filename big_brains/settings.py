@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'landing',
     'toys',
+    'blogs',
 ]
 
 MIDDLEWARE = [
