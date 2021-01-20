@@ -85,34 +85,14 @@
     height: 10rem;
 }
 
-.image-lesson-1 {
-    background-image: url("../images/landing/image-lesson.jpg");
+.image-blog-1 {
+    background-image: url("../images/landing/image-blog.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 10rem;
 }
-
-.image-lesson-2 {
-    background-image: url("../images/landing/image-lesson.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 10rem;
-}
-
-.image-lesson-3 {
-    background-image: url("../images/landing/image-lesson.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 10rem;
-}
-
-
 
 .payment-section {
     margin-top: 5rem;
