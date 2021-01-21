@@ -14,24 +14,32 @@
             </p>
         </div>                
     </div>
+    <div class="row blogpage-title">
+        <div class="col-6">
+            <h1>Educational Blogs</h1>
+            <p>
+                Read the latest blogs from educators or parents with experience and learn what is best for your children. If you have any questions about these articles, please contact don't hesitate to us.
+            </p> 
+        </div>
+    </div>
     <div class="row">
         {% for blog in blogs %}  
-        <div class="col-4">
-            <a href="" class="toy-box mx-auto">  
+        <div class="col-12">
+            <a href="" class="blog-box mx-auto">  
                 {% if blog.image %}            
                     <div>
-                        <img src="../media/{{ blog.image }}" class="toy-image" 
-                        alt="{{ toy.name }}">
+                        <img src="../media/{{ blog.image }}" class="blog-image" 
+                        alt="{{ blog.name }}">
                     </div>
                 {% else %}  
                     <div>
-                        <img src="../media/no_image_available.jpg" class="toy-image" alt="no image">
+                        <img src="../media/no_image_available.jpg" class="blog-image" alt="no image">
                     </div>                
                 {% endif %}
-                <p class="toy-name md-font">{{ blog.name }}</p>           
+                <p class="blog-name md-font">{{ blog.name }}</p>           
                 <p>{{ blog.author }}</p>    
                 <p>{{ blog.date }}</p>                                       
-                <p class="toy-price md-font">{{ blog.story }}</p>  
+                <p class="blog-price md-font">{{ blog.story }}</p>  
                 <div>
                     <button class="buy-button">button</button> 
                 </div>
