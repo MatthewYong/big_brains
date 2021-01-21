@@ -21,30 +21,26 @@
                 Read the latest blogs from educators or parents with experience and learn what is best for your children. If you have any questions about these articles, please contact don't hesitate to us.
             </p> 
         </div>
+        <hr class="blogpage-separator">
     </div>
     <div class="row">
-        {% for blog in blogs %}  
-        <div class="col-12">
-            <a href="" class="blog-box mx-auto">  
-                {% if blog.image %}            
-                    <div>
-                        <img src="../media/{{ blog.image }}" class="blog-image" 
-                        alt="{{ blog.name }}">
-                    </div>
-                {% else %}  
-                    <div>
-                        <img src="../media/no_image_available.jpg" class="blog-image" alt="no image">
-                    </div>                
-                {% endif %}
-                <p class="blog-name md-font">{{ blog.name }}</p>           
-                <p>{{ blog.author }}</p>    
-                <p>{{ blog.date }}</p>                                       
-                <p class="blog-price md-font">{{ blog.story }}</p>  
-                <div>
-                    <button class="buy-button">button</button> 
+        {% for blog in blogs %}   
+            {% if blog.image %}            
+                <div class="col-6">
+                    <img src="../media/{{ blog.image }}" class="blog-image" 
+                    alt="{{ blog.name }}">
                 </div>
-            </a>                    
-        </div>
+            {% else %}  
+                <div class="col-6">
+                    <img src="../media/no_image_available.jpg" class="blog-image" alt="no image">
+                </div>                
+            {% endif %}
+            <div class="col-6">
+                 
+                <p class="blog-name md-font">{{ blog.title }}</p>               
+                <p class="blog-price md-font">{{ blog.story }}</p> 
+                <p>{{ blog.author }}</p>                  
+            </div>                  
         {% endfor %}         
     </div>
 </div>

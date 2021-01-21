@@ -4,6 +4,7 @@ from django.db import models
 class Blog(models.Model):
 
     title = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
     date = models.DateTimeField(auto_now=True, null=True)
     author = models.CharField(max_length=50)
     story = models.CharField(max_length=10000)

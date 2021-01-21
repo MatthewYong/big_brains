@@ -7,6 +7,7 @@ class BlogAdmin(admin.ModelAdmin):
         'title',
         'date',
         'author',
+        'description',
         'story',
         'image',
     )
