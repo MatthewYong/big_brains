@@ -1,14 +1,14 @@
 /*All blogs page*/
 .blogpage-header {
     margin-top: 8rem;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
 }
 
 .blogpage-title {
     font-size: 3rem;
     font-weight: 900;
     color: #971328;     
-    border-bottom: 0.1rem solid #AB8E66;   
+    border-bottom: 0.15rem solid #AB8E66;   
 }
 
 .blog-link {
@@ -37,7 +37,7 @@
 
 .blog-title {
     font-weight: 600;
-    color: #971328;
+    color: #E52F4D;
 }
 
 .blog-description {
