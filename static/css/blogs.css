@@ -1,8 +1,16 @@
 /*All blogs page*/
 .blogpage-header {
-    text-align: center;
-    margin-top: 5rem;
+    margin-top: 8rem;
     margin-bottom: 5rem;
+}
+
+.blogpage-title {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.blog-link {
+    text-decoration: none;
 }
 
 .blog-box {

@@ -4,27 +4,17 @@
 {% block content %}
 
 <div class="container">
-    <div class="row blogpage-header">
-        <div class="col-6 blogpage-path">path/path</div>
-        <div class="col-6 blogpage-quantity">
-            <p>
-                {{ blogs.count }} blog{% if blogs.count > 1 %}s
-                {% endif %} 
-                found             
-            </p>
-        </div>                
-    </div>
-    <div class="row blogpage-title">
-        <div class="col-6">
-            <h1>Educational Blogs</h1>
+    <div class="row blogpage-header md-font">
+        <div class="col-8">
+            <p class="blogpage-title">Educational Blogs</p>
             <p>
                 Read the latest blogs from educators or parents with experience and learn what is best for your children. If you have any questions about these articles, please contact don't hesitate to us.
             </p> 
         </div>
         <hr class="blogpage-separator">
     </div>
-
     {% for blog in blogs %}   
+    <a href="" class="blog-link">
         <div class="row blog-box">
             {% if blog.image %}            
                 <div class="col-6">
@@ -39,9 +29,10 @@
             <div class="col-6">
                 <p class="blog-title lg-font">{{ blog.title }}</p>          
                 <p class="blog-description md-font">{{ blog.description }}</p> 
-                <p class="blog-author sm-font">{{ blog.author }}</p>                  
+                <p class="blog-author sm-font">{{ blog.author }}</p>
             </div>    
-        </div>             
+        </div>  
+    </a>                   
     {% endfor %}         
 </div>
 
