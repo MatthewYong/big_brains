@@ -56,7 +56,7 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                         <a class="nav-link" href="{% url 'toys' %}">Toys</a>
-                        <a class="nav-link" href="#">Blogs</a>
+                        <a class="nav-link" href="{% url 'blogs' %}">Blogs</a>
                         <a class="nav-link" href="#">Login</a>  
                         <a class="nav-link" href="#">Logout</a>
                         <a class="nav-link" href="#">Register</a>     
@@ -100,8 +100,8 @@
                 <div col-12>
                     <div>
                         <a href="">About</a>
-                        <a href="">Toys</a>
-                        <a href="">Blogs</a>
+                        <a href="{% url 'toys' %}">Toys</a>
+                        <a href="{% url 'blogs' %}">Blogs</a>
                         <a href="">Contact</a>
                     </div>                        
                  </div>
