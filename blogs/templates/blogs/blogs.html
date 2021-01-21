@@ -4,12 +4,15 @@
 {% block content %}
 
 <div class="container">
-    <div class="row toypage-header">
-        <div class="col-4 toypage-path">path/path</div>
-        <div class="col-4 toypage-quantity">
-            <p>{{ toys.count }} Products found</p>
-        </div>
-        <div class="col-4 toypage-filter">Add Sorting & Filter</div>                
+    <div class="row blogpage-header">
+        <div class="col-6 blogpage-path">path/path</div>
+        <div class="col-6 blogpage-quantity">
+            <p>
+                {{ blogs.count }} blog{% if blogs.count > 1 %}s
+                {% endif %} 
+                found             
+            </p>
+        </div>                
     </div>
     <div class="row">
         {% for blog in blogs %}  
@@ -17,7 +20,7 @@
             <a href="" class="toy-box mx-auto">  
                 {% if blog.image %}            
                     <div>
-                        <img src="../media/{{ toy.image }}" class="toy-image" 
+                        <img src="../media/{{ blog.image }}" class="toy-image" 
                         alt="{{ toy.name }}">
                     </div>
                 {% else %}  
