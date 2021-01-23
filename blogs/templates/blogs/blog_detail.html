@@ -4,31 +4,32 @@
 {% block content %}
 
 <div class="container">
-    <div class="row blogpage-header md-font">
-        <div class="col-8">
-            <p class="blogpage-title">Educational Blogs</p>
+    <div class="row">
+        <div class="col-8 blogpage-detail-header">
+            <p>{{ blog.title }}</p>
         </div>
     </div>
-  
-    <a href="" class="blog-link">
-        <div class="row blog-box">
-            {% if blog.image %}            
-                <div class="col-6">
-                    <img src="../media/{{ blog.image }}" class="blog-image" 
-                    alt="{{ blog.title }}">
-                </div>
-            {% else %}  
-                <div class="col-6">
-                    <img src="../media/no_image_available.jpg" class="blog-image" alt="no image">
-                </div>                
-            {% endif %}
+    <div class="row">
+        {% if blog.image %}            
             <div class="col-6">
-                <p class="blog-title lg-font">{{ blog.title }}</p>          
-                <p class="blog-description md-font">{{ blog.description }}</p> 
-                <p class="blog-author sm-font">by {{ blog.author }}</p>
-            </div>    
-        </div>  
-    </a>                   
+                <img src="../media/{{ blog.image }}" class="blog-image" 
+                alt="{{ blog.title }}">
+            </div>
+        {% else %}  
+            <div class="col-6">
+                <img src="../media/no_image_available.jpg" class="blog-image" alt="no image">
+            </div>                
+        {% endif %}
+
+    </div>  
+    <div class="row">
+        <div class="col-6">
+            <p class="blog-title lg-font">{{ blog.title }}</p>          
+            <p class="blog-author sm-font">by {{ blog.author }}</p>
+            <p class="blog-story sm-font">{{ blog.story }}</p>
+        </div>    
+    </div>
+                
         
 </div>
 

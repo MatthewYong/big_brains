@@ -55,13 +55,15 @@
 
 
 
-
-
-
 /*blog detail*/
 
 
-
+.blogpage-detail-header {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #971328;
+    margin-top: 5rem;
+}
 
 
 
