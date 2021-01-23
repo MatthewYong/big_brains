@@ -5,29 +5,28 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-8 blogpage-detail-header">
+        <div class="col-8 offset-2 blogpage-detail-header">
             <p>{{ blog.title }}</p>
-            <p class="blog-description md-font">{{ blog.description }}</p> 
         </div>
     </div>
     <div class="row">
         {% if blog.image %}            
-            <div class="col-6">
+            <div class="col-8 offset-2">
                 <img src="../media/{{ blog.image }}" class="blog-detail-image" 
                 alt="{{ blog.title }}">
             </div>
         {% else %}  
-            <div class="col-6">
+            <div class="col-8 offset-2">
                 <img src="../media/no_image_available.jpg" class="blog-detail-image" alt="no image">
             </div>                
         {% endif %}
 
     </div>  
     <div class="row">
-        <div class="col-6">    
-
-            <p class="blog-author sm-font">by {{ blog.author }}</p>
-            <p class="blog-story sm-font">{{ blog.story }}</p>
+        <div class="col-8 offset-2">    
+            <p class="blog-detail-author sm-font">{{ blog.author }}</p>
+            <p class="blog-detail-date sm-font">{{ blog.date }}</p>   
+            <p class="blog-detail-story sm-font">{{ blog.story }}</p>
         </div>    
     </div>
                 
