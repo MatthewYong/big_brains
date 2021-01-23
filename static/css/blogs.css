@@ -1,10 +1,10 @@
 /*All blogs page*/
-.blogpage-header {
+.blog-header {
     margin-top: 8rem;
     margin-bottom: 8rem;
 }
 
-.blogpage-title {
+.blog-pagetitle {
     font-size: 3rem;
     font-weight: 900;
     color: #971328;     
@@ -82,7 +82,7 @@
 
 .blog-detail-story {
     margin-top: 3rem;
-
+    margin-bottom: 3rem;
 }
 
 
