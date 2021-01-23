@@ -57,12 +57,17 @@
 
 /*blog detail*/
 
-
 .blogpage-detail-header {
     font-size: 3rem;
     font-weight: 900;
     color: #971328;
     margin-top: 5rem;
+}
+
+.blog-detail-image {
+    display: block;
+    width: 100%;
+    height: 25rem;
 }
 
 
