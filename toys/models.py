@@ -19,7 +19,7 @@ class Age(models.Model):
 class Toy(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Toys'    
+        verbose_name_plural = 'Toys'
 
     age = models.ForeignKey('Age', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=200, null=True, blank=True)
