@@ -34,9 +34,6 @@ body {
 
 
 /*Navigation menu*/
-header {
-    padding: 3rem;
-}
 .navbar-brand {
     font-family:'Prata', serif;
     font-weight: 600;
