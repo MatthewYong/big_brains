@@ -64,8 +64,22 @@ nav {
 }
 
 
+/*Scroll to top button*/
+#scroll-top-button {
+    font-size: 1.5rem;
+    color: #FFFFD9;
+    background-color: #b9acae;
+    position: fixed;
+    bottom: 5rem;
+    right: 3rem;
+    border: 0.2rem solid #AB8E66;
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
 
-
+#scroll-top-button {
+    
+}
 
 
 /*Footer*/
