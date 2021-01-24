@@ -13,15 +13,21 @@
                 found             
             </p>
         </div>
-        <div class="col-4 toypage-filter">Add Sorting & Filter</div>
-    </div>
-    <div class="row">
-        <div class="col-8 offset-2">
-            <form class="search-form" method="GET">
-                <input type="text" placeholder="Search Toys"><i class="fas fa-search"></i>
-                <button type="submit">Search</button>
-            </form>
-        </div>
+        <div class="col-4 toypage-filter dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Age
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">Age 0-2</a>
+                </li>
+                <li>
+                    <a href="#">Age 3-7</a>
+                </li>
+                <li>
+                    <a href="#">Age 8-12</a>
+                </li>
+            </ul>
+        </div>        
     </div>
     <div class="row">
         {% for toy in toys %}  

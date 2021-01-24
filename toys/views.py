@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
+from django.db.models import Q
 from .models import Toy
 
 
@@ -6,9 +8,21 @@ def all_toys(request):
     """A view that shows all the toys page, which includes searching and sorting features """
 
     toys = Toy.objects.all()
+    query = None
+    # Code used from Boutique Ado - CI Lesson
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "No search request")
+                return redirect(reverse('toys'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            toys = toys.filter(queries)
 
     context = {
         'toys': toys,
+        'search_toys': query,
     }
 
     return render(request, 'toys/toys.html', context)
