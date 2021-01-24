@@ -16,6 +16,14 @@
         <div class="col-4 toypage-filter">Add Sorting & Filter</div>
     </div>
     <div class="row">
+        <div class="col-8 offset-2">
+            <form class="search-form" method="GET">
+                <input type="text" placeholder="Search Toys"><i class="fas fa-search"></i>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
         {% for toy in toys %}  
         <div class="col-4">
             <a href="{% url 'toy_detail' toy.id %}" class="toy-box mx-auto">  
