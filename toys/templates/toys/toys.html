@@ -18,13 +18,16 @@
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="#">Age 0-2</a>
+                    <a href="{% url 'toys' %}">All</a>
+                </li>                
+                <li>
+                    <a href="{% url 'toys' %}?age=ages0-2">Ages 0-2</a>
                 </li>
                 <li>
-                    <a href="#">Age 3-7</a>
+                    <a href="{% url 'toys' %}?age=ages3-7">Ages 3-7</a>
                 </li>
                 <li>
-                    <a href="#">Age 8-12</a>
+                    <a href="{% url 'toys' %}?age=ages8-12">Ages 8-12</a>
                 </li>
             </ul>
         </div>        

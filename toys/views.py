@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
-from .models import Toy
+from .models import Toy, Age
 
 
 def all_toys(request):
@@ -9,8 +9,14 @@ def all_toys(request):
 
     toys = Toy.objects.all()
     query = None
+    age = None
     # Code used from Boutique Ado - CI Lesson
     if request.GET:
+        if 'age' in request.GET:
+            ages = request.GET['age'].split(',')
+            toys = toys.filter(age__name__in=ages)
+            ages = Age.objects.filter(name__in=ages)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -23,6 +29,7 @@ def all_toys(request):
     context = {
         'toys': toys,
         'search_toys': query,
+        'age_range': age,
     }
 
     return render(request, 'toys/toys.html', context)
