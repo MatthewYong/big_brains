@@ -48,6 +48,12 @@ body {
     color: #ffffff;
 }
 
+.navbar-separator {
+    background-color: #AB8E66;
+    padding: 0.1rem;
+    margin: 0;
+}
+
 #logo {
     color: #AB8E66;
 }
