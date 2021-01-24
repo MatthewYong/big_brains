@@ -72,13 +72,14 @@ nav {
     position: fixed;
     bottom: 5rem;
     right: 3rem;
-    border: 0.2rem solid #AB8E66;
-    border-radius: 0.3rem;
-    padding: 1rem;
+    border: 0.15rem solid #AB8E66;
+    border-radius: 0.1rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f;     
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem; 
 }
 
-#scroll-top-button {
-    
+#scroll-top-button:active {
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset; 
 }
 
 
