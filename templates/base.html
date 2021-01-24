@@ -80,7 +80,7 @@
     {% block content %}
     {% endblock %}
 
-    <button id="scroll-top-button"><i class="fas fa-arrow-up"></i></button>
+    <button onclick="scrollWintop()" id="scroll-top-button"><i class="fas fa-arrow-up"></i></button>
 
     <footer class="sm-font">
         <div class="container-fluid">
@@ -141,6 +141,11 @@
 
     {% block postloadjs %}
         <script src="{% static 'js/main.js' %}"></script>
+        <script type="text/javascript">
+            function scrollWintop() {
+                window.scrollTo(0,0);
+                }
+        </script>
     {% endblock %}
 
 

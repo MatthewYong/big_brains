@@ -69,7 +69,9 @@ nav {
     font-size: 1.5rem;
     color: #FFFFD9;
     background-color: #b9acae;
+    opacity: 0.9;
     position: fixed;
+    z-index: 9999;
     bottom: 5rem;
     right: 3rem;
     border: 0.15rem solid #AB8E66;
