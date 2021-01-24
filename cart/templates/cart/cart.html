@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    {% if item in cart %}
+        <div>Test</div>
+
+    {% else %}    
+        <div>Your bag is empty</div>
+    {% endif %}
+
+{% endblock %}
