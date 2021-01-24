@@ -13,7 +13,7 @@ def all_toys(request):
     # Code used from Boutique Ado - CI Lesson
     if request.GET:
         if 'age' in request.GET:
-            ages = request.GET['age'].split(',')
+            ages = request.GET.get('age')
             toys = toys.filter(age__name__in=ages)
             ages = Age.objects.filter(name__in=ages)
 
