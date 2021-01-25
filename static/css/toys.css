@@ -59,18 +59,20 @@
     font-size: 3rem;
     font-weight: 300;
     margin-top: 10vh;
-    margin-bottom: 20rem;
+    margin-bottom: 8rem;
 }
 
-.cart-header hr {
+.cart-separator{
     background-color: #971328;
     padding: 0.01rem;
     margin-top: 1rem;
-    margin-bottom: 10vh;
 }
 
-
 .cart-items {
+    margin-bottom: 5rem;
+}
+
+.cart-total {
     margin-bottom: 5rem;
 }
 
