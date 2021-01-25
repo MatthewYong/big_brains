@@ -35,18 +35,9 @@
 }
 
 
-
-
-
-
-
 .buy-button {
     border-radius: 0.2rem;
 }
-
-
-
-
 
 /*Toy detail*/
 .quantity button {
@@ -56,13 +47,20 @@
 
 
 
-
 /*Toy review*/
 .review button{
     margin-bottom: 1rem;
 
 }
 
+
+/*Cart*/
+.cart-header-empty {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-top: 10rem;
+    margin-bottom: 30rem;
+}
 
 
 

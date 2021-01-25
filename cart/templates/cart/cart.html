@@ -4,10 +4,24 @@
 {% block content %}
 
     {% if item in cart %}
-        <div>Test</div>
+        <div>
+            <p>
+                Shopping Bag
+            </p>
+        </div>
 
-    {% else %}    
-        <div>Your bag is empty</div>
+    {% else %}   
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-8 offset-2 cart-header-empty">
+                <p>
+                    Your Shopping Bag is Empty
+                </p>   
+                <p class="md-font">Click <a href="{% url 'toys' %}">here</a> to Continue Shopping
+                </p>      
+            </div>
+        </div>
+    </div> 
     {% endif %}
 
 {% endblock %}
