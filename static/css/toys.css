@@ -58,9 +58,34 @@
 .cart-header-empty {
     font-size: 3rem;
     font-weight: 300;
-    margin-top: 10rem;
-    margin-bottom: 30rem;
+    margin-top: 15vh;
+    margin-bottom: 20rem;
 }
+
+.cart-header-empty hr {
+    background-color: #A3A3A3;
+    padding: 0.05rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.cart-header-empty a {
+    color: #AB8E66;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.cart-header-empty a:hover {
+    font-weight: 900;
+}
+
+.cart-header-empty a:active {
+    color: #971328 ;
+}
+
+
+
+
 
 
 
