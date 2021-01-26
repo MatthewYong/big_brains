@@ -31,20 +31,19 @@
             <p>{{ toy.age }} | Item # {{ toy.sku }}</p>                      
             <p class="toy-price md-font">£{{ toy.price }}</p>  
             <p class="toy-price md-font">{{ toy.description }}</p> 
-            <!--Add to cart button-->
-            <div>
-                <p>Qty:</p>
-            </div>  
-            <!--Quantity setting, code used from CI lesson 'Adding Products-->  
+            <!--Add to cart button, code used from CI lesson 'Adding Products-->  
             <form action="" method="POST">
                 {% csrf_token %}
+                <div>
+                    <p>Qty:</p>
+                </div>                  
                 <div class="quantity-input">
                     <input type="number" name="quantity" value="1" min="1" max="10" data-item-id="{{ toy.id }}" id="id_qty_{{ toy.id }}">
                 </div>
                 <div class="add-to-cart-button">
                     <input type="submit" value="Add to cart">  
                 </div>
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                <input type="hidden" name="redirect_url" value="{{ request.path">
             </form> 
         </div>
     </div>
