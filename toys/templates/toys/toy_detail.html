@@ -36,12 +36,15 @@
                 <p>Qty:</p>
             </div>  
             <!--Quantity setting, code used from CI lesson 'Adding Products-->  
-            <form class="quantity">
+            <form action="" method="POST">
                 {% csrf_token %}
-                <input type="number" name="quantity" value="1" min="1" max="10" data-item-id="{{ toy.id }}" id="id_qty_{{ toy.id }}">
-                <div class="add-to-cart">
-                    <button>Add to cart</button> 
-                </div>                
+                <div class="quantity-input">
+                    <input type="number" name="quantity" value="1" min="1" max="10" data-item-id="{{ toy.id }}" id="id_qty_{{ toy.id }}">
+                </div>
+                <div class="add-to-cart-button">
+                    <input type="submit" value="Add to cart">  
+                </div>
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form> 
         </div>
     </div>

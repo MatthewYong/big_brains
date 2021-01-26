@@ -40,10 +40,18 @@
 }
 
 /*Toy detail*/
-.quantity button {
+.quantity-input {
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-button {
     padding: 0.4rem 0.75rem 0.4rem 0.75rem;
     margin-bottom: 1rem;
 }
+
+
+
+
 
 
 
