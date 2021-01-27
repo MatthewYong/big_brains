@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block content %}
 
@@ -36,7 +37,7 @@
                     </div>  
                     <div class="col-2 offset-2">
                         <p>Subtotal</p>
-                        <p>£{{ item.toy.price * 0.8 }}</p>
+                        <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
                     </div>                                               
                 </div>
                 {% endfor %}                
