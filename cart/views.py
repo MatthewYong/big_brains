@@ -12,15 +12,23 @@ def add_to_cart(request, toy_id):
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
-    if toy_id in list(cart.keys()):
-        # Prevents user from adding more toy qty than 10
-        if quantity + cart[toy_id] > 10:
-            print('Sorry')
-        else:
-            cart[toy_id] += quantity
+    if quantity <= 0:
+        print('Sorry the minimum quantity you have to buy is 1')
+        # Add toast message
     else:
-        cart[toy_id] = quantity
-
+        if quantity > 0 and quantity <= 10:
+            if toy_id in list(cart.keys()):
+                # Prevents user from adding more toy qty than 10
+                if quantity + cart[toy_id] > 10:
+                    print('Sorry the maximum quantity you can buy is 10')
+                    # Add toast message
+                else:
+                    cart[toy_id] += quantity
+            else:
+                cart[toy_id] = quantity
+        else:
+            print('Sorry the maximum quantity you can buy is 10')
+            # Add toast message
     request.session['cart'] = cart
     print(cart)
     return redirect(redirect_url)
