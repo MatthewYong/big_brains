@@ -4,49 +4,53 @@
 {% block content %}
 
     {% if cart_items %}
-        <div class="container sm-font">
-            <div>
-                {{ cart_items }}
-            </div>
-            <div class="row">
-                <div class="col-12 cart-header">
-                    <p>
-                        Shopping Bag
-                    </p>   
-                    <hr class="cart-separator">   
+        {% for item in cart_items %}
+            <div class="container sm-font">
+                <div>
+                    {{ cart_items }}
+                    {{ total }}
+                    {{ toy_count }}
                 </div>
-            </div>
-            <div class="row cart-items">
-                <div class="col-2">Image</div>
-                <div class="col-2">
-                    <p>Title</p>
-                    <p>Test Title</p>
+                <div class="row">
+                    <div class="col-12 cart-header">
+                        <p>
+                            Shopping Bag
+                        </p>   
+                        <hr class="cart-separator">   
+                    </div>
                 </div>
-                <div class="col-2">
-                    <p>Price</p>
-                    <p>Test Price</p>
-                </div>   
-                <div class="col-2">
-                    <p>Quantity</p>
-                    <p>Test Qty <i class="far fa-trash-alt"></i> </p>
-                    
-                </div>  
-                <div class="col-2 offset-2">
-                    <p>Subtotal</p>
-                    <p>Test Subtotal</p>
-                </div>                                               
-            </div>
-            <hr class="cart-separator">
-            <div class="row cart-total">
-                <div class="col-2 offset-8">
-                    <p>Total</p>
+                <div class="row cart-items">
+                    <div class="col-2">Image</div>
+                    <div class="col-2">
+                        <p>{{ item.toy.name }}</p>
+                        <p>Test Title</p>
+                    </div>
+                    <div class="col-2">
+                        <p>Price</p>
+                        <p>Test Price</p>
+                    </div>   
+                    <div class="col-2">
+                        <p>Quantity</p>
+                        <p>Test Qty <i class="far fa-trash-alt"></i> </p>
+                        
+                    </div>  
+                    <div class="col-2 offset-2">
+                        <p>Subtotal</p>
+                        <p>Test Subtotal</p>
+                    </div>                                               
                 </div>
-                <div class="col-2">
-                    <p>Total Number</p>
-                    <button>Pay Now</button>
+                <hr class="cart-separator">
+                <div class="row cart-total">
+                    <div class="col-2 offset-8">
+                        <p>Total</p>
+                    </div>
+                    <div class="col-2">
+                        <p>Total Number</p>
+                        <button>Pay Now</button>
+                    </div>
                 </div>
-            </div>
-        </div> 
+            </div> 
+        {% endfor %}
     {% else %}  
         <div class="container text-center">
             <div class="row">
