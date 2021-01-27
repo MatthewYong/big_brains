@@ -4,7 +4,6 @@
 {% block content %}
 
     {% if cart_items %}
-        {% for item in cart_items %}
             <div class="container sm-font">
                 <div>
                     {{ cart_items }}
@@ -19,38 +18,39 @@
                         <hr class="cart-separator">   
                     </div>
                 </div>
-                <div class="row cart-items">
+                {% for item in cart_items %}                 
+                <div class="row cart-items">                   
                     <div class="col-2">Image</div>
                     <div class="col-2">
+                        <p>Title</p>
                         <p>{{ item.toy.name }}</p>
-                        <p>Test Title</p>
                     </div>
                     <div class="col-2">
                         <p>Price</p>
-                        <p>Test Price</p>
+                        <p>{{ item.toy.price }}</p>
                     </div>   
                     <div class="col-2">
                         <p>Quantity</p>
-                        <p>Test Qty <i class="far fa-trash-alt"></i> </p>
+                        <p>{{ item.quantity }} <i class="far fa-trash-alt"></i> </p>
                         
                     </div>  
                     <div class="col-2 offset-2">
                         <p>Subtotal</p>
-                        <p>Test Subtotal</p>
+                        <p>£{{ subtotal }}</p>
                     </div>                                               
                 </div>
+                {% endfor %}                
                 <hr class="cart-separator">
                 <div class="row cart-total">
                     <div class="col-2 offset-8">
                         <p>Total</p>
                     </div>
                     <div class="col-2">
-                        <p>Total Number</p>
+                        <p>£{{ total }}</p>
                         <button>Pay Now</button>
                     </div>
-                </div>
-            </div> 
-        {% endfor %}
+                </div>                
+            </div>
     {% else %}  
         <div class="container text-center">
             <div class="row">
