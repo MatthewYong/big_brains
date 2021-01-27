@@ -3,7 +3,7 @@ from toys.models import Toy
 
 
 def cart_contents(request):
-    """Returns the cart items throughout the website through contexts"""
+    """Returns the cart items throughout the website through context"""
     cart_items = []
     total = 0
     toy_count = 0

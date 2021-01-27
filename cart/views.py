@@ -13,10 +13,14 @@ def add_to_cart(request, toy_id):
     cart = request.session.get('cart', {})
 
     if toy_id in list(cart.keys()):
-        cart[toy_id] += quantity
+        # Prevents user from adding more toy qty than 10
+        if quantity + cart[toy_id] > 10:
+            print('Sorry')
+        else:
+            cart[toy_id] += quantity
     else:
         cart[toy_id] = quantity
 
     request.session['cart'] = cart
-
+    print(cart)
     return redirect(redirect_url)
