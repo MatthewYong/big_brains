@@ -3,8 +3,11 @@
 
 {% block content %}
 
-    {% if item in cart %}
+    {% if cart_items %}
         <div class="container sm-font">
+            <div>
+                {{ cart_items }}
+            </div>
             <div class="row">
                 <div class="col-12 cart-header">
                     <p>
