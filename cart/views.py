@@ -30,5 +30,14 @@ def add_to_cart(request, toy_id):
             print('Sorry the maximum quantity you can buy is 10')
             # Add toast message
     request.session['cart'] = cart
-    print(cart)
+
     return redirect(redirect_url)
+
+
+def remove_from_cart(request, toy_id):
+    cart = request.session.get('cart', {})
+    cart.pop(toy_id)
+
+    request.session['cart'] = cart
+    print(cart)
+    return redirect('toys')

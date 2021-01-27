@@ -32,7 +32,13 @@
                     </div>   
                     <div class="col-2">
                         <p>Quantity</p>
-                        <p>{{ item.quantity }} <i class="far fa-trash-alt"></i> </p>
+                        <p>{{ item.quantity }} 
+                            <form action="{% url 'remove_from_cart' item.toy.id %}">
+                                <button type="submit">
+                                    <i class="far fa-trash-alt"></i>  
+                                </button>
+                            </form>
+                        </p>
                         
                     </div>  
                     <div class="col-2 offset-2">
