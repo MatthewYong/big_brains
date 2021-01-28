@@ -32,9 +32,9 @@
                     </div>   
                     <div class="col-2">
                         <p>Quantity</p>
-                        <form action="" method="POST">
+                        <form action="{% url 'update_cart' item.toy.id %}" method="POST">
                             {% csrf_token %}
-                                <p class="cart-quantity"><input type="number" value="{{ item.quantity }}">
+                                <p class="cart-quantity"><input type="number" value="{{ item.quantity }}" name="update_quantity">
                                 </p>                            
                                 <button class="cart-update-button" type="submit">
                                     Update

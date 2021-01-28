@@ -34,6 +34,20 @@ def add_to_cart(request, toy_id):
     return redirect(redirect_url)
 
 
+def update_cart(request, toy_id):
+    cart = request.session.get('cart', {})
+    update_quantity = int(request.POST.get('update_quantity'))
+    redirect_url = request.POST.get('redirect_url')
+
+    if update_quantity:
+        cart[toy_id] += update_quantity
+
+    request.session['cart'] = cart
+    print(cart)
+
+    return redirect(redirect_url)
+
+
 def remove_from_cart(request, toy_id):
     cart = request.session.get('cart', {})
     cart.pop(toy_id)
