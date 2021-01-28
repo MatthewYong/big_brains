@@ -33,11 +33,8 @@
                         <p class="cart-item-header">Quantity</p>
                         <form action="{% url 'update_cart' item.toy.id %}" method="POST">
                             {% csrf_token %}
-                                <p class="cart-quantity"><input type="number" value="{{ item.quantity }}" min="0" max="10" name="update_quantity">
-                                </p>                            
-                                <button class="cart-update-button" type="submit">
-                                    Update
-                                </button>
+                                <input class="cart-quantity" type="number" value="{{ item.quantity }}" min="0" max="10" name="update_quantity">
+                                <input class="cart-update-button"  type="submit" value="Update">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>       
                         <form action="{% url 'remove_from_cart' item.toy.id %}" method="POST">
