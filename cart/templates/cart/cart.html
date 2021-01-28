@@ -16,14 +16,16 @@
                 </div>
                 {% for item in cart_items %}                 
                 <div class="row cart-items">                   
-                    <div class="col-2">{{Image}}</div>
+                    <div class="col-2">
+                        <img src="../media/{{ item.toy.image }}" class="toy-image" alt="">
+                    </div>
                     <div class="col-2">
                         <p>Title</p>
                         <p>{{ item.toy.name }}</p>
                     </div>
                     <div class="col-2">
                         <p>Price</p>
-                        <p>{{ item.toy.price }}</p>
+                        <p>£{{ item.toy.price }}</p>
                     </div>   
                     <div class="col-2">
                         <p>Quantity</p>
