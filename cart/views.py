@@ -39,11 +39,13 @@ def update_cart(request, toy_id):
     update_quantity = int(request.POST.get('update_quantity'))
     redirect_url = request.POST.get('redirect_url')
 
-    if update_quantity < 0:
-        print('Sorry the quantity must be 0 or higher')
-
-    if update_quantity:
-        cart[toy_id] += update_quantity
+    if update_quantity < 0 or update_quantity > 10:
+        print('Sorry the quantity must be between 0 or 10')
+    elif update_quantity > 0 and update_quantity <= 10:
+        cart[toy_id] = update_quantity
+    else:
+        cart.pop(toy_id)
+        print('Item removed from cart')
 
     request.session['cart'] = cart
     print(cart)
