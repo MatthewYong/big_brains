@@ -105,11 +105,29 @@ input::-webkit-inner-spin-button {
 }
 
 
-.cart-update-button {
 
+.cart-update-button {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFD9;
+    background-color: #b9acae;
+    border: 0.15rem solid #AB8E66;
+    border-radius: 0.2rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f;     
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem; 
 }
 
+.cart-update-button:active {
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset;     
+}
 
+.cart-delete-button {
+    font-size: 1.25rem;
+}
+
+.cart-delete-button:active {
+    color: #E52F4D;
+}
 
 
 /*Cart empty CSS*/
