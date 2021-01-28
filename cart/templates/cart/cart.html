@@ -6,11 +6,6 @@
 
     {% if cart_items %}
             <div class="container sm-font">
-                <div>
-                    {{ cart_items }}
-                    {{ total }}
-                    {{ toy_count }}
-                </div>
                 <div class="row">
                     <div class="col-12 cart-header">
                         <p>
@@ -34,22 +29,21 @@
                         <p>Quantity</p>
                         <form action="{% url 'update_cart' item.toy.id %}" method="POST">
                             {% csrf_token %}
-                                <p class="cart-quantity"><input type="number" value="{{ item.quantity }}" name="update_quantity">
+                                <p class="cart-quantity"><input type="number" value="{{ item.quantity }}" min="0" max="10" name="update_quantity">
                                 </p>                            
                                 <button class="cart-update-button" type="submit">
                                     Update
                                 </button>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </form>                        
-                    </div>
+                        </form>       
                         <form action="{% url 'remove_from_cart' item.toy.id %}" method="POST">
                         {% csrf_token %}
                             <button class="cart-delete-button" type="submit">
                                 <i class="far fa-trash-alt"></i> 
                             </button>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </form>
-                    </div>  
+                        </form>                                         
+                    </div>
                     <div class="col-2 offset-2">
                         <p>Subtotal</p>
                         <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>

@@ -39,6 +39,9 @@ def update_cart(request, toy_id):
     update_quantity = int(request.POST.get('update_quantity'))
     redirect_url = request.POST.get('redirect_url')
 
+    if update_quantity < 0:
+        print('Sorry the quantity must be 0 or higher')
+
     if update_quantity:
         cart[toy_id] += update_quantity
 
