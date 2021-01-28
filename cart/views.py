@@ -7,7 +7,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, toy_id):
-    """Add a quantity of toys to the cart"""
+    """Function to add a quantity in the user's cart"""
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -35,17 +35,20 @@ def add_to_cart(request, toy_id):
 
 
 def update_cart(request, toy_id):
+    """Function to update the quantity in the user's cart"""
     cart = request.session.get('cart', {})
     update_quantity = int(request.POST.get('update_quantity'))
     redirect_url = request.POST.get('redirect_url')
 
     if update_quantity < 0 or update_quantity > 10:
         print('Sorry the quantity must be between 0 or 10')
+        # Add toast message
     elif update_quantity > 0 and update_quantity <= 10:
         cart[toy_id] = update_quantity
     else:
         cart.pop(toy_id)
         print('Item removed from cart')
+        # Add toast message
 
     request.session['cart'] = cart
     print(cart)
@@ -54,8 +57,12 @@ def update_cart(request, toy_id):
 
 
 def remove_from_cart(request, toy_id):
+    """Function to remove an item from rhe user's cart"""
     cart = request.session.get('cart', {})
     cart.pop(toy_id)
+    print('Item removed from cart')
+    # Add toast message
+
     redirect_url = request.POST.get('redirect_url')
 
     request.session['cart'] = cart
