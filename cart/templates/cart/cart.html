@@ -32,11 +32,11 @@
                     </div>   
                     <div class="col-2">
                         <p>Quantity</p>
-                        <p>{{ item.quantity }} 
+                        <p class="cart-quantity"><input type="number" value="{{ item.quantity }}">
                             <form action="{% url 'remove_from_cart' item.toy.id %}" method="POST">
                             {% csrf_token %}
-                                <button type="submit">
-                                    <i class="far fa-trash-alt"></i>  
+                                <button class="cart-delete-button" type="submit">
+                                    <i class="far fa-trash-alt"></i> 
                                 </button>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>

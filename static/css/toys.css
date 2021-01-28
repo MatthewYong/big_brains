@@ -84,6 +84,17 @@
     margin-bottom: 5rem;
 }
 
+.cart-delete-button {
+    color: #971328;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.cart-quantity input {
+    text-align: center;
+    width: 2rem;
+}
 
 
 
