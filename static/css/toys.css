@@ -63,8 +63,9 @@
 
 /*Cart*/
 .cart-header {
+    text-align: center;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 10vh;
     margin-bottom: 8rem;
 }
@@ -75,8 +76,14 @@
     margin-top: 1rem;
 }
 
+.cart-items-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .cart-items {
-    margin-bottom: 5rem;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .cart-item-header {
@@ -108,9 +115,6 @@ input::-webkit-inner-spin-button {
     background-color: #FFFFD9;  
     border-radius: 0.2rem;
     margin-left: 1rem;
-    /*box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f;     
-    background-color: #b9acae;    
-    padding: 0.4rem 0.75rem 0.4rem 0.75rem;*/
 }
 
 .cart-update-button:active {
