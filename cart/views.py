@@ -37,7 +37,8 @@ def add_to_cart(request, toy_id):
 def remove_from_cart(request, toy_id):
     cart = request.session.get('cart', {})
     cart.pop(toy_id)
+    redirect_url = request.POST.get('redirect_url')
 
     request.session['cart'] = cart
-    print(cart)
-    return redirect('toys')
+
+    return redirect(redirect_url)
