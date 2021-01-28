@@ -20,15 +20,15 @@
                         <img src="../media/{{ item.toy.image }}" class="toy-image" alt="">
                     </div>
                     <div class="col-2">
-                        <p>Title</p>
+                        <p class="cart-item-header">Title</p>
                         <p>{{ item.toy.name }}</p>
                     </div>
                     <div class="col-2">
-                        <p>Price</p>
+                        <p class="cart-item-header">Price</p>
                         <p>£{{ item.toy.price }}</p>
                     </div>   
                     <div class="col-2">
-                        <p>Quantity</p>
+                        <p class="cart-item-header">Quantity</p>
                         <form action="{% url 'update_cart' item.toy.id %}" method="POST">
                             {% csrf_token %}
                                 <p class="cart-quantity"><input type="number" value="{{ item.quantity }}" min="0" max="10" name="update_quantity">
@@ -47,7 +47,7 @@
                         </form>                                         
                     </div>
                     <div class="col-2 offset-2">
-                        <p>Subtotal</p>
+                        <p class="cart-item-header">Subtotal</p>
                         <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
                     </div>                                               
                 </div>
@@ -55,7 +55,7 @@
                 <hr class="cart-separator">
                 <div class="row cart-total">
                     <div class="col-2 offset-8">
-                        <p>Total</p>
+                        <p class="cart-item-header">Total</p>
                     </div>
                     <div class="col-2">
                         <p>£{{ total }}</p>
