@@ -21,19 +21,17 @@ def add_to_cart(request, toy_id):
             if toy_id in list(cart.keys()):
                 # Prevents user from adding more toy qty than 10
                 if quantity + cart[toy_id] > 10:
-                    print('Sorry the maximum quantity you can buy is 10')
-                    # Add toast message
+                    messages.warning(
+                        request, 'Sorry, the maximum quantity you can buy is 10')
                 else:
                     cart[toy_id] += quantity
-                    # Add success message
-                    print('Item Added')
-                    messages.success(request, 'Success!')
+                    messages.success(request, 'Added to Cart!')
             else:
                 cart[toy_id] = quantity
-                print('Item New Added')
+                messages.success(request, 'Added to Cart!')
         else:
-            print('Sorry the maximum quantity you can buy is 10')
-            # Add toast message
+            messages.warning(
+                request, 'Sorry, the maximum quantity you can buy is 10')
     request.session['cart'] = cart
 
     return redirect(redirect_url)
@@ -46,17 +44,15 @@ def update_cart(request, toy_id):
     redirect_url = request.POST.get('redirect_url')
 
     if update_quantity < 0 or update_quantity > 10:
-        print('Sorry the quantity must be between 0 or 10')
-        # Add toast message
+        messages.warning(
+            request, 'Sorry, the quantity must be between 0 or 10')
     elif update_quantity > 0 and update_quantity <= 10:
         cart[toy_id] = update_quantity
     else:
         cart.pop(toy_id)
         print('Item removed from cart')
-        # Add toast message
-
+        messages.error(request, 'Removed from Cart')
     request.session['cart'] = cart
-    print(cart)
 
     return redirect(redirect_url)
 
@@ -65,11 +61,8 @@ def remove_from_cart(request, toy_id):
     """Function to remove an item from rhe user's cart"""
     cart = request.session.get('cart', {})
     cart.pop(toy_id)
-    print('Item removed from cart')
-    # Add toast message
-
+    messages.error(request, 'Removed from Cart')
     redirect_url = request.POST.get('redirect_url')
-
     request.session['cart'] = cart
 
     return redirect(redirect_url)
