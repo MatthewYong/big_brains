@@ -96,6 +96,14 @@ nav {
     box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset; 
 }
 
+/*Toasts messages*/
+.message-container {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    z-index: 9999;
+}
+
 
 
 

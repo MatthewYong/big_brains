@@ -26,9 +26,11 @@ def add_to_cart(request, toy_id):
                 else:
                     cart[toy_id] += quantity
                     # Add success message
+                    print('Item Added')
                     messages.success(request, 'Success!')
             else:
                 cart[toy_id] = quantity
+                print('Item New Added')
         else:
             print('Sorry the maximum quantity you can buy is 10')
             # Add toast message
