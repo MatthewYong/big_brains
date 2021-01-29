@@ -144,7 +144,14 @@
             </div>            
         </div>
     </footer>
-
+    <!--Toast messages; code used from CI lesson 'Toasts'-->
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% include 'include/toasts/toast_success.html'%}
+            {% endfor %}
+        </div>
+    {% endif %}
     {% block postloadjs %}
         <script src="{% static 'js/main.js' %}"></script>
     {% endblock %}
