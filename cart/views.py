@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 
 
 def view_cart(request):
@@ -24,6 +25,8 @@ def add_to_cart(request, toy_id):
                     # Add toast message
                 else:
                     cart[toy_id] += quantity
+                    # Add success message
+                    messages.success(request, 'Success!')
             else:
                 cart[toy_id] = quantity
         else:

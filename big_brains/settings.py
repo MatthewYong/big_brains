@@ -82,6 +82,8 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 AUTHENTICATION_BACKENDS = [
     # Code used from https://django-allauth.readthedocs.io/en/latest/installation.html#post-installation
     # Needed to login by username in Django admin, regardless of `allauth`
