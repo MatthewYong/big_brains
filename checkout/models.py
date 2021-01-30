@@ -1,7 +1,11 @@
+import uuid
+
+
 from django.db import models
 
 from django_countries.fields import CountryField
 
+from toys.models import Toy
 
 
 class Order(models.Model):
@@ -15,4 +19,17 @@ class Order(models.Model):
     town = models.CharField(max_length=50, null=False, blank=False)
     country = CountryField(multiple=True)
     procurement_date = models.DateTimeField(auto_now_add=True)
-    cart_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    cart_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
+
+
+class OrderLineItem(models.Model):
+    order = models.ForeignKey(
+                            Order, null=False, blank=False,
+                            on_delete=models.CASCADE, related_name='lineitems')
+    toy = models.ForeignKey(
+                        Toy, null=False, blank=False, on_delete=models.CASCADE)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_total = models.DecimalField(
+                                max_digits=6, decimal_places=2, null=False,
+                                blank=False, editable=False)
