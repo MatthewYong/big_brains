@@ -1,5 +1,8 @@
 from django.db import models
 
+from django_countries.fields import CountryField
+
+
 
 class Order(models.Model):
 
@@ -8,8 +11,8 @@ class Order(models.Model):
     last_name = models.CharField(max_length=20, null=False, blank=False)
     email_address = models.CharField(max_length=50, null=False, blank=False)
     address = models.CharField(max_length=100, null=False, blank=False)
-    postcode = models.CharField(max_length=100, null=True, blank=True)
-    town = models.CharField(max_length=100, null=False, blank=False)
-    country = models.CharField(max_length=100, null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    town = models.CharField(max_length=50, null=False, blank=False)
+    country = CountryField(multiple=True)
     procurement_date = models.DateTimeField(auto_now_add=True)
     cart_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
