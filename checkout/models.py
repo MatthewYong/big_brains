@@ -9,7 +9,7 @@ from toys.models import Toy
 
 class Order(models.Model):
 
-    order_number = models.Charfield(max_length=40, null=False, editable=False)
+    order_number = models.CharField(max_length=40, null=False, editable=False)
     first_name = models.CharField(max_length=20, null=False, blank=False)
     last_name = models.CharField(max_length=20, null=False, blank=False)
     email_address = models.CharField(max_length=50, null=False, blank=False)
@@ -73,4 +73,4 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.order_number
+        return f'SKU {self.toy.sku} on order {self.order.order_number}'
