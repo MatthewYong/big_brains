@@ -99,12 +99,22 @@ nav {
 /*Toasts messages*/
 .message-container {
     position: fixed;
-    top: 5rem;
+    top: 7rem;
     right: 1rem;
     z-index: 9999;
 }
 
+.toast-message-control {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #0f0f0f;
+    background-color: #ECECB1;
+}
 
+.toast-message-image {
+    width: 8rem;
+    height: 5rem;
+}
 
 
 

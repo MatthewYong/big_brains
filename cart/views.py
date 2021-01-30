@@ -25,10 +25,10 @@ def add_to_cart(request, toy_id):
                         request, 'Sorry, the maximum quantity you can buy is 10')
                 else:
                     cart[toy_id] += quantity
-                    messages.success(request, 'Added to Cart!')
+                    messages.success(request, 'Added to Cart')
             else:
                 cart[toy_id] = quantity
-                messages.success(request, 'Added to Cart!')
+                messages.success(request, 'Added to Cart')
         else:
             messages.warning(
                 request, 'Sorry, the maximum quantity you can buy is 10')
@@ -48,6 +48,8 @@ def update_cart(request, toy_id):
             request, 'Sorry, the quantity must be between 0 or 10')
     elif update_quantity > 0 and update_quantity <= 10:
         cart[toy_id] = update_quantity
+        messages.warning(
+            request, 'Cart is up-to-date')
     else:
         cart.pop(toy_id)
         print('Item removed from cart')
