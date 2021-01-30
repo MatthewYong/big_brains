@@ -1,8 +1,7 @@
 import uuid
-
-
+from django.db.models import Sum
+from django.conf import settings
 from django.db import models
-
 from django_countries.fields import CountryField
 
 from toys.models import Toy
@@ -21,6 +20,12 @@ class Order(models.Model):
     procurement_date = models.DateTimeField(auto_now_add=True)
     cart_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
+
+    def generate_order_number(self):
+        """
+        Function that generates a unique order number
+        """
+        return uuid.uuid4().hex.upper()
 
 
 class OrderLineItem(models.Model):
