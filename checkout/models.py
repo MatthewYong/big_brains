@@ -23,9 +23,34 @@ class Order(models.Model):
 
     def generate_order_number(self):
         """
-        Function that generates a unique order number
+        Function that generates a unique order number.
+        Code used from CI checkout lesson
         """
         return uuid.uuid4().hex.upper()
+
+    """
+    def update_total(self):
+        Updates cart total each time an order item is added. Code partly used from CI checkout lesson
+        self.cart_total = self.orderitems.aggregate(Sum('item_total'))['item_total__sum'] or 0
+        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        else:
+            self.delivery_cost = 0
+        self.grand_total = self.order_total + self.delivery_cost
+        self.save()
+    """
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already. Code used from CI checkout lesson
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.order_number        
 
 
 class OrderLineItem(models.Model):
@@ -38,3 +63,14 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(
                                 max_digits=6, decimal_places=2, null=False,
                                 blank=False, editable=False)
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already. Code used from CI checkout lesson
+        """
+        self.lineitem_total = self.toy.price * self.quantity
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.order_number
