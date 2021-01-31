@@ -8,3 +8,8 @@ class OrderAdmin(admin.ModelAdmin):
 
     fields = ('order_number', 'date', 'first_name', 'last_name', 'email',
               'address', 'postcode', 'town', 'country',)
+
+    list_display = ('order_number', 'date', 'first_name', 'last_name',
+                    'order_total',)
+
+    ordering = ('-date')
