@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cart_tools %}
+
+<!--Link to css files-->
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">   
+{% endblock %}
+
+{% block content %}
+
+    {% if cart_items %}
+            <div class="container sm-font">
+                <div class="row">
+                    <div class="col-12 cart-header">
+                        <p>
+                            Shopping Bag
+                        </p>   
+                        <hr class="cart-separator">   
+                    </div>
+                </div>
+
+
+
+{% endblock %}
