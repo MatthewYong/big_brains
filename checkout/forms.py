@@ -11,7 +11,7 @@ class OrderForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """
         Function to add placeholders and classes,
-        code used from CI lesson checkout
+        code used from CI checkout lesson
         """
         super().__init__(*args, **kwargs)
         placeholders = {
