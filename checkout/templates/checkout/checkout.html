@@ -25,7 +25,12 @@
             <fieldset>
                 <legend>Shipping Adddress</legend>
                 {{ order_form.first_name | as_crispy_field }}
-
+                {{ order_form.last_name | as_crispy_field }}       
+                {{ order_form.email_address | as_crispy_field }}  
+                {{ order_form.address | as_crispy_field }}   
+                {{ order_form.postcode | as_crispy_field }}  
+                {{ order_form.town | as_crispy_field }}  
+                {{ order_form.country | as_crispy_field }}
             </fieldset>
         
         </form>
