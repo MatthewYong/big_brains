@@ -27,12 +27,14 @@
 
 .cart-items {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .cart-item-header {
     font-size: 1.25rem;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .cart-total {
@@ -41,7 +43,7 @@
     margin-bottom: 5rem;
 }
 
-.cart-quantity input {
+.cart-quantity {
     text-align: center;
     width: 2rem;
     
@@ -57,6 +59,7 @@ input::-webkit-inner-spin-button {
 .cart-update-button {
     font-size: 1.25rem;
     font-weight: 600;
+    text-transform: uppercase;
     background-color: #FFFFD9;  
     border-radius: 0.2rem;
     margin-left: 1rem;
