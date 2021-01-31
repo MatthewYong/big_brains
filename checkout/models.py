@@ -17,7 +17,7 @@ class Order(models.Model):
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town = models.CharField(max_length=50, null=False, blank=False)
     country = CountryField(multiple=True)
-    procurement_date = models.DateTimeField(auto_now_add=True)
+    order_date = models.DateTimeField(auto_now_add=True)
     cart_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
 
