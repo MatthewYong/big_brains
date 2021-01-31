@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="row cart-items-header">
-            <div class="col-2"></div>
+            <div class="col-2 offset-1"></div>
             <div class="col-2">
                 <p class="cart-item-header">Toy</p>
             </div>
@@ -53,13 +53,13 @@
             <div class="col-2">
                 <p class="cart-item-header">Quantity</p>
             </div>
-            <div class="col-2 offset-2">
+            <div class="col-2">
                 <p class="cart-item-header">Subtotal</p>
             </div>                
         </div>        
         {% for item in cart_items %}                 
         <div class="row cart-items">                   
-            <div class="col-2">
+            <div class="col-2 offset-1">
                 <a href="{% url 'toy_detail' item.toy.id %}">
                     <img src="../media/{{ item.toy.image }}"    class="cart-image" alt="">
                 </a>
@@ -73,20 +73,30 @@
             <div class="col-2">
                 <p>{{ item.quantity }}</p>
             </div>                        
-            <div class="col-2 offset-2">
+            <div class="col-2">
                 <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
             </div>                                               
         </div>
         {% endfor %}                 
         <hr class="cart-separator">
         <div class="row cart-total">
-            <div class="col-2 offset-8">
+            <div class="col-2 offset-7">
                 <p class="cart-item-header">Total</p>
             </div>
             <div class="col-2">
                 <p>£{{ total }}</p>
             </div>
-        </div>        
+        </div>
+        <div class="row cart-total">
+            <div class="col-3 offset-3">
+                <a href="{% url 'view_cart' %}">
+                    <button>Back to Cart</button>
+                </a>
+                <a href="{% url 'view_cart' %}">
+                    <button>Buy Now</button>
+                </a>                                   
+            </div>        
+        </div>                
     </div>
 
 
