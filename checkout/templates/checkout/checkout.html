@@ -8,59 +8,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12 checkout-header">
-                <p>
-                    Your Bag <!--Add username-->
-                </p>   
-                <hr class="cart-separator">   
-            </div>
-        </div>
-        {% for item in cart_items %}                 
-        <div class="row cart-items">                   
-            <div class="col-2">
-                <a href="{% url 'toy_detail' item.toy.id %}">
-                    <img src="../media/{{ item.toy.image }}"    class="cart-image" alt="">
-                </a>
-            </div>
-            <div class="col-2">
-                <p>{{ item.toy.name }}</p>
-            </div>
-            <div class="col-2">
-                <p>£{{ item.toy.price }}</p>
-            </div>   
-            <div class="col-2">
-                <form action="{% url 'update_cart' item.toy.id %}" method="POST">
-                    {% csrf_token %}
-                        <input class="cart-quantity" type="number" value="{{ item.quantity }}" min="0" max="10" name="update_quantity">
-                        <input class="cart-update-button"  type="submit" value="Update">
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                </form>
-            </div>                            
-            <div class="col-1 offset-1">   
-                <form action="{% url 'remove_from_cart' item.toy.id %}" method="POST">
-                {% csrf_token %}
-                    <button class="cart-delete-button" type="submit">
-                        <i class="far fa-trash-alt"></i> 
-                    </button>
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                </form>                                         
-            </div>
-            <div class="col-2">
-                <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
-            </div>                                               
-        </div>
-        {% endfor %}                 
-        <hr class="cart-separator">
-        <div class="row cart-total">
-            <div class="col-2 offset-8">
-                <p class="cart-item-header">Total</p>
-            </div>
-            <div class="col-2">
-                <p>£{{ total }}</p>
-            </div>
-        </div>              
+    <div class="container">             
         <div class="row">
             <div class="col-12 checkout-header">
                 <p>
@@ -87,6 +35,59 @@
                 </form>                
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 checkout-header">
+                <p>
+                    Your Toys <!--Add username-->
+                </p>   
+                <hr class="cart-separator">   
+            </div>
+        </div>
+        <div class="row cart-items-header">
+            <div class="col-2"></div>
+            <div class="col-2">
+                <p class="cart-item-header">Toy</p>
+            </div>
+            <div class="col-2">
+                <p class="cart-item-header">Price</p>
+            </div>
+            <div class="col-2">
+                <p class="cart-item-header">Quantity</p>
+            </div>
+            <div class="col-2 offset-2">
+                <p class="cart-item-header">Subtotal</p>
+            </div>                
+        </div>        
+        {% for item in cart_items %}                 
+        <div class="row cart-items">                   
+            <div class="col-2">
+                <a href="{% url 'toy_detail' item.toy.id %}">
+                    <img src="../media/{{ item.toy.image }}"    class="cart-image" alt="">
+                </a>
+            </div>
+            <div class="col-2">
+                <p>{{ item.toy.name }}</p>
+            </div>
+            <div class="col-2">
+                <p>£{{ item.toy.price }}</p>
+            </div>   
+            <div class="col-2">
+                <p>{{ item.quantity }}</p>
+            </div>                        
+            <div class="col-2 offset-2">
+                <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
+            </div>                                               
+        </div>
+        {% endfor %}                 
+        <hr class="cart-separator">
+        <div class="row cart-total">
+            <div class="col-2 offset-8">
+                <p class="cart-item-header">Total</p>
+            </div>
+            <div class="col-2">
+                <p>£{{ total }}</p>
+            </div>
+        </div>        
     </div>
 
 
