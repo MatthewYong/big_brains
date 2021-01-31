@@ -112,5 +112,17 @@ input::-webkit-inner-spin-button {
 
 
 
+/*Checkout*/
+.checkout-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 10vh;
+    margin-bottom: 5rem;
+}
+
+
+
 
 
