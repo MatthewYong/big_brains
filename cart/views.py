@@ -22,7 +22,8 @@ def add_to_cart(request, toy_id):
                 # Prevents user from adding more toy qty than 10
                 if quantity + cart[toy_id] > 10:
                     messages.warning(
-                        request, 'Sorry, the maximum quantity you can buy is 10')
+                        request,
+                        'Sorry, the maximum quantity you can buy is 10')
                 else:
                     cart[toy_id] += quantity
                     messages.success(request, 'Added to Cart')

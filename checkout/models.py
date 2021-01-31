@@ -29,17 +29,12 @@ class Order(models.Model):
         """
         return uuid.uuid4().hex.upper()
 
-    """
     def update_cart_total(self):
-        Updates cart total each time an order item is added. Code partly used from CI checkout lesson
-        self.cart_total = self.orderitems.aggregate(Sum('item_total'))['item_total__sum'] or 0
-        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
-        else:
-            self.delivery_cost = 0
-        self.grand_total = self.order_total + self.delivery_cost
+        """Updates cart total each time an order item is added.
+        Code partly used from CI checkout lesson"""
+        self.cart_total = self.lineitems.aggregate(
+                            Sum('line_item_total'))['lineitem_total__sum']
         self.save()
-    """
 
     def save(self, *args, **kwargs):
         """
