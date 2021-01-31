@@ -2,6 +2,10 @@
 {% load static %}
 {% load cart_tools %}
 
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">   
+{% endblock %}
+
 {% block content %}
 
     {% if cart_items %}
@@ -36,7 +40,7 @@
                 <div class="row cart-items">                   
                     <div class="col-2">
                         <a href="{% url 'toy_detail' item.toy.id %}">
-                            <img src="../media/{{ item.toy.image }}"    class="toy-image" alt="">
+                            <img src="../media/{{ item.toy.image }}"    class="cart-image" alt="">
                         </a>
                     </div>
                     <div class="col-2">

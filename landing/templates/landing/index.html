@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'landing/css/index.css' %}">   
+{% endblock %}
+
 {% block content %}
     <div class="image-hero">        
         <div class="container">
