@@ -1,0 +1,15 @@
+.checkout-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 10vh;
+    margin-bottom: 5rem;
+}
+
+
+.checkout-separator {
+    background-color: #971328;
+    padding: 0.01rem;
+    margin-top: 1rem;
+}
