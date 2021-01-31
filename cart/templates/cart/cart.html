@@ -78,7 +78,9 @@
                     </div>
                     <div class="col-2">
                         <p>£{{ total }}</p>
-                        <button>Pay Now</button>
+                        <a href="{% url 'checkout' %}">
+                            <button>Check out</button>
+                        </a>
                     </div>
                 </div>                
             </div>

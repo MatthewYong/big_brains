@@ -8,16 +8,28 @@
 
 {% block content %}
 
-    {% if cart_items %}
-            <div class="container sm-font">
-                <div class="row">
-                    <div class="col-12 cart-header">
-                        <p>
-                            Shopping Bag
-                        </p>   
-                        <hr class="cart-separator">   
-                    </div>
-                </div>
+    <div class="container sm-font">
+        <div class="row">
+            <div class="col-12 cart-header">
+                <p>
+                    Shopping Bag
+                </p>   
+                <hr class="cart-separator">   
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <form action="{% url 'checkout' %}" method="POST" id="checkout-form">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Shipping Adddress</legend>
+                {{ order_form.first_name | as_crispy_field }}
+
+            </fieldset>
+        
+        </form>
+    </div>
 
 
 
