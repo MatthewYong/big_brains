@@ -27,8 +27,8 @@
 
 .cart-items {
     text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
 }
 
 .cart-item-header {
@@ -39,9 +39,16 @@
 
 .cart-total {
     text-align: center;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 5rem;
 }
+
+.cart-total p, .cart-total button {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
 
 .cart-quantity {
     text-align: center;
