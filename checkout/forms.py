@@ -25,7 +25,7 @@ class OrderForm(forms.ModelForm):
             'comments': 'Add your comments',
         }
 
-        self.fields['first_name'].widget.attrs['autofocus'] = True
+        self.fields['first_name'].widget.attrs['autofocus'] = False
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
