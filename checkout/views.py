@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
@@ -43,7 +43,11 @@ def checkout(request):
                     quantity=item_data,
                 )
                 order_line_item.save()
-            return redirect(reverse('checkout_success')
+            return redirect(reverse('checkout_success'),
+                            args=[order.order_number])
+        else:
+            messages.error(request,
+                           'There was an error with your form. Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
@@ -69,6 +73,26 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """
+    After checkout is successful, cart will be emptied
+    """
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'bag' in request.session:
+        del request.session['cart']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
