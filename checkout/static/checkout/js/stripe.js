@@ -1,5 +1,5 @@
 /*
-Code is tweaked to match to the website's theme, but mainly used from CI checkout lesson which is derived from Stripe website: https://stripe.com/docs/payments/accept-a-payment?integration=elements
+Code is tweaked to match to the website's theme, but mainly used from CI Stripe lesson which is derived from Stripe website: https://stripe.com/docs/payments/accept-a-payment?integration=elements
 */
 
 
@@ -24,3 +24,26 @@ var style = {
 };
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
+
+
+// Handle realtime validation errors on the card element
+// Code mostly used from CI Stripe lesson
+card.addEventListener('change', function (event) {
+    var errorDiv = document.getElementById('card-errors');
+    if (event.error) {
+        var html = `
+            <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+            </span>
+            <span>${event.error.message}</span>
+            `;
+        $(errorDiv).html(html);
+    } else {
+        errorDiv.textContent = '';
+    }
+});
+
+
+
+
+
