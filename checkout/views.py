@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
+from .models import Order, OrderLineItem
+from toys.models import Toy
 from cart.context import cart_contents
 
 import stripe
@@ -30,7 +32,18 @@ def checkout(request):
             'country': request.POST['country'],
             'comments': request.POST['comments'],
         }
-
+        order_form = OrderForm(form_data)
+        if order_form.is_valid():
+            order = order_form.save
+            for item_id, item_data in cart.items():
+                toy = Toy.objects.get(id=item_id)
+                order_line_item = OrderLineItem(
+                    order=order,
+                    toy=toy,
+                    quantity=item_data,
+                )
+                order_line_item.save()
+            return redirect(reverse('checkout_success')
     else:
         cart = request.session.get('cart', {})
         if not cart:
