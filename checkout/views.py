@@ -17,21 +17,36 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    cart = request.session.get('cart', {})
-    if not cart:
-        messages.error(request, 'Your cart is empty')
-        return redirect(reverse('toys'))
+    if request.method == 'POST':
+        cart = request.session.get('cart', {})
 
-    current_cart = cart_contents(request)
-    total = current_cart['total']
-    stripe_total = round(total * 100)
-    stripe.api_key = stripe_secret_key
-    intent = stripe.PaymentIntent.create(
-        amount=stripe_total,
-        currency=settings.STRIPE_CURRENCY,
-    )
+        form_data = {
+            'first_name': request.POST['first_name'],
+            'last_name': request.POST['last_name'],
+            'email_address': request.POST['email_address'],
+            'address': request.POST['address'],
+            'postcode': request.POST['postcode'],
+            'town': request.POST['town'],
+            'country': request.POST['country'],
+            'comments': request.POST['comments'],
+        }
 
-    order_form = OrderForm()
+    else:
+        cart = request.session.get('cart', {})
+        if not cart:
+            messages.error(request, 'Your cart is empty')
+            return redirect(reverse('toys'))
+
+        current_cart = cart_contents(request)
+        total = current_cart['total']
+        stripe_total = round(total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
+
+        order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing')
