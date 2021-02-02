@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}"> 
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">     
+{% endblock %}
+
+{% block content %}
+    <div class="container">  
+        <div class="row">
+            <div class="col-12 checkout-header">
+                <p>
+                    Thank you
+                </p>   
+                <hr class="cart-separator">   
+                <button>Home</button>
+            </div>
+        </div>
+    </div> 
+
+
+
+
+{% endblock %}
+
