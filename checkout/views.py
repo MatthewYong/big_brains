@@ -44,9 +44,10 @@ def checkout(request):
                 )
                 order_line_item.save()
             return redirect(reverse('checkout_success',
-                            args=[order.order_number]))
+                                    args=[order.order_number]))
         else:
-            messages.error(request,'There was an error with your form. Please double check your information.')
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.')
             print(order_form.errors)
             return redirect(reverse('checkout_success'))
 
@@ -83,6 +84,7 @@ def checkout(request):
 def checkout_success(request, order_number):
     """
     After checkout is successful, cart will be emptied
+    and success message will be displayed
     """
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order successfully processed! \
