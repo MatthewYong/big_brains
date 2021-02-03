@@ -17,13 +17,13 @@ class Order(models.Model):
     address = models.CharField(max_length=100, null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town = models.CharField(max_length=50, null=False, blank=False)
-    country = CountryField(multiple=True)
+    country = CountryField(blank_label='Country', null=False, blank=False)
     comments = models.CharField(max_length=1000, null=True, blank=True)
     order_date = models.CharField(max_length=20, null=False, blank=False)
     cart_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
 
-    def generate_order_number(self):
+    def _generate_order_number(self):
         """
         Function that generates a unique order number.
         Code used from CI checkout lesson
@@ -34,7 +34,7 @@ class Order(models.Model):
         """Updates cart total each time an order item is added.
         Code partly used from CI checkout lesson"""
         self.cart_total = self.lineitems.aggregate(
-                            Sum('line_item_total'))['lineitem_total__sum']
+                            Sum('line_item_total'))['lineitem_total__sum'] or 0
         self.save()
 
     def save(self, *args, **kwargs):
@@ -67,7 +67,6 @@ class OrderLineItem(models.Model):
         if it hasn't been set already. Code used from CI checkout lesson
         """
         self.lineitem_total = self.toy.price * self.quantity
-        super().save(*args, **kwargs)
 
     def __str__(self):
         return f'SKU {self.toy.sku} on order {self.order.order_number}'
