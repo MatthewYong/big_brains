@@ -51,3 +51,15 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     margin-top: 10vh;
     margin-bottom: 5rem;
 }
+
+
+/*Loading overlay*/
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(100, 3, 3, 0.384) ;
+    z-index: 9999;
+}
