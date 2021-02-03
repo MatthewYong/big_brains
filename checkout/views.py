@@ -69,7 +69,8 @@ def checkout(request):
         order_form = OrderForm()
 
         if not stripe_public_key:
-            messages.warning(request, 'Stripe public key is missing')
+            messages.warning(request, 'Please fill in the correct Stripe \
+            Public key')
 
         template = 'checkout/checkout.html'
         context = {
@@ -87,9 +88,6 @@ def checkout_success(request, order_number):
     and success message will be displayed
     """
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email_address}.')
 
     if 'cart' in request.session:
         del request.session['cart']
