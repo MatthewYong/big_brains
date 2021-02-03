@@ -6,7 +6,6 @@ from django.db import models
 from django_countries.fields import CountryField
 
 from toys.models import Toy
-import datetime
 
 
 class Order(models.Model):
@@ -35,7 +34,7 @@ class Order(models.Model):
         """Updates cart total each time an order item is added.
         Code partly used from CI checkout lesson"""
         self.cart_total = self.lineitems.aggregate(
-                            Sum('line_item_total'))['lineitem_total__sum'] or 0
+                            Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.save()
 
     def save(self, *args, **kwargs):
@@ -62,13 +61,13 @@ class OrderLineItem(models.Model):
                                 max_digits=6, decimal_places=2, null=False,
                                 blank=False, editable=False)
 
-
     def save(self, *args, **kwargs):
         """
         Override the original save method to set the order number
         if it hasn't been set already. Code used from CI checkout lesson
         """
         self.lineitem_total = self.toy.price * self.quantity
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f'SKU {self.toy.sku} on order {self.order.order_number}'
