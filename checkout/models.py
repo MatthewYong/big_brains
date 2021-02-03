@@ -6,6 +6,7 @@ from django.db import models
 from django_countries.fields import CountryField
 
 from toys.models import Toy
+import datetime
 
 
 class Order(models.Model):
@@ -19,7 +20,7 @@ class Order(models.Model):
     town = models.CharField(max_length=50, null=False, blank=False)
     country = CountryField(blank_label='Country', null=False, blank=False)
     comments = models.CharField(max_length=1000, null=True, blank=True)
-    order_date = models.CharField(max_length=20, null=False, blank=False)
+    order_date = models.DateField("Order Date", auto_now_add=True)
     cart_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
 
@@ -60,6 +61,7 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(
                                 max_digits=6, decimal_places=2, null=False,
                                 blank=False, editable=False)
+
 
     def save(self, *args, **kwargs):
         """
