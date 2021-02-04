@@ -52,6 +52,17 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     margin-bottom: 5rem;
 }
 
+/*Code used form CI profile lesson*/
+select,
+select option {
+    color: #0f0f0f;
+}
+
+select:invalid {
+    color: #aab7c4;
+}
+
+
 
 /*Loading overlay*/
 #loading-overlay {
