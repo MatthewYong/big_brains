@@ -6,6 +6,7 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 from toys.models import Toy
 from cart.context import cart_contents
+from profiles.models import Profile
 
 import stripe
 
