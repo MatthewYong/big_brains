@@ -1,11 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from .models import Profile
 
 
 def profile(request):
     """
-    Display the user's profile
+    Function to link the order history to a specific user
     """
+    profile = get_object_or_404(Profile, user=request.user)
+    orders = profile.orders.all()
+
     template = 'profiles/profile.html'
-    context = {}
+    context = {
+        'orders': orders,
+    }
 
     return render(request, template, context)

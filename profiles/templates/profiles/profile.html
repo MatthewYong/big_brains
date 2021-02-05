@@ -15,6 +15,11 @@
                 </p>   
                 <hr class="cart-separator">   
             </div>
+            {% for order in orders %}
+            <div>
+                {{ order.order_number }}
+            </div>
+            {% endfor %}
         </div>
 
 {% endblock %}
