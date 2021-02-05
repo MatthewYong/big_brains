@@ -12,7 +12,8 @@ class OrderAdmin(admin.ModelAdmin):
 
     readonly_fields = ('order_number', 'order_date', 'cart_total',)
 
-    fields = ('order_number', 'order_date', 'first_name', 'last_name',
+    fields = ('order_number', 'profile', 'order_date',
+              'first_name', 'last_name',
               'email_address', 'address', 'postcode', 'town',
               'country', 'comments', 'cart_total')
 

@@ -89,6 +89,12 @@ def checkout_success(request, order_number):
     """
     order = get_object_or_404(Order, order_number=order_number)
 
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(user=request.user)
+        # Order will be added to order history of user's profile
+        order.profile = profile
+        order.save()
+
     if 'cart' in request.session:
         del request.session['cart']
 
