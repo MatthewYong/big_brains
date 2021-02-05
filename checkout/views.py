@@ -22,7 +22,6 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
-
         form_data = {
             'first_name': request.POST['first_name'],
             'last_name': request.POST['last_name'],
@@ -43,13 +42,13 @@ def checkout(request):
                     toy=toy,
                     quantity=item_data,
                 )
+                print(order.order_number)
                 order_line_item.save()
             return redirect(reverse('checkout_success',
                                     args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
-            print(order_form.errors)
             return redirect(reverse('checkout_success'))
 
     else:

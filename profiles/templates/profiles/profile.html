@@ -18,8 +18,19 @@
             {% for order in orders %}
             <div>
                 {{ order.order_number }}
+                {{ order.order_date }}
+                {{ order.lineitems.all }}
             </div>
             {% endfor %}
+
+            {% for item in order.lineitems.all %}
+            <div>
+                {{ item.toy.name }}
+            </div>
+            {% endfor %}
+
+
         </div>
+    </div>
 
 {% endblock %}
