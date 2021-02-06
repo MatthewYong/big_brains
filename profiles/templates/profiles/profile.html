@@ -16,18 +16,27 @@
                 <hr class="cart-separator">   
             </div>
             {% for order in orders %}
-            <div>
-                {{ order.order_number }}
-                {{ order.order_date }}
-                {{ order.lineitems.all }}
-            </div>
-            {% endfor %}
+                <div>
+                    {{ order.order_number }}
+                    {{ order.order_date }}
+                    {{ order.profile }}                    
+  
+                </div>
 
-            {% for item in order.lineitems.all %}
-            <div>
-                {{ item.toy.name }}
-            </div>
+                {% for item in order.lineitems.all %}
+                    <div>
+                        {{ item.toy.name }}
+                        {{ item.toy.age }}
+                        {{ item.toy.sku }}   
+                        {{ item.toy.image }}                                                                       
+                    </div>
+                {% endfor %}
             {% endfor %}
+            <div>
+
+            </div>
+            
+
 
 
         </div>

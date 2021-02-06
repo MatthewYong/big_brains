@@ -42,7 +42,6 @@ def checkout(request):
                     toy=toy,
                     quantity=item_data,
                 )
-                print(order.order_number)
                 order_line_item.save()
             return redirect(reverse('checkout_success',
                                     args=[order.order_number]))
