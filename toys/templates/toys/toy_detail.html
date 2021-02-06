@@ -20,12 +20,12 @@
             <a href="/" class="toy-box mx-auto">  
                 {% if toy.image %}            
                     <div>
-                        <img src="../media/{{ toy.image }}" class="toy-image" 
+                        <img src="{{ MEDIA_URL }}{{ toy.image }}" class="toy-image" 
                         alt="{{ toy.name }}">
                     </div>
                 {% else %}  
                     <div>
-                        <img src="../media/no_image_available.jpg" class="toy-image" alt="no image">
+                        <img src="{{ MEDIA_URL }}no_image_available.jpg" class="toy-image" alt="no image">
                     </div>                
                 {% endif %}
             </a>                    

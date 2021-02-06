@@ -40,7 +40,7 @@
                 <div class="row">                   
                     <div class="col-2">
                         <a href="{% url 'toy_detail' item.toy.id %}">
-                            <img src="../media/{{ item.toy.image }}"    class="cart-image" alt="">
+                            <img src="{{ MEDIA_URL }}{{ item.toy.image }}"    class="cart-image" alt="">
                         </a>
                     </div>
                     <div class="col-2 cart-items">

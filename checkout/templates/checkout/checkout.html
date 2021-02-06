@@ -37,7 +37,7 @@
         <div class="row md-font">                   
             <div class="col-2 offset-1">
                 <a href="{% url 'toy_detail' item.toy.id %}">
-                    <img src="../media/{{ item.toy.image }}"    class="cart-image" alt="">
+                    <img src="{{ MEDIA_URL }}{{ item.toy.image }}"    class="cart-image" alt="">
                 </a>
             </div>
             <div class="col-2 cart-items">
