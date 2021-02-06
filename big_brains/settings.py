@@ -28,7 +28,7 @@ SECRET_KEY = 'de4hul-on8d$@=7xae!_&ewlr(%uov@qgz6!0t^n@(!+c3#mpb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['big-brains.herokuapp.com', 'localhost']
 
 
 # Application definition
