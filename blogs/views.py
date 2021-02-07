@@ -61,3 +61,12 @@ def blog_add(request):
             'blog_form': blog_form,
         }
         return render(request, template, context)
+
+
+def blog_delete(request, blog_id):
+    """
+    A view to delete the blog by the author
+    """
+    blog = get_object_or_404(Blog, pk=blog_id)
+    blog.delete()
+    return redirect(reverse('blogs'))

@@ -61,7 +61,7 @@ def update_cart(request, toy_id):
 
 
 def remove_from_cart(request, toy_id):
-    """Function to remove an item from rhe user's cart"""
+    """Function to remove an item from the user's cart"""
     cart = request.session.get('cart', {})
     cart.pop(toy_id)
     messages.error(request, 'Removed from Cart')
