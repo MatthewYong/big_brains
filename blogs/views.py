@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import Blog
-from profiles.models import Profile
 from .forms import BlogForm
 
 
@@ -76,5 +75,10 @@ def blog_delete(request, blog_id):
     A view to delete the blog by the author
     """
     blog = get_object_or_404(Blog, pk=blog_id)
-    blog.delete()
-    return redirect(reverse('blogs'))
+
+    if request.user == blog.author:
+        blog.delete()
+        return redirect(reverse('blogs'))
+    else:
+        messages.error(request, 'You cannot delete this article.')
+        return redirect(reverse('blogs'))
