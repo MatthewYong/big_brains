@@ -34,12 +34,22 @@ def blog_add(request):
     """
     A view to add new blogs through a user profile
     """
+    if request.method == 'POST':
+        blog_form_data = {
+            'image_url': request.POST['image_url'],
+            'title': request.POST['title'],
+            'author': request.POST['author'],
+            'date': request.POST['date'],
+            'description': request.POST['description'],
+            'article': request.POST['article'],
+        }
 
-    blog_form = BlogForm()
-    template = 'blogs/blog_add.html'
+    else:
+        blog_form = BlogForm()
+        template = 'blogs/blog_add.html'
 
-    context = {
-        'blog_form': blog_form,
-    }
+        context = {
+            'blog_form': blog_form,
+        }
 
     return render(request, template, context)

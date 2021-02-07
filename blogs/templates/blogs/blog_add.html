@@ -10,19 +10,19 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <form action="" method="POST" id="blog-add-form">
+            <form action="{% url 'blogs' %}" method="POST" id="blog-add-form">
                 {% csrf_token %}
                 <fieldset>
                     <legend>Write your article</legend>
+                    {{ blog_form.image_url | as_crispy_field }} 
                     {{ blog_form.title | as_crispy_field }}
                     {{ blog_form.author | as_crispy_field }}  
                     {{ blog_form.date | as_crispy_field }}                    
                     {{ blog_form.description | as_crispy_field }}      
-                    {{ blog_form.article | as_crispy_field }}                
-                    {{ blog_form.image_url | as_crispy_field }}
+                    {{ blog_form.article | as_crispy_field }}
                 </fieldset>
                 <div class="col-12">
-                    <button id="submit-button">Add your article</button>
+                    <button>Add your article</button>
                 </div>
             </form>
         </div>
