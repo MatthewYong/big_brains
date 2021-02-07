@@ -14,9 +14,9 @@
         </div>
     </div>
     <div class="row">
-        {% if blog.image %}            
+        {% if blog.image_url %}            
             <div class="col-8 offset-2">
-                <img src="{{ MEDIA_URL }}{{ blog.image }}" class="blog-detail-image" 
+                <img src="{{ blog.image_url }}" class="blog-detail-image" 
                 alt="{{ blog.title }}">
             </div>
         {% else %}  
