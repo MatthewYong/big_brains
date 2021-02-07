@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
+
 from .models import Toy, Age
 
 
 def all_toys(request):
-    """A view that shows all the toys page, which includes searching and sorting features """
+    """A view that shows all the toys page,\
+    which includes searching and sorting features """
 
     toys = Toy.objects.all()
     query = None
