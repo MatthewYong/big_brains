@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import Blog
+from profiles.models import Profile
 from .forms import BlogForm
 
 
@@ -38,17 +39,24 @@ def blog_add(request):
     A view to add new blogs through a user profile
     """
     if request.method == 'POST':
+
         blog_form_data = {
             'image_url': request.POST['image_url'],
             'title': request.POST['title'],
-            'author': request.POST['author'],
             'date': request.POST['date'],
             'description': request.POST['description'],
             'article': request.POST['article'],
         }
+
         blog_form = BlogForm(blog_form_data)
+
+        # Instance code used from https://www.youtube.com/watch?
+        # v=zJWhizYFKP0&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0u
+        # c&index=27&ab_channel=TheNetNinja
         if blog_form.is_valid():
-            blog_form.save()
+            instance = blog_form.save(commit=False)
+            instance.author = request.user
+            instance.save()
             return redirect(reverse('blogs'))
         else:
             messages.error(request, 'There is something wrong with your form. \
