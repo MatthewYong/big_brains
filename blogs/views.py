@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Blog
 from .forms import BlogForm
@@ -30,6 +32,7 @@ def blog_detail(request, blog_id):
     return render(request, 'blogs/blog_detail.html', context)
 
 
+@login_required
 def blog_add(request):
     """
     A view to add new blogs through a user profile
@@ -44,9 +47,12 @@ def blog_add(request):
             'article': request.POST['article'],
         }
         blog_form = BlogForm(blog_form_data)
-        blog_form.save()
-        return redirect(reverse('blogs'))
-
+        if blog_form.is_valid():
+            blog_form.save()
+            return redirect(reverse('blogs'))
+        else:
+            messages.error(request, 'There is something wrong with your form. \
+                Please double check your information.')
     else:
         blog_form = BlogForm()
         template = 'blogs/blog_add.html'
@@ -54,5 +60,4 @@ def blog_add(request):
         context = {
             'blog_form': blog_form,
         }
-
-    return render(request, template, context)
+        return render(request, template, context)
