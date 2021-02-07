@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 
 from .models import Blog
 from .forms import BlogForm
@@ -43,6 +43,9 @@ def blog_add(request):
             'description': request.POST['description'],
             'article': request.POST['article'],
         }
+        blog_form = BlogForm(blog_form_data)
+        blog_form.save()
+        return redirect(reverse('blogs'))
 
     else:
         blog_form = BlogForm()
