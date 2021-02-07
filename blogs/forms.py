@@ -6,4 +6,4 @@ class BlogForm(forms.ModelForm):
     class Meta:
         article = Blog
         fields = ('title', 'description', 'date',
-                  'author', 'story', 'image-url')
+                  'author', 'story', 'image_url')

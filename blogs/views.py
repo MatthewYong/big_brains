@@ -37,7 +37,7 @@ def blog_add(request):
 
     blog_form = BlogForm()
 
-    template = 'checkout/checkout.html'
+    template = 'blog_add.html'
     context = {
         'blog_form': blog_form,
     }
