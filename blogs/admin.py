@@ -8,8 +8,8 @@ class BlogAdmin(admin.ModelAdmin):
         'date',
         'author',
         'description',
-        'story',
-        'image',
+        'article',
+        'image_url',
     )
 
     ordering = ('author',)

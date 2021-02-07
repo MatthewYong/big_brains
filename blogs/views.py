@@ -36,11 +36,10 @@ def blog_add(request):
     """
 
     blog_form = BlogForm()
+    template = 'blogs/blog_add.html'
 
-    template = 'blog_add.html'
     context = {
         'blog_form': blog_form,
     }
 
     return render(request, template, context)
-

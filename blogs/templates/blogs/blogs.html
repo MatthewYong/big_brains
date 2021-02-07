@@ -20,9 +20,9 @@
     {% for blog in blogs %}   
     <a href="{% url 'blog_detail' blog.id %}" class="blog-link">
         <div class="row blog-box">
-            {% if blog.image %}            
+            {% if blog.image_url %}            
                 <div class="col-6">
-                    <img src="{{ MEDIA_URL }}{{ blog.image }}" class="blog-image" 
+                    <img src="{{ blog.image_url }}" class="blog-image" 
                     alt="{{ blog.title }}">
                 </div>
             {% else %}  
