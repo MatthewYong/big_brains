@@ -74,7 +74,7 @@ def blog_add(request):
 @login_required
 def blog_delete(request, blog_id):
     """
-    A view to delete the blog by the blog's user
+    A view to delete the blog written by the blog's user
     """
     blog = get_object_or_404(Blog, pk=blog_id)
 
@@ -89,9 +89,39 @@ def blog_delete(request, blog_id):
 @login_required
 def blog_edit(request, blog_id):
     """
-    A view to delete the blog by the blog's user
+    A view to edit the blog written by the blog's user
     """
+    if request.method == 'POST':
+        blog_form_data = {
+            'image_url': request.POST['image_url'],
+            'title': request.POST['title'],
+            'author_friendly': request.POST['author_friendly'],
+            'date': request.POST['date'],
+            'description': request.POST['description'],
+            'article': request.POST['article'],
+        }
 
+        blog_form = BlogForm(blog_form_data)
 
+        # Instance code used from https://www.youtube.com/watch?
+        # v=zJWhizYFKP0&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0u
+        # c&index=27&ab_channel=TheNetNinja
+        if blog_form.is_valid():
+            instance = blog_form.save(commit=False)
+            instance.author = request.user
+            instance.save()
+            return redirect(reverse('blogs'))
+        else:
+            messages.error(request, 'There is something wrong with your form. \
+                Please double check your information.')
+    else:
+        blog = get_object_or_404(Blog, pk=blog_id)
+        blog_form = BlogForm()
 
+        template = 'blogs/blog_edit.html'
 
+        context = {
+            'blog_form': blog_form,
+            'blog': blog,
+        }
+        return render(request, template, context)

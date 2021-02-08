@@ -35,7 +35,7 @@
                 <p class="blog-description md-font">{{ blog.description }}</p> 
                 <p class="blog-author sm-font">by {{ blog.author_friendly }}</p>
                 {% if blog.author == request.user %}
-                    <a href="">Edit</a>
+                    <a href="{% url 'blog_edit' blog.id %}">Edit</a>
                     <a href="{% url 'blog_delete' blog.id %}">Delete</a>
                 {% endif %}
             </div>    
