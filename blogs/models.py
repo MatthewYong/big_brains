@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils import timezone
 
 
 class Blog(models.Model):
@@ -8,7 +7,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=200, null=False, blank=False)
     author_friendly = models.CharField(max_length=30, null=False, blank=False)
     description = models.CharField(max_length=200, null=False, blank=False)
-    date = models.DateTimeField(default=timezone.now)
+    date = models.DateTimeField(auto_now=True)
     article = models.CharField(max_length=10000, null=False, blank=False)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
 
