@@ -46,12 +46,15 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+
+    # Big Brain's apps
     'landing',
     'toys',
     'blogs',
     'cart',
     'checkout',
     'profiles',
+    'reviews',
 
     # Miscellaneous apps
     'crispy_forms',
