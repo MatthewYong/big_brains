@@ -43,7 +43,6 @@ def blog_add(request):
             'image_url': request.POST['image_url'],
             'title': request.POST['title'],
             'author_friendly': request.POST['author_friendly'],
-            'date': request.POST['date'],
             'description': request.POST['description'],
             'article': request.POST['article'],
         }
@@ -97,12 +96,11 @@ def blog_edit(request, blog_id):
             'image_url': request.POST['image_url'],
             'title': request.POST['title'],
             'author_friendly': request.POST['author_friendly'],
-            'date': request.POST['date'],
             'description': request.POST['description'],
             'article': request.POST['article'],
         }
 
-        blog_form = BlogForm(blog_form_data or None, instance=blog)
+        blog_form = BlogForm(blog_form_data, instance=blog)
 
         if blog_form.is_valid():
             blog_form.save()

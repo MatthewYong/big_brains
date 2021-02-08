@@ -9,12 +9,6 @@ class BlogForm(forms.ModelForm):
             'title',
             'author_friendly',
             'description',
-            'date',
             'article',
             'image_url'
         )
-"""
-        widget = {
-            'title': forms.TextInput(attrs={'placeholder': 'Test'})
-        }
-"""
