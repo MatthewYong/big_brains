@@ -42,6 +42,7 @@ def blog_add(request):
         blog_form_data = {
             'image_url': request.POST['image_url'],
             'title': request.POST['title'],
+            'author_friendly': request.POST['author_friendly'],
             'date': request.POST['date'],
             'description': request.POST['description'],
             'article': request.POST['article'],
@@ -72,7 +73,7 @@ def blog_add(request):
 
 def blog_delete(request, blog_id):
     """
-    A view to delete the blog by the author
+    A view to delete the blog by the blog's user
     """
     blog = get_object_or_404(Blog, pk=blog_id)
 

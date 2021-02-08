@@ -15,7 +15,8 @@
                 <fieldset>
                     <legend>Write your article</legend>
                     {{ blog_form.image_url | as_crispy_field }} 
-                    {{ blog_form.title | as_crispy_field }}  
+                    {{ blog_form.title | as_crispy_field }}    
+                    {{ blog_form.author_friendly | as_crispy_field }}                                        
                     {{ blog_form.date | as_crispy_field }}                    
                     {{ blog_form.description | as_crispy_field }}      
                     {{ blog_form.article | as_crispy_field }}

@@ -4,9 +4,9 @@ from .models import Blog
 
 class BlogAdmin(admin.ModelAdmin):
     list_display = (
-        'title',
-        'date',
         'author',
+        'author_friendly',
+        'title',
         'description',
         'article',
         'image_url',
