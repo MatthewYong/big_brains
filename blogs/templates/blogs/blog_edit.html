@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <form action="{% url 'blog_add' %}" method="POST" id="blog-add-form">
+            <form action="{% url 'blog_edit' blog.id %}" method="POST" id="blog-add-form">
                 {% csrf_token %}
                 <fieldset>
                     <legend>Write your article</legend>
@@ -22,7 +22,7 @@
                     {{ blog_form.article | as_crispy_field }}
                 </fieldset>
                 <div class="col-12">
-                    <button>Add your article</button>
+                    <button>Edit your article</button>
                 </div>
             </form>
         </div>

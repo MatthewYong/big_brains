@@ -92,6 +92,7 @@ def blog_edit(request, blog_id):
     A view to edit the blog written by the blog's user
     """
     if request.method == 'POST':
+        blog = get_object_or_404(Blog, pk=blog_id)
         blog_form_data = {
             'image_url': request.POST['image_url'],
             'title': request.POST['title'],
@@ -101,15 +102,13 @@ def blog_edit(request, blog_id):
             'article': request.POST['article'],
         }
 
-        blog_form = BlogForm(blog_form_data)
+        blog_form = BlogForm(blog_form_data or None, instance=blog)
 
         # Instance code used from https://www.youtube.com/watch?
         # v=zJWhizYFKP0&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0u
         # c&index=27&ab_channel=TheNetNinja
         if blog_form.is_valid():
-            instance = blog_form.save(commit=False)
-            instance.author = request.user
-            instance.save()
+            blog_form.save()
             return redirect(reverse('blogs'))
         else:
             messages.error(request, 'There is something wrong with your form. \

@@ -53,7 +53,6 @@ def update_cart(request, toy_id):
             request, 'Cart is up-to-date')
     else:
         cart.pop(toy_id)
-        print('Item removed from cart')
         messages.error(request, 'Removed from Cart')
     request.session['cart'] = cart
 
