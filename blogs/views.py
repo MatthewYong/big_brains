@@ -104,9 +104,6 @@ def blog_edit(request, blog_id):
 
         blog_form = BlogForm(blog_form_data or None, instance=blog)
 
-        # Instance code used from https://www.youtube.com/watch?
-        # v=zJWhizYFKP0&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0u
-        # c&index=27&ab_channel=TheNetNinja
         if blog_form.is_valid():
             blog_form.save()
             return redirect(reverse('blogs'))
@@ -115,7 +112,7 @@ def blog_edit(request, blog_id):
                 Please double check your information.')
     else:
         blog = get_object_or_404(Blog, pk=blog_id)
-        blog_form = BlogForm()
+        blog_form = BlogForm(instance=blog)
 
         template = 'blogs/blog_edit.html'
 
