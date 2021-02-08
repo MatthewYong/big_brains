@@ -71,6 +71,7 @@ def blog_add(request):
         return render(request, template, context)
 
 
+@login_required
 def blog_delete(request, blog_id):
     """
     A view to delete the blog by the blog's user
@@ -83,3 +84,14 @@ def blog_delete(request, blog_id):
     else:
         messages.error(request, 'You cannot delete this article.')
         return redirect(reverse('blogs'))
+
+
+@login_required
+def blog_edit(request, blog_id):
+    """
+    A view to delete the blog by the blog's user
+    """
+
+
+
+

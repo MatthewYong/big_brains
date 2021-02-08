@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'blogs/css/blogs.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form action="{% url 'blog_add' %}" method="POST" id="blog-add-form">
+                {% csrf_token %}
+                <fieldset>
+                    <legend>Write your article</legend>
+                    {{ blog_form.image_url | as_crispy_field }} 
+                    {{ blog_form.title | as_crispy_field }}    
+                    {{ blog_form.author_friendly | as_crispy_field }}                                        
+                    {{ blog_form.date | as_crispy_field }}                    
+                    {{ blog_form.description | as_crispy_field }}      
+                    {{ blog_form.article | as_crispy_field }}
+                </fieldset>
+                <div class="col-12">
+                    <button>Add your article</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
