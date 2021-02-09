@@ -55,15 +55,21 @@
         <div class="col-12 review">
             <p>Reviews</p>
             <form action="" method="POST">
-                {% csrf_token %}
-                                
-
+                {% csrf_token %}       
                 <div>
                     <p>If no review, show text 'Write the First Review'</p>
                     <!--Only logged in users can add review-->
                     <button>Add review</button>
-                </div>            
+                </div>  
             </form>
+
+            {% for review in reviews %}
+            <div>
+                {{ review.name }}
+            </div>
+            {% endfor %}  
+            
+ 
         </div>
     </div>
 </div>

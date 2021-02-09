@@ -7,7 +7,9 @@ from .forms import BlogForm
 
 
 def all_blogs(request):
-    """A view to show the fields of each blog"""
+    """
+    A view to show the fields of each blog
+    """
 
     blogs = Blog.objects.all()
 
