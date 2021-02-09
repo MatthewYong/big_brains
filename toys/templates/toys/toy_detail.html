@@ -54,11 +54,16 @@
     <div class="row">
         <div class="col-12 review">
             <p>Reviews</p>
-            <div>
-                <p>If no review, show text 'Write the First Review'</p>
-                <!--Only logged in users can add review-->
-                <button>Add review</button>
-            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                                
+
+                <div>
+                    <p>If no review, show text 'Write the First Review'</p>
+                    <!--Only logged in users can add review-->
+                    <button>Add review</button>
+                </div>            
+            </form>
         </div>
     </div>
 </div>
