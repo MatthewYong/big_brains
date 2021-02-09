@@ -34,7 +34,7 @@ class Toy(models.Model):
 
 
 class ToyReview(models.Model):
-    
+
     name = models.CharField(max_length=30, null=False, blank=False)
     date = models.DateTimeField(auto_now=True)
     comment = models.CharField(max_length=500, null=False, blank=False)

@@ -54,16 +54,18 @@
     <div class="row">
         <div class="col-12 review">
             <p>Reviews</p>
-            <form action="" method="POST">
+            <form action="{% url 'add_toy_review' toy.id %}" method="POST">
                 {% csrf_token %}       
                 <div>
+                    {{ toy_review_form.name | as_crispy_field }}     
+                    {{ toy_review_form.comment | as_crispy_field }}                                     
                     <p>If no review, show text 'Write the First Review'</p>
                     <!--Only logged in users can add review-->
                     <button>Add review</button>
                 </div>  
             </form>
 
-            {% for review in reviews %}
+            {% for review in toy_reviews %}
             <div>
                 {{ review.name }}
             </div>
