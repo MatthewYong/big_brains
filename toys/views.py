@@ -47,3 +47,16 @@ def toy_detail(request, toy_id):
     }
 
     return render(request, 'toys/toy_detail.html', context)
+
+
+def all_reviews(request):
+    """
+    A view to get all the reviews for each specific toy
+    """
+
+
+    context = {
+        'reviews': reviews,
+    }
+
+    return render(request, 'toys/toys.html', context)

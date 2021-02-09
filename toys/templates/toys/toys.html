@@ -17,6 +17,15 @@
                 found             
             </p>
         </div>
+
+        
+        {% for review in reviews %}
+        <div>
+            {{ review.name }}
+        </div>
+        {% endfor %}  
+        
+        
         <div class="col-4 toypage-filter dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Filter by Age
             <span class="caret"></span></button>
