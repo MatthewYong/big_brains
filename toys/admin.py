@@ -22,6 +22,7 @@ class AgeAdmin(admin.ModelAdmin):
 
 class ToyReviewAdmin(admin.ModelAdmin):
     list_display = (
+        'toy_review',
         'name',
         'date',
         'comment',
