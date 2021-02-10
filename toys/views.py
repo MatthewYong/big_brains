@@ -39,16 +39,21 @@ def all_toys(request):
 
 
 def toy_detail(request, toy_id):
-    """A view to show single toy and its user reviews"""
+    """
+    A view to show single toy and its user reviews.
+    In toy_reviews we get all the objects from the
+    ToyReview model and through the filter method we can
+    filter all the reviews by a specific toy's id.
+    """
 
-    toy_review_form = ToyReviewForm()
     toy = get_object_or_404(Toy, pk=toy_id)
     toy_reviews = ToyReview.objects.all().filter(toy=toy)
+    toy_review_form = ToyReviewForm()
 
     context = {
-        'toy_review_form': toy_review_form,
         'toy': toy,
         'toy_reviews': toy_reviews,
+        'toy_review_form': toy_review_form,
     }
     return render(request, 'toys/toy_detail.html', context)
 
@@ -62,12 +67,13 @@ def add_toy_review(request, toy_id):
 
         redirect_url = request.POST.get('redirect_url')
         toy_review_form_data = {
+            'toy': request.POST['toy'],
             'name': request.POST['name'],
             'comment': request.POST['comment'],
         }
 
         toy_review_form = ToyReviewForm(toy_review_form_data)
-
+        print(toy_review_form)
         if toy_review_form.is_valid():
             instance = toy_review_form.save(commit=False)
             instance.toy = request.GET.get(toy_id)

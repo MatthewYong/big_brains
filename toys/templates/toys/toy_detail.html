@@ -68,7 +68,7 @@
                 </div>  
             </form>
 
-            {% for review in toy_reviews %}
+            {% for review in toy.toy_reviews.all %}
             <div>
                 {{ review.toy }}                
                 {{ review.name }}

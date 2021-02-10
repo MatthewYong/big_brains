@@ -35,7 +35,7 @@ class Toy(models.Model):
 
 class ToyReview(models.Model):
 
-    toy = models.ForeignKey('Toy', null=True, blank=True, on_delete=models.SET_NULL)
+    toy = models.ForeignKey('Toy', related_name='reviews', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=30, null=False, blank=False)
     date = models.DateTimeField(auto_now=True)
     comment = models.CharField(max_length=500, null=False, blank=False)
