@@ -48,21 +48,7 @@ def toy_detail(request, toy_id):
         'toy_review_form': toy_review_form,
         'toy': toy,
     }
-    print(toy)
     return render(request, 'toys/toy_detail.html', context)
-
-
-def toy_reviews(request, toy_id):
-    """
-    A view to get all the reviews for each specific toy
-    """
-    toy_reviews = get_object_or_404(ToyReview, pk=toy_id)
-
-    context = {
-        'toy_reviews': toy_reviews,
-    }
-
-    return render(request, 'toys/toys.html', context)
 
 
 def add_toy_review(request, toy_id):
@@ -71,6 +57,8 @@ def add_toy_review(request, toy_id):
     """
     if request.method == 'POST':
 
+        redirect_url = request.POST.get('redirect_url')
+        print(redirect_url)
         toy_review_form_data = {
             'name': request.POST['name'],
             'comment': request.POST['comment'],
@@ -80,10 +68,11 @@ def add_toy_review(request, toy_id):
 
         if toy_review_form.is_valid():
             toy_review_form.save()
-            return redirect(reverse('toy_detail'))
+            return redirect(redirect_url)
         else:
             messages.error(request, 'There is something wrong with your form. \
                 Please double check your information.')
+    """
     else:
         toy_reviews = get_object_or_404(ToyReview, pk=toy_id)
 
@@ -92,3 +81,4 @@ def add_toy_review(request, toy_id):
         }
         print(context)
         return render(request, 'toys/toy_detail.html', context)
+    """
