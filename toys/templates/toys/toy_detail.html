@@ -60,6 +60,7 @@
                     {{ toy_review_form.toy | as_crispy_field }}
                     {{ toy_review_form.name | as_crispy_field }}     
                     {{ toy_review_form.comment | as_crispy_field }} 
+                    <!--Redirect to same toy after form is submitted-->
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     <p>If no review, show text 'Write the First Review'</p>
                     <!--Only logged in users can add review-->
@@ -69,9 +70,12 @@
 
             {% for review in toy_reviews %}
             <div>
+                {{ review.toy }}                
                 {{ review.name }}
+                {{ review.comment }}                
             </div>
             {% endfor %}  
+
             
  
         </div>

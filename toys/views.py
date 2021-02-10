@@ -39,14 +39,16 @@ def all_toys(request):
 
 
 def toy_detail(request, toy_id):
-    """A view that shows a single toy page"""
+    """A view to show single toy and its user reviews"""
 
     toy_review_form = ToyReviewForm()
     toy = get_object_or_404(Toy, pk=toy_id)
+    toy_reviews = ToyReview.objects.all().filter(toy=toy)
 
     context = {
         'toy_review_form': toy_review_form,
         'toy': toy,
+        'toy_reviews': toy_reviews,
     }
     return render(request, 'toys/toy_detail.html', context)
 
@@ -55,10 +57,10 @@ def add_toy_review(request, toy_id):
     """
     A view to add a review for a specific toy
     """
+
     if request.method == 'POST':
 
         redirect_url = request.POST.get('redirect_url')
-        print(redirect_url)
         toy_review_form_data = {
             'name': request.POST['name'],
             'comment': request.POST['comment'],
@@ -67,18 +69,10 @@ def add_toy_review(request, toy_id):
         toy_review_form = ToyReviewForm(toy_review_form_data)
 
         if toy_review_form.is_valid():
-            toy_review_form.save()
+            instance = toy_review_form.save(commit=False)
+            instance.toy = request.GET.get(toy_id)
+            instance.save()
             return redirect(redirect_url)
         else:
             messages.error(request, 'There is something wrong with your form. \
                 Please double check your information.')
-    """
-    else:
-        toy_reviews = get_object_or_404(ToyReview, pk=toy_id)
-
-        context = {
-            'toy_reviews': toy_reviews,
-        }
-        print(context)
-        return render(request, 'toys/toy_detail.html', context)
-    """
