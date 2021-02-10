@@ -66,6 +66,7 @@ def add_toy_review(request, toy_id):
     if request.method == 'POST':
 
         redirect_url = request.POST.get('redirect_url')
+        toy = request.POST.get('toy', toy_id)
         toy_review_form_data = {
             'toy': request.POST['toy'],
             'name': request.POST['name'],
