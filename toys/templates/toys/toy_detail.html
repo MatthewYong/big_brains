@@ -57,7 +57,6 @@
             <form action="{% url 'add_toy_review' toy.id %}" method="POST">
                 {% csrf_token %}       
                 <div>
-                    {{ toy_review_form.toy | as_crispy_field }}
                     {{ toy_review_form.name | as_crispy_field }}     
                     {{ toy_review_form.comment | as_crispy_field }} 
                     <!--Redirect to same toy after form is submitted-->
