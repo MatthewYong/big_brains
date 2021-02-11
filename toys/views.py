@@ -64,20 +64,14 @@ def add_toy_review(request, toy_id):
     """
 
     if request.method == 'POST':
-
+        toy = get_object_or_404(Toy, pk=toy_id)
         redirect_url = request.POST.get('redirect_url')
-        toy = request.POST.get('toy', toy_id)
-        toy_review_form_data = {
-            'toy': request.POST['toy'],
-            'name': request.POST['name'],
-            'comment': request.POST['comment'],
-        }
+        toy_review_form = ToyReviewForm(request.POST)
 
-        toy_review_form = ToyReviewForm(toy_review_form_data)
-        print(toy_review_form)
         if toy_review_form.is_valid():
             instance = toy_review_form.save(commit=False)
-            instance.toy = request.GET.get(toy_id)
+            # Sets the foreign key toy to object Toy with pk=toy_id
+            instance.toy = toy
             instance.save()
             return redirect(redirect_url)
         else:

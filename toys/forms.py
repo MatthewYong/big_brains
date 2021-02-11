@@ -5,8 +5,4 @@ from .models import ToyReview
 class ToyReviewForm(forms.ModelForm):
     class Meta:
         model = ToyReview
-        fields = (
-            'toy',
-            'name',
-            'comment',
-        )
+        fields = '__all__'
