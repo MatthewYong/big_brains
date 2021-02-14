@@ -40,9 +40,10 @@ def delete_toy_review(request, review_id):
     if request.method == 'POST':
         redirect_url = request.POST.get('redirect_url')
         toy_review = get_object_or_404(ToyReview, pk=review_id)
-        print(toy_review)
         if request.user == toy_review.user_review:
             toy_review.delete()
+            messages.success(
+                request, 'Review deleted')
             return redirect(redirect_url)
         else:
             messages.error(
