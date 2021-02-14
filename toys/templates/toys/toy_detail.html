@@ -54,6 +54,16 @@
     <div class="row">
         <div class="col-12 review">
             <p>Reviews</p>
+
+            {% for review in toy_reviews %}
+            <div>             
+                {{ review.name }}
+                {{ review.comment }}       
+                <a href="">Delete</a>         
+            </div>
+            {% endfor %}  
+
+            {% if user.is_authenticated %}
             <form action="{% url 'add_toy_review' toy.id %}" method="POST">
                 {% csrf_token %}       
                 <div>
@@ -65,17 +75,8 @@
                     <!--Only logged in users can add review-->
                     <button>Add review</button>
                 </div>  
-            </form>
-
-            {% for review in toy_reviews %}
-            <div>
-                {{ review.toy }}                
-                {{ review.name }}
-                {{ review.comment }}                
-            </div>
-            {% endfor %}  
-
-            
+            </form>    
+            {% endif %}                    
  
         </div>
     </div>

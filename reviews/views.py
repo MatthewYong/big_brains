@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect
 from django.contrib import messages
 
 from toys.models import Toy
@@ -7,7 +7,9 @@ from .forms import ToyReviewForm
 
 def add_toy_review(request, toy_id):
     """
-    A view to add a review for a specific toy
+    A view to add a review for a specific toy.
+    The view gets the ID from a specific toy and
+    links it to the filled form
     """
 
     if request.method == 'POST':
