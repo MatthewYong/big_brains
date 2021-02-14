@@ -4,6 +4,7 @@ from .models import ToyReview
 
 class ToyReviewAdmin(admin.ModelAdmin):
     list_display = (
+        'user_review',
         'toy',
         'name',
         'date',
