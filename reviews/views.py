@@ -1,7 +1,8 @@
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+from .models import ToyReview
 from toys.models import Toy
 from .forms import ToyReviewForm
 
@@ -30,3 +31,18 @@ def add_toy_review(request, toy_id):
         else:
             messages.error(request, 'There is something wrong with your form. \
                 Please double check your information.')
+
+
+def delete_toy_review(request, toy_id):
+    """
+    A view to delete a review from a specic user
+    """
+    review = get_object_or_404(ToyReview, pk=toy_id)
+
+    if request.user == review.user_review:
+        review.delete()
+        return redirect(reverse('toys'))
+    else:
+        messages.error(
+            request, 'Sorry you can only delete your own reviews')
+        return redirect(reverse('toys'))
