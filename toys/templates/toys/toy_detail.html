@@ -59,8 +59,20 @@
             <div>             
                 {{ review.name }}
                 {{ review.comment }}  
-                {% if review.user_review == request.user %}     
-                <a href="{% url 'delete_toy_review' toy.id %}">Delete</a>      
+                {% if review.user_review == request.user %} 
+                {{ request.path }}
+
+                <a href="{% url 'delete_toy_review' toy.id %}"> Delete</a>
+
+                <!--
+                <form action="{% url 'delete_toy_review' toy.id %}" method="POST">
+                    {% csrf_token %} 
+                    <div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">                
+                        <button>Delete review</button>
+                    </div>
+                </form>    
+                -->
                 {% endif %}   
             </div>
             {% endfor %}  
