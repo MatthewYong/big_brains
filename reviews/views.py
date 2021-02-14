@@ -1,10 +1,12 @@
 from django.shortcuts import get_object_or_404, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from toys.models import Toy
 from .forms import ToyReviewForm
 
 
+@login_required
 def add_toy_review(request, toy_id):
     """
     A view to add a review for a specific toy.
