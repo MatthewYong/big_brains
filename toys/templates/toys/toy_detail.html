@@ -59,8 +59,9 @@
             <div>             
                 {{ review.name }}
                 {{ review.comment }}  
-               
-                <a href="">Delete</a>         
+                {% if review.user_review == User %}     
+                <a href="">Delete</a>      
+                {% endif %}   
             </div>
             {% endfor %}  
 

@@ -23,6 +23,8 @@ def add_toy_review(request, toy_id):
             instance = toy_review_form.save(commit=False)
             # Sets the foreign key toy to object Toy with pk=toy_id
             instance.toy = toy
+            # Sets the foreign key user to object user_review with user_id
+            instance.user_review = request.user
             instance.save()
             return redirect(redirect_url)
         else:
