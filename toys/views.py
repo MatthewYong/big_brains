@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 
 from .models import Toy, Age
+from reviews.models import ToyReview
+from reviews.forms import ToyReviewForm
 
 
 def all_toys(request):
@@ -46,9 +48,13 @@ def toy_detail(request, toy_id):
     """
 
     toy = get_object_or_404(Toy, pk=toy_id)
+    toy_reviews = ToyReview.objects.all().filter(toy=toy)
+    toy_review_form = ToyReviewForm()
 
     context = {
         'toy': toy,
-
+        'toy_reviews': toy_reviews,
+        'toy_review_form': toy_review_form,
     }
+
     return render(request, 'toys/toy_detail.html', context)

@@ -1,27 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import ToyReview
+from django.contrib import messages
+
 from toys.models import Toy
-
 from .forms import ToyReviewForm
-
-
-def view_toy_review(request, toy_id):
-    """
-    A view to show single toy and its user reviews.
-    In toy_reviews we get all the objects from the
-    ToyReview model and through the filter method we can
-    filter all the reviews by a specific toy's id.
-    """
-
-    toy = get_object_or_404(Toy, pk=toy_id)
-    toy_reviews = ToyReview.objects.all().filter(toy=toy)
-    toy_review_form = ToyReviewForm()
-
-    context = {
-        'toy_reviews': toy_reviews,
-        'toy_review_form': toy_review_form,
-    }
-    return render(request, 'toys/toy_detail.html', context)
 
 
 def add_toy_review(request, toy_id):
@@ -43,4 +24,3 @@ def add_toy_review(request, toy_id):
         else:
             messages.error(request, 'There is something wrong with your form. \
                 Please double check your information.')
-
