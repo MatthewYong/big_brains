@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.contrib import messages
-
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import ToyReview
 from toys.models import Toy
+
 from .forms import ToyReviewForm
 
 
-def toy_detail(request, toy_id):
+def view_toy_review(request, toy_id):
     """
     A view to show single toy and its user reviews.
     In toy_reviews we get all the objects from the
@@ -18,7 +18,6 @@ def toy_detail(request, toy_id):
     toy_review_form = ToyReviewForm()
 
     context = {
-        'toy': toy,
         'toy_reviews': toy_reviews,
         'toy_review_form': toy_review_form,
     }
