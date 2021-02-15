@@ -130,16 +130,13 @@ nav {
 }
 
 
-
-
-
 /*Footer*/
 
 footer {
     background-color:#CFCFCF;
     text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 footer a {
@@ -153,6 +150,15 @@ footer a {
 /*Footer links*/
 .footer-link-wrapper {
     margin-top: 1rem;
+}
+
+.footer-links {
+    padding-top: 1rem;
+}
+
+.footer-links a:hover {
+    color: #971328;
+    text-decoration: none;
 }
 
 
@@ -174,7 +180,7 @@ footer a {
 
 /*Contact form*/
 .contact-form {
-    display: block;
+    display: none;
     position: fixed;
     top: 10vh;
     left: 25%;
