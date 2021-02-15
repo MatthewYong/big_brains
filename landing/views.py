@@ -11,7 +11,7 @@ def index(request):
 
     if request.method == 'POST':
         message = request.POST['message']
-        send_mail('Contact Form',
+        send_mail('Contact Form Big Brains',
                   message,
                   settings.EMAIL_HOST_USER,
                   ['kfm.yong@gmail.com'],
