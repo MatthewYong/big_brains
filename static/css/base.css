@@ -174,15 +174,23 @@ footer a {
 
 /*Contact form*/
 .contact-form {
-    position: fixed;
-    top: 10rem;
-    left: 25%;
     display: block;
+    position: fixed;
+    top: 10vh;
+    left: 25%;
     width: 50%;
     text-transform: uppercase;
     color: #ECECB1;
     background-color: #971329fa;    
     border: 0.2rem solid  #AB8E66;
-    padding: 3rem;
+    padding: 2rem;
     margin-top: 5rem;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+}
+
+#contact-button {
+    margin-top: 1rem;
 }
