@@ -9,7 +9,10 @@
 
 <div class="container">
     <div class="row toypage-header">
-        <div class="col-4 toypage-path">{{ request.get_full_path }}</div>
+        <div class="col-4 toypage-path">
+            <a href="/">home</a>
+            {{ request.path }}
+        </div>
         <div class="col-4 toypage-quantity">
             <p>
                 {{ toys.count }} toy{% if toys.count > 1 %}s

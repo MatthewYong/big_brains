@@ -9,7 +9,13 @@
 
 <div class="container">
     <div class="row toypage-header">
-        <div class="col-4 toypage-path">{{ request.get_full_path }}</div>
+        <div class="col-4 toypage-path">
+            <a href="/">home</a>
+            <span>/</span>
+            <a href="{% url 'toys' %}">toys</a>
+            <span>/</span>
+            <span>{{ toy.id }}</span>            
+        </div>
         <div class="col-4 toypage-quantity">
             <p>... Products found</p>
         </div>
