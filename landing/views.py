@@ -6,7 +6,7 @@ from django.conf import settings
 def index(request):
     """
     A view that shows the landing page and sends
-    an email to the user.
+    an email to the user
     """
 
     if request.method == 'POST':
