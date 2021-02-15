@@ -180,6 +180,7 @@ footer a {
     left: 25%;
     width: 50%;
     text-transform: uppercase;
+    font-weight: 500;
     color: #ECECB1;
     background-color: #971329fa;    
     border: 0.2rem solid  #AB8E66;
@@ -187,8 +188,34 @@ footer a {
     margin-top: 5rem;
 }
 
+.contact-form h1 {
+    margin-bottom: 2rem;
+}
+
 .contact-form label {
     margin-top: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    background-color:  #ffffff;
+}
+
+.contact-form input:hover, .contact-form textarea:hover {
+    background-color: #fce9e9ec;
+}
+
+.contact-form-input {
+    text-transform: none;
+    color: black;
+    font-weight: 600;
+}
+
+.contact-form a {
+    color: #ECECB1;
+}
+
+.contact-form a:hover {
+    color: #AB8E66;
 }
 
 #contact-button {
