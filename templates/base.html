@@ -106,61 +106,69 @@
     <footer class="md-font">
         <div class="container-fluid">
             <div class="row footer-link-wrapper">
-                <div class="col-1 offset-4">
-                    <a href="{% url 'toys' %}">Home</a>
-                </div>
-                <div class="col-1">
-                    <a href="{% url 'toys' %}">Toys</a>
-                </div>
-                <div class="col-1">
-                    <a href="{% url 'blogs' %}">Blogs</a>
-                </div>
-                <div class="col-1">
-                    <a href="">contact</a>
-                </div>
-            </div> 
-            <div class="row social-media-wrapper">           
-                <div class="col-1 offset-4">
-                    <a href="https://twitter.com" class="social-media" target="_blank" rel="noopener">
-                        <i class="fab fa-twitter-square" aria-hidden="true"></i>
-                        <span class="sr-only">twitter</span>
-                    </a>
-                </div>
-                <div class="col-1">
-                    <a href="https://youtube.com" class="social-media" target="_blank" rel="noopener">
-                        <i class="fab fa-youtube-square" aria-hidden="true"></i>
-                        <span class="sr-only">youtube</span>
-                    </a>
-                </div>
-                <div class="col-1">
-                    <a href="https://facebook.com" class="social-media" target="_blank" rel="noopener">
-                        <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                        <span class="sr-only">facebook</span>
-                    </a>
-                </div>
-                <div class="col-1">
-                    <a href="https://instagram.com" class="social-media" target="_blank" rel="noopener">
-                        <i class="fab fa-instagram-square" aria-hidden="true"></i>
-                        <span class="sr-only">instagram</span>
-                    </a>
-                </div>                                                
-            </div>
-            <div class="row copyright">
-                <div class="col-12">
+                <div class="col-4 social-media-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Follow Us</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="https://twitter.com" class="social-media" target="_blank" rel="noopener">
+                                <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                                <span class="sr-only">twitter</span>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://youtube.com" class="social-media" target="_blank" rel="noopener">
+                                <i class="fab fa-youtube-square" aria-hidden="true"></i>
+                                <span class="sr-only">youtube</span>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://facebook.com" class="social-media" target="_blank" rel="noopener">
+                                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                                <span class="sr-only">facebook</span>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://instagram.com" class="social-media" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                                <span class="sr-only">instagram</span>
+                            </a>
+                        </div>                         
+                    </div>
+                </div> 
+                <div class="col-4">
+                    <div>
+                        <a href="{% url 'toys' %}">Home</a>
+                    </div>
+                    <div>
+                        <a href="{% url 'toys' %}">Toys</a>
+                    </div>
+                    <div>
+                        <a href="{% url 'blogs' %}">Blogs</a>
+                    </div>
+                    <div>
+                        <a href="">contact</a>
+                    </div>
+                </div>                                     
+                <div class="col-4 copyright">
                     <p>Copyright 2020 © <b>Matthew Yong</b></p>
                 </div>
-            </div>
-            <div class="row contact-form">
-                <div class="col-12 mx-auto">
-                    <p>Contact</p>
-                    <form>
+            </div>        
+            <div class="row contact-form mx-auto">
+                <div class="col-12">
+                    <h2>Contact</h2>
+                    <form action="" method="POST">
                         <label for="">Name</label>
-                        <input class="form-control" type="text"><br>
+                        <input class="form-control" type="text" required>
                         <label for="">Email</label>
-                        <input class="form-control" type="text"><br>
+                        <input class="form-control" type="text" required>
                         <label for="">Message</label>
-                        <input class="form-control" type="text" row="3"><br>
-                        <input type="submit" value="Submit">
+                        <textarea class="form-control" type="text" row="3" required>
+                        </textarea>
+                        <button>Send</button>
                     </form>
                 </div>
             </div>
@@ -168,11 +176,11 @@
     </footer>
     <!--Toast messages; code used from CI lesson 'Toasts'-->
     {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-        {% include 'includes/toasts/toasts.html'%}
-        {% endfor %}
-    </div>
+        <div class="message-container">
+            {% for message in messages %}
+            {% include 'includes/toasts/toasts.html'%}
+            {% endfor %}
+        </div>
     {% endif %}
     {% block postloadjs %}
     <script src="{% static 'js/main.js' %}"></script>
