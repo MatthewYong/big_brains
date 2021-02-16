@@ -276,7 +276,7 @@ a.bottom:hover:before {
 
 /*404 & 500 styling*/
 .image-bg-error {
-    background-image: url("/static/images/landing/image-banner1.jpg");
+    background-image: url("/static/images/error/image-error.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -290,26 +290,32 @@ a.bottom:hover:before {
     margin-bottom: 4rem;
 }
 
+
+
 .error-content{
     text-align: center;
 }
 
 .error-link{
-    color: #152a23;
+    color: #FFFFD9;
+    background-color: #971328;
 }
 
 .error-link:hover{
-    background-color: rgba(34, 34, 34, 0.144);
-    opacity: 0.8;
+    background-color: #971329e1;
 }
 
 .error-link:active{
-    box-shadow: 0.05rem 0.05rem 0.1rem rgb(10, 10, 10) inset; 
+    box-shadow: 0.3rem 0.3rem 0.1rem rgb(10, 10, 10) inset; 
 }
 
 .error-link p{
     text-align: center;
-    border: 0.1rem solid #222;    
+    border: 0.2rem solid #AB8E66;   
     padding: 1rem;
     margin-top: 3rem;
+}
+
+.error-text a:hover {
+    text-decoration: none;
 }
