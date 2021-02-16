@@ -131,12 +131,11 @@ nav {
 
 
 /*Footer*/
-
 footer {
     background-color:#CFCFCF;
     text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 footer a {
@@ -191,8 +190,6 @@ a.bottom:before {
   transition: all 0.3s ease-in-out;
 }
 
-
-
 a.bottom:hover:before {
   visibility: visible;
   height: 3px;
@@ -200,21 +197,44 @@ a.bottom:hover:before {
 
 
 /*Social media links*/
-
 .social-media-wrapper{
     margin-top: 1rem;
 }
 
 .social-media-header {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 2rem;
 }
 
 .social-media {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #971328;
 }
+
+
+/*Social media colours found on google.com*/
+.twitter {
+    color: #1DA1F2;
+}
+
+.youtube {
+    color: #FF0000;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.instagram { 
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
 
 .copyright {
     margin-top: 5rem;
