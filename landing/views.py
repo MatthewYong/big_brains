@@ -18,3 +18,11 @@ def index(request):
                   fail_silently=False)
 
     return render(request, 'landing/index.html')
+
+
+def tempview(request):
+    """
+    Temporary view to render temp.html
+    """
+
+    return render(request, 'landing/temp.html')

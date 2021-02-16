@@ -223,7 +223,7 @@ a.bottom:hover:before {
 
 /*Contact form*/
 .contact-form {
-    display: block;
+    display: none;
     position: fixed;
     top: 10vh;
     left: 25%;
@@ -270,3 +270,9 @@ a.bottom:hover:before {
 #contact-button {
     margin-top: 1rem;
 }
+
+
+
+
+/*404 & 500 styling*/
+
