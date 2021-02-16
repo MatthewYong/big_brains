@@ -54,27 +54,27 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active underline-transition" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'toys' %}">Toys</a>
+                        <a class="nav-link underline-transition" href="{% url 'toys' %}">Toys</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blogs' %}">Blogs</a>
+                        <a class="nav-link underline-transition" href="{% url 'blogs' %}">Blogs</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link underline-transition" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
+                        <a class="nav-link underline-transition" href="{% url 'profile' %}">My Profile</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link underline-transition" href="{% url 'account_login' %}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
+                        <a class="nav-link underline-transition" href="{% url 'account_signup' %}">Signup</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -142,16 +142,16 @@
                 </div> 
                 <div class="col-4">
                     <div class="footer-links">
-                        <a href="{% url 'landing' %}" class="bottom">Home</a>
+                        <a href="{% url 'landing' %}" class="underline-transition">Home</a>
+                    </div>
+                    <div class="footer-links ">
+                        <a href="{% url 'toys' %}" class="underline-transition">Toys</a>
                     </div>
                     <div class="footer-links">
-                        <a href="{% url 'toys' %}">Toys</a>
+                        <a href="{% url 'blogs' %}" class="underline-transition">Blogs</a>
                     </div>
                     <div class="footer-links">
-                        <a href="{% url 'blogs' %}">Blogs</a>
-                    </div>
-                    <div class="footer-links">
-                        <a href="">contact</a>
+                        <a href="" class="underline-transition">contact</a>
                     </div>
                 </div>                                     
                 <div class="col-4 copyright">
