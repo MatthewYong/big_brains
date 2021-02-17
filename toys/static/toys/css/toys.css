@@ -18,25 +18,21 @@
 }
 
 .toy-filter-button {
-    font-weight: 500;
-    color: #FFFFD9;
-    background-color: #971328;
-    border: 0.1rem solid #AB8E66;
-    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f; 
+    font-weight: 600;
+    color: #0f0f0f;
+    background-color: #ffff;
+    border: 0.1rem solid #ffff;
     text-transform: uppercase;
+    padding: 0.25rem;
 }
 
 .toy-filter-button:hover {
-    font-weight: 500;
-    color: #ffff;
-    background-color: #971328;
-    border: 0.1rem solid #AB8E66;
-    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .dropdown-menu {
     text-align: center;
-    background-color: #ECECB1;
+    background-color: #ffff;
 }
 
 .dropdown-menu a {
