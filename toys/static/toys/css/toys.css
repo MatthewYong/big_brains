@@ -22,6 +22,7 @@
     color: #FFFFD9;
     background-color: #971328;
     border: 0.1rem solid #AB8E66;
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f; 
     text-transform: uppercase;
 }
 
@@ -64,7 +65,7 @@
 .toy-image {
     display: block;
     width: 100%;
-    height: 30vh;
+    height: auto;
 }
 
 .toy-name {
@@ -76,7 +77,23 @@
 }
 
 .buy-button {
+    font-weight: 500;
+    color: #FFFFD9;
+    background-color: #971328;
+    border: 0.1rem solid #AB8E66;
     border-radius: 0.2rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f; 
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+
+.buy-button:hover {
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.buy-button:active {
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset;
 }
 
 .toys-count-zero {

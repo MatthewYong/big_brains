@@ -100,6 +100,10 @@ nav {
     margin: 0;
 }
 
+.cart a:hover {
+    color: #FFFFD9;
+}
+
 .cart-icon-quantity {
     font-size: 1rem;
     font-weight: 600;
@@ -110,6 +114,20 @@ nav {
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 50%;
+}
+
+.search-form {
+    font-weight: 600;
+    color: #0F0F0F;
+    background-color: #8F793E;
+    border: 0.1rem solid #FFFFD9;
+}
+
+.search-form:hover {
+    font-weight: 600;
+    color: #0F0F0F;
+    background-color: #8F793E;
+    border: 0.1rem solid #FFFFD9;
 }
 
 #logo {
