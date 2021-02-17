@@ -8,8 +8,8 @@
 {% block content %}
 
 <div class="container">
-    <div class="row toypage-header">
-        <div class="col-4 toypage-path">
+    <div class="row toypage-header sm-font">
+        <div class="col-4">
             <a href="/">home</a>
             {{ request.path }}
         </div>
@@ -21,7 +21,7 @@
             </p>
         </div>        
         <div class="col-4 toypage-filter dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Filter by Age
+            <button class="btn btn-danger dropdown-toggle toy-filter-button" type="button" data-toggle="dropdown">Filter by Age
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <li>

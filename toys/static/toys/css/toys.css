@@ -1,9 +1,49 @@
 /*All toys*/
 .toypage-header {
+    text-transform: uppercase;
+    font-weight: 600;
     text-align: center;
     margin-top: 10rem;
     margin-bottom: 5rem;
 }
+
+.toypage-header a {
+    color: #E52F4D;
+}
+
+.toypage-header a:hover {
+    color: #971328;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.toy-filter-button {
+    font-weight: 500;
+    color: #FFFFD9;
+    background-color: #971328;
+    border: 0.1rem solid #AB8E66;
+    text-transform: uppercase;
+}
+
+.toy-filter-button:hover {
+    font-weight: 500;
+    color: #ffff;
+    background-color: #971328;
+    border: 0.1rem solid #AB8E66;
+    text-transform: uppercase;
+}
+
+.dropdown-menu {
+    text-align: center;
+    background-color: #ECECB1;
+}
+
+.dropdown-menu a {
+    color: #0f0f0f;
+}
+
+
+
 
 .toy-box {
     color: #0f0f0f;
@@ -17,7 +57,9 @@
 }
 
 .toy-box:hover {
-    color: #0f0f0f;
+    font-weight: 900;
+    color: #971328;
+    text-decoration: none;
 }
 
 .toy-image {
@@ -31,7 +73,7 @@
 }
 
 .toy-price {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
