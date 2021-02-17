@@ -75,7 +75,7 @@
 .buy-button {
     font-weight: 500;
     color: #FFFFD9;
-    background-color: #971328;
+    background-color: #c22943;
     border: 0.1rem solid #AB8E66;
     border-radius: 0.2rem;
     box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f; 
@@ -84,7 +84,6 @@
 }
 
 .buy-button:hover {
-    font-weight: 600;
     opacity: 0.9;
 }
 
