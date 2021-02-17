@@ -173,7 +173,7 @@ nav {
 
 /*Footer*/
 footer {
-    background-color:rgba(143, 121, 62, 0.87);
+    background-image:linear-gradient(#8F793E, #AB8E66);
     text-align: center;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
@@ -197,6 +197,7 @@ footer a {
 }
 
 .footer-links a:hover {
+    font-weight: 900;    
     color: #971328;
     text-decoration: none;
 }
@@ -242,8 +243,8 @@ footer a {
   -webkit-background-clip: text;
 }
 
-
 .copyright {
+    font-weight: 600;
     margin-top: 5rem;
 }
 
