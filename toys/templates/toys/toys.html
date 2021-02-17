@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="container">
     <div class="row toypage-header sm-font">
         <div class="col-4">
@@ -15,7 +14,7 @@
         </div>
         <div class="col-4 toypage-quantity">
             <p>
-                {{ toys.count }} toy{% if toys.count > 1 %}s
+                {{ toys.count }} toy{% if toys.count > 1 or toys.count == 0 %}s
                 {% endif %} 
                 found             
             </p>
@@ -39,9 +38,14 @@
             </ul>
         </div>   
     </div>
+    {% if toys.count == 0 %}
+    <div class="toys-count-zero">
+        <p>No toys found</p>
+    </div>
+    {% endif %}
     <div class="row">
         {% for toy in toys %}  
-        <div class="col-4">
+        <div class="col-4 toy-box-wrapper">
             <a href="{% url 'toy_detail' toy.id %}" class="toy-box mx-auto">  
                 {% if toy.image %}            
                     <div>

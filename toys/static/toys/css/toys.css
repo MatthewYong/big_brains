@@ -8,11 +8,11 @@
 }
 
 .toypage-header a {
-    color: #E52F4D;
+    color: #971328;
 }
 
 .toypage-header a:hover {
-    color: #971328;
+    color: #E52F4D;
     font-weight: 600;
     text-decoration: none;
 }
@@ -42,8 +42,9 @@
     color: #0f0f0f;
 }
 
-
-
+.toy-box-wrapper {
+    margin-bottom: 5rem;
+}
 
 .toy-box {
     color: #0f0f0f;
@@ -52,8 +53,6 @@
     width: 20rem;
     height: 30rem;
     padding: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
 }
 
 .toy-box:hover {
@@ -65,7 +64,7 @@
 .toy-image {
     display: block;
     width: 100%;
-    height: auto;
+    height: 30vh;
 }
 
 .toy-name {
@@ -76,9 +75,17 @@
     font-weight: 600;
 }
 
-
 .buy-button {
     border-radius: 0.2rem;
+}
+
+.toys-count-zero {
+    font-size: 3rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 20vh;
+    height: 60vh;
+    width: 100%;
 }
 
 /*Toy detail*/
