@@ -150,3 +150,17 @@ input::-webkit-inner-spin-button {
     background: none;
     padding: 0;
 }
+
+.review-login {
+    text-transform: capitalize;
+}
+
+.review-login a {
+    color: #971328;
+    text-decoration: none;
+}
+
+.review-login a:hover {
+    color: #E52F4D;
+    font-weight: 600;
+}

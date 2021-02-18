@@ -93,8 +93,8 @@
             </form>    
         
             {% else %}
-            <div>
-                <p>Please login to add a review</p>
+            <div class="review-login">
+                <p>Please <a href="{% url 'account_login' %}">login</a> to add a review</p>
             </div>
             {% endif %}                    
  
