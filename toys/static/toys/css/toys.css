@@ -130,9 +130,15 @@
     font-weight: 600;
 }
 
-.review button{
-    margin-bottom: 1rem;
+.review-form {
+    width: 50%;
+    margin-top: 5rem;
+}
 
+.review-add-button {
+    padding: 0.25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -141,8 +147,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.delete-review {
-    font-size: 1.25rem;  
+.review-delete {
     font-weight: 600;  
     text-transform: uppercase;
     color: #971328;
@@ -153,14 +158,12 @@ input::-webkit-inner-spin-button {
 
 .review-login {
     text-transform: capitalize;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .review-login a {
     color: #971328;
-    text-decoration: none;
-}
-
-.review-login a:hover {
-    color: #E52F4D;
     font-weight: 600;
 }
+
