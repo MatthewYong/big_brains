@@ -66,6 +66,7 @@
 
 .toy-name {
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .toy-price {
@@ -77,7 +78,7 @@
     text-align: center;
 }
 
-.buy-button {
+.add-to-cart-button{
     font-weight: 500;
     color: #FFFFD9;
     background-color: #c22943;
@@ -88,11 +89,11 @@
     padding: 0.5rem;
 }
 
-.buy-button:hover {
+.add-to-cart-button:hover {
     opacity: 0.9;
 }
 
-.buy-button:active {
+.add-to-cart-button:active {
     box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset;
 }
 
@@ -107,16 +108,24 @@
 
 
 /*Toy detail*/
-.quantity-input {
-    margin-bottom: 1rem;
+.quantity-input-header {
+    margin-top: 2rem;
+    font-weight: 600;
 }
 
-.add-to-cart-button {
-    margin-bottom: 1rem;
+.quantity-input input {
+    text-align: center;
+    margin-bottom: 2rem;    
 }
 
 /*Toy review*/
 .review button{
     margin-bottom: 1rem;
 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
