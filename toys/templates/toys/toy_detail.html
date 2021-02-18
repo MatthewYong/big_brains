@@ -69,7 +69,9 @@
                     {% csrf_token %} 
                     <div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">                
-                        <button class="general-button" type="submit">Delete review</button>
+                        <button class="delete-review" type="submit">
+                            <i class="far fa-trash-alt"></i> Delete review
+                        </button>
                     </div>
                 </form>    
                 {% endif %}   
@@ -86,7 +88,7 @@
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     <p>If no review, show text 'Write the First Review'</p>
                     <!--Only logged in users can add review-->
-                    <button>Add review</button>
+                    <button class="general-button">Add review</button>
                 </div>  
             </form>    
         

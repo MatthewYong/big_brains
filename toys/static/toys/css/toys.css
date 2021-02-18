@@ -130,7 +130,6 @@
     font-weight: 600;
 }
 
-
 .review button{
     margin-bottom: 1rem;
 
@@ -140,4 +139,14 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.delete-review {
+    font-size: 1.25rem;  
+    font-weight: 600;  
+    text-transform: uppercase;
+    color: #971328;
+    border: none;
+    background: none;
+    padding: 0;
 }
