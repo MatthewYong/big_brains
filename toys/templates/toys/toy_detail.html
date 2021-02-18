@@ -46,7 +46,7 @@
                 <div class="quantity-input">
                     <input type="number" name="quantity" value="1" min="1" max="10" data-toy-id="{{ toy.id }}" id="id_qty_{{ toy.id }}">
                 </div>
-                <button class="add-to-cart-button" type="submit">
+                <button class="general-button" type="submit">
                     Add to cart
                 </button>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -54,23 +54,24 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 review">
-            <p>Reviews</p>
-
+        <div class="col-12 review sm-font">
+            <div class="review-header">
+                <p>Reviews</p>
+                <hr>
+            </div>
             {% for review in toy_reviews %}
-            <div>             
-                {{ review.name }}
-                {{ review.comment }}  
+            <div class="review-wrapper"> 
+                <p class="review-comment">"{{ review.comment }}"</p>          
+                <p class="review-name">{{ review.name }}</p>  
+
                 {% if review.user_review == request.user %}
-                
                 <form action="{% url 'delete_toy_review' review.id %}" method="POST">
                     {% csrf_token %} 
                     <div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">                
-                        <button>Delete review</button>
+                        <button class="general-button" type="submit">Delete review</button>
                     </div>
                 </form>    
-
                 {% endif %}   
             </div>
             {% endfor %}  

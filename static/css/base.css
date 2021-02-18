@@ -34,6 +34,26 @@ body {
     font-size: 2rem;
 }
 
+/*General button style*/
+.general-button{
+    font-weight: 500;
+    color: #FFFFD9;
+    background-color: #c22943;
+    border: 0.1rem solid #AB8E66;
+    border-radius: 0.2rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f; 
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+
+.general-button:hover {
+    opacity: 0.9;
+}
+
+.general-button:active {
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset;
+}
+
 
 /*Animation of all underline throughout the website. Code inspired from https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
 a.underline-transition:before {

@@ -78,25 +78,6 @@
     text-align: center;
 }
 
-.add-to-cart-button{
-    font-weight: 500;
-    color: #FFFFD9;
-    background-color: #c22943;
-    border: 0.1rem solid #AB8E66;
-    border-radius: 0.2rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f; 
-    text-transform: uppercase;
-    padding: 0.5rem;
-}
-
-.add-to-cart-button:hover {
-    opacity: 0.9;
-}
-
-.add-to-cart-button:active {
-    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset;
-}
-
 .toys-count-zero {
     font-size: 3rem;
     text-transform: capitalize;
@@ -119,6 +100,37 @@
 }
 
 /*Toy review*/
+.review {
+    font-style: italic;
+}
+
+.review-header {
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.review-wrapper {
+    width: 50%;    
+    border: 0.1rem solid #0f0f0f;
+    border-radius: 0.2rem;
+    background-color: #ECECB1;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.review-comment {
+    font-weight: 500;
+}
+
+.review-name {
+    font-weight: 600;
+}
+
+
 .review button{
     margin-bottom: 1rem;
 

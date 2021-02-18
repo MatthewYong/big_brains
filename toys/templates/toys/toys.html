@@ -67,7 +67,7 @@
                 <div class="quantity-input">
                     <input type="hidden" name="quantity" value="1" min="1" max="10" data-toy-id="{{ toy.id }}" id="id_qty_{{ toy.id }}">
                 </div>
-                <button class="add-to-cart-button" type="submit">
+                <button class="general-button" type="submit">
                     Add to cart
                 </button>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}/{{ toy.id }}">
