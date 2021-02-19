@@ -34,7 +34,6 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     margin-bottom: 1.5rem;
 }
 
-
 #payment-form .form-control,
 #card-element {
     color: #0f0f0f;
@@ -46,7 +45,6 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     width: 100%;
     margin-top: 3rem;
 }
-
 
 /*Checkout*/
 .checkout-header {
