@@ -30,24 +30,21 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
 }
 
 .fieldset-label {
-    position: relative;
-    right: .5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
 }
 
-/*
+
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
-}
-*/
-.test:focus {
-    border-color: #b9acae;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5rem #E52F4D;
+    color: #0f0f0f;
+    border: 0.1rem solid #CFCFCF;
+    border-radius: 0.2rem;
 }
 
 .checkout-payment-card {
-    width: 50%;
+    width: 100%;
+    margin-top: 3rem;
 }
 
 
@@ -61,7 +58,13 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     margin-bottom: 5rem;
 }
 
+.checkout-form-header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
 .checkout-continue {
+    font-weight: 600;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -73,8 +76,8 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
 .checkout-continue a:hover {
     font-weight: 600;
     color: #E52F4D;
+    text-decoration: none;
 }
-
 
 .checkout-buy-button {
     margin-right: 1rem;
