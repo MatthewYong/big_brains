@@ -8,7 +8,7 @@
 
 {% block content %}
     <div class="container">  
-        <div class="row">
+        <div class="row sm-font">
             <div class="col-12 checkout-header">
                 <p>
                     Thank you for shopping with Big Brains!
@@ -17,12 +17,16 @@
             </div>
             <div class="col-12">
                 <p>
-                    Your order number is <span>{{ order.order_number }}</span>
+                    Your order number is <span class="checkout-success-ordernumber">{{ order.order_number }}</span>
                 </p>
                 <p>
                     We have received your order and look forward to fulfil it as soon as possible
-                </p> 
-                <a href="{% url 'toys' %}"> Back to Toys</a>               
+                </p>
+                <a href="{% url 'toys' %}"> 
+                    <button class="general-button checkout-success-button">
+                        Back to Toys
+                    </button>
+                </a>
             </div>
         </div>
     </div> 
