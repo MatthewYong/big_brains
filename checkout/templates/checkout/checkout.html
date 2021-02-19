@@ -20,10 +20,10 @@
         </div>
         <div class="row cart-items-header lg-font">
             <div class="col-2 offset-1"></div>
-            <div class="col-2">
+            <div class="col-3">
                 <p class="cart-item-header">Toy</p>
             </div>
-            <div class="col-2">
+            <div class="col-1">
                 <p class="cart-item-header">Price</p>
             </div>
             <div class="col-2">
@@ -40,10 +40,10 @@
                     <img src="{{ MEDIA_URL }}{{ item.toy.image }}"    class="cart-image" alt="">
                 </a>
             </div>
-            <div class="col-2 cart-items">
+            <div class="col-3 cart-items">
                 <p>{{ item.toy.name }}</p>
             </div>
-            <div class="col-2 cart-items">
+            <div class="col-1 cart-items">
                 <p>£{{ item.toy.price }}</p>
             </div>   
             <div class="col-2 cart-items">
@@ -87,8 +87,8 @@
                         {{ order_form.country | as_crispy_field }}
                         {{ order_form.comments | as_crispy_field }} 
                     </fieldset>        
-                    <fieldset class="px-3 mt-5 mb-5">
-                        <legend class="fieldset-label large text-black px-2 w-auto">
+                    <fieldset class="checkout-payment-card">
+                        <legend class="fieldset-label mt-3">
                             Payment Card
                         </legend>
                         <!-- A Stripe card element will go here -->
@@ -103,9 +103,8 @@
                                 Back to Cart
                             </span>
                         </a>
-                        <button id="submit-button">Buy Now</button>
+                        <button class="general-button"  id="submit-button">Buy Now</button>
                     </div>
-
                 </form>                
             </div>
         </div>                

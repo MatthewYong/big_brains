@@ -34,10 +34,16 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     right: .5rem;
 }
 
+/*
 #payment-form .form-control,
 #card-element {
     color: #000;
     border: 1px solid #000;
+}
+*/
+
+.checkout-payment-card {
+    width: 50%;
 }
 
 
