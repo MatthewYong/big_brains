@@ -12,6 +12,21 @@ class OrderForm(forms.ModelForm):
             'first_name': forms.TextInput(attrs={
                 'class': 'input',
                 'placeholder': 'First Name'}),
+            'last_name': forms.TextInput(attrs={
+                'class': 'input',
+                'placeholder': 'Last Name'}),
+            'email_address': forms.TextInput(attrs={
+                'class': 'input',
+                'placeholder': 'Email Address'}),
+            'address': forms.TextInput(attrs={
+                'class': 'input',
+                'placeholder': 'Address'}),
+            'postcode': forms.TextInput(attrs={
+                'class': 'input',
+                'placeholder': 'Postcode'}),
+            'town': forms.TextInput(attrs={
+                'class': 'input',
+                'placeholder': 'Town'}),
             'comments': forms.Textarea(attrs={
                 'class': 'textarea', 'rows': 5,
                 'placeholder': 'Comments'}),
