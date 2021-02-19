@@ -41,6 +41,10 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     border: 1px solid #000;
 }
 */
+.test:focus {
+    border-color: #b9acae;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5rem #E52F4D;
+}
 
 .checkout-payment-card {
     width: 50%;
