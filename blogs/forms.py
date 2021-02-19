@@ -13,6 +13,10 @@ class BlogForm(forms.ModelForm):
             'image_url',
         )
 
+        labels = {
+            "author_friendly": "Author",
+        }
+
         widgets = {
             'image_url': forms.TextInput(attrs={
                 'class': 'input',
