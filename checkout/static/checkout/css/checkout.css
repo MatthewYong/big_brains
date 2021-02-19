@@ -51,7 +51,6 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
 }
 
 
-
 /*Checkout*/
 .checkout-header {
     text-align: center;
@@ -62,6 +61,27 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     margin-bottom: 5rem;
 }
 
+.checkout-continue {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.checkout-continue a {
+    color: #971328;
+}
+
+.checkout-continue a:hover {
+    font-weight: 600;
+    color: #E52F4D;
+}
+
+
+.checkout-buy-button {
+    margin-right: 1rem;
+    padding: 0.25rem;
+}
+
+
 /*Code used form CI profile lesson*/
 select,
 select option {
@@ -71,6 +91,8 @@ select option {
 select:invalid {
     color: #aab7c4;
 }
+
+
 
 
 

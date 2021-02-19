@@ -97,13 +97,17 @@
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>                       
                     </fieldset>
-                    <div class="col-12">
-                        <a href="{% url 'view_cart' %}">
-                            <span>
-                                Back to Cart
-                            </span>
-                        </a>
-                        <button class="general-button"  id="submit-button">Buy Now</button>
+                    <div class="checkout-continue sm-font">
+                        <button class="general-button checkout-buy-button"  id="submit-button">
+                            Buy Now
+                        </button>                        
+                        <span>
+                            or
+                            <a href="{% url 'view_cart' %}">
+                                Edit
+                            </a
+                            >your Shopping Cart
+                        </span>                            
                     </div>
                 </form>                
             </div>
