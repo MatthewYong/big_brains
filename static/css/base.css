@@ -116,6 +116,12 @@ a.underline-transition:hover:before {
     margin-bottom: 8rem;
 }
 
+.cart-separator{
+    background-color: #971328;
+    padding: 0.01rem;
+    margin-top: 1rem;
+}
+
 /*Navigation menu*/
 nav {
     height: 6rem;
