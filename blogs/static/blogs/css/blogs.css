@@ -50,7 +50,6 @@
 }
 
 
-
 /*blog detail*/
 
 .blogpage-detail-header {
@@ -82,6 +81,25 @@
 
 .blog-detail-article {
     margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+/*Blog add */
+
+.blog-add-wrapper {
+    width: 75%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.blog-add-header {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+
+.blog-add-button {
     margin-bottom: 3rem;
 }
 
