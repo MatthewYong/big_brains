@@ -13,3 +13,9 @@
     padding: 0.01rem;
     margin-top: 1rem;
 }
+
+.order-toy-image {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+}

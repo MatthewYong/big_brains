@@ -3,15 +3,16 @@
 
 {% block extracss %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">     
+    <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">      
 {% endblock %}
 
 {% block content %}
     <div class="container">  
-        <!--Summary-->
+        <!--My orders-->
         <div class="row">
             <div class="col-12 cart-header">
                 <p>
-                    My profile
+                    My orders
                 </p>   
                 <hr class="cart-separator">   
             </div>
@@ -19,27 +20,92 @@
                 <div>
                     {{ order.order_number }}
                     {{ order.order_date }}
-                    {{ order.profile }}                    
-  
                 </div>
-
+                <hr>
                 {% for item in order.lineitems.all %}
                     <div>
+                        <img src="{{ MEDIA_URL }}{{ item.toy.image }}" class="order-toy-image" alt="no image">
+                    </div>
+                    <div>
                         {{ item.toy.name }}
-                        {{ item.toy.age }}
                         {{ item.toy.sku }}   
-                        {{ item.toy.image }}                                                                       
                     </div>
                 {% endfor %}
             {% endfor %}
-            <div>
-
-            </div>
-            
-
-
-
         </div>
     </div>
+
+    {% if orders %}
+        <div class="container md-font">
+            <div class="row">
+                <div class="col-12 cart-header">
+                    <p>
+                        My Orders
+                    </p>   
+                    <hr class="cart-separator">   
+                </div>
+            </div>
+            {% for order in orders %}             
+                <div class="row cart-items-header">
+                    <div class="col-2"></div>
+                    <div class="col-3">
+                        <p class="cart-item-header">Toy</p>
+                    </div>
+                    <div class="col-1">
+                        <p class="cart-item-header">Price</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="cart-item-header">Quantity</p>
+                    </div>
+                    <div class="col-1 offset-1">
+                        <p class="cart-item-header">Delete</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="cart-item-header">Subtotal</p>
+                    </div>                
+                </div>
+                {% for item in order.lineitems.all %}
+                    <div class="row">                   
+                        <div class="col-2">
+                            <a href="{% url 'toy_detail' item.toy.id %}">
+                                <img src="{{ MEDIA_URL }}{{ item.toy.image }}"    class="cart-image" alt="">
+                            </a>
+                        </div>
+                        <div class="col-3 cart-items">
+                            <p>{{ item.toy.name }}</p>
+                        </div>
+                        <div class="col-1 cart-items">
+                            <p>£{{ item.toy.price }}</p>
+                        </div>                            
+                        <div class="col-2 cart-items">
+                            <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
+                        </div>                                               
+                    </div>
+                <hr>
+            {% endfor %} 
+            <div class="row cart-total">
+                <div class="col-2 offset-8">
+                    <p class="cart-item-header">Total</p>
+                </div>
+                <div class="col-2">
+                    <p>£{{ total }}</p>
+                </div>
+            </div>                
+        </div>
+    {% else %}  
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-8 offset-2 cart-header-empty">
+                    <p>
+                        Your have no orders!
+                    </p>   
+                    <hr>
+                    <p class="md-font">Click <a href="{% url 'toys' %}">here</a> to continue Shopping
+                    </p>      
+
+                </div>
+            </div>
+        </div> 
+    {% endif %}
 
 {% endblock %}
