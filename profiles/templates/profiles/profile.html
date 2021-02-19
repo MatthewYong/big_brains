@@ -58,7 +58,7 @@
                             <p>{{item.quantity}}</p>
                         </div>                                                
                         <div class="col-2 offset-2 cart-items">
-                            <p>£</p>
+                            <p>£{{ item.toy.price | cart_total:item.quantity }}</p>
                         </div>                                               
                     </div>
                 {% endfor %}
