@@ -14,8 +14,11 @@
     margin-top: 1rem;
 }
 
-.order-toy-image {
-    display: block;
-    width: 5rem;
-    height: 5rem;
+.profile-order {
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.profile-order span {
+    font-weight: 600;
 }

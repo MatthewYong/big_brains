@@ -7,34 +7,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">  
-        <!--My orders-->
-        <div class="row">
-            <div class="col-12 cart-header">
-                <p>
-                    My orders
-                </p>   
-                <hr class="cart-separator">   
-            </div>
-            {% for order in orders %}
-                <div>
-                    {{ order.order_number }}
-                    {{ order.order_date }}
-                </div>
-                <hr>
-                {% for item in order.lineitems.all %}
-                    <div>
-                        <img src="{{ MEDIA_URL }}{{ item.toy.image }}" class="order-toy-image" alt="no image">
-                    </div>
-                    <div>
-                        {{ item.toy.name }}
-                        {{ item.toy.sku }}   
-                    </div>
-                {% endfor %}
-            {% endfor %}
-        </div>
-    </div>
-
     {% if orders %}
         <div class="container md-font">
             <div class="row">
@@ -44,8 +16,16 @@
                     </p>   
                     <hr class="cart-separator">   
                 </div>
-            </div>
-            {% for order in orders %}             
+            </div>  
+            {% for order in orders %} 
+                <div class="profile-order">
+                    <p>
+                        Order: <span>{{ order.order_number }}</span>
+                    </p>
+                    <p>
+                        Order date: <span>{{ order.order_date }}</span>
+                    </p> 
+                </div>                      
                 <div class="row cart-items-header">
                     <div class="col-2"></div>
                     <div class="col-3">
@@ -78,19 +58,20 @@
                             <p>£{{ item.toy.price }}</p>
                         </div>                            
                         <div class="col-2 cart-items">
-                            <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
+                            <p>£</p>
                         </div>                                               
                     </div>
-                <hr>
-            {% endfor %} 
-            <div class="row cart-total">
-                <div class="col-2 offset-8">
-                    <p class="cart-item-header">Total</p>
-                </div>
-                <div class="col-2">
-                    <p>£{{ total }}</p>
-                </div>
-            </div>                
+                    <hr>
+                {% endfor %} 
+                <div class="row cart-total">
+                    <div class="col-2 offset-8">
+                        <p class="cart-item-header">Total</p>
+                    </div>
+                    <div class="col-2">
+                        <p>£{{ total }}</p>
+                    </div>
+                </div>  
+            {% endfor %}               
         </div>
     {% else %}  
         <div class="container text-center">
