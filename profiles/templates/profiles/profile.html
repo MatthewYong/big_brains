@@ -20,7 +20,7 @@
             {% for order in orders %} 
                 <div class="profile-order">
                     <p>
-                        Order: <span>{{ order.order_number }}</span>
+                        Order number: <span>{{ order.order_number }}</span>
                     </p>
                     <p>
                         Order date: <span>{{ order.order_date }}</span>
@@ -37,10 +37,7 @@
                     <div class="col-2">
                         <p class="cart-item-header">Quantity</p>
                     </div>
-                    <div class="col-1 offset-1">
-                        <p class="cart-item-header">Delete</p>
-                    </div>
-                    <div class="col-2">
+                    <div class="col-2 offset-2">
                         <p class="cart-item-header">Subtotal</p>
                     </div>                
                 </div>
@@ -56,19 +53,22 @@
                         </div>
                         <div class="col-1 cart-items">
                             <p>£{{ item.toy.price }}</p>
-                        </div>                            
+                        </div>     
                         <div class="col-2 cart-items">
+                            <p>{{item.quantity}}</p>
+                        </div>                                                
+                        <div class="col-2 offset-2 cart-items">
                             <p>£</p>
                         </div>                                               
                     </div>
-                    <hr>
-                {% endfor %} 
+                {% endfor %}
+                <hr> 
                 <div class="row cart-total">
                     <div class="col-2 offset-8">
                         <p class="cart-item-header">Total</p>
                     </div>
                     <div class="col-2">
-                        <p>£{{ total }}</p>
+                        <p>£{{ order.cart_total }}</p>
                     </div>
                 </div>  
             {% endfor %}               
@@ -81,7 +81,7 @@
                         Your have no orders!
                     </p>   
                     <hr>
-                    <p class="md-font">Click <a href="{% url 'toys' %}">here</a> to continue Shopping
+                    <p class="md-font">Click <a href="{% url 'toys' %}">here</a> to start Shopping
                     </p>      
 
                 </div>
