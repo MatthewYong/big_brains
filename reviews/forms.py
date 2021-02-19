@@ -16,9 +16,10 @@ class ToyReviewForm(forms.ModelForm):
         # 1A&t=20s&ab_channel=PrettyPrinted
 
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'input',
-                                           'placeholder': 'Your name'}),
-            'comment': forms.Textarea(attrs={'class': 'textarea', 'rows': 5,
-                                             'placeholder':
-                                             'Write your review...'}),
+            'name': forms.TextInput(attrs={
+                'class': 'input',
+                'placeholder': 'Your name'}),
+            'comment': forms.Textarea(attrs={
+                'class': 'textarea', 'rows': 5,
+                'placeholder': 'Write your review...'}),
         }
