@@ -11,7 +11,7 @@ class ToyReviewForm(forms.ModelForm):
             'comment',
         )
 
-        # Widgets to add place holders and control layout of the form. Code
+        # Widgets to add placeholders and control layout of the form. Code
         # partially used from: https://www.youtube.com/watch?v=VYs-u0g
         # 1A&t=20s&ab_channel=PrettyPrinted
 

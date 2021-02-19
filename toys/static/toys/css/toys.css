@@ -118,6 +118,7 @@
     border: 0.1rem solid #0f0f0f;
     border-radius: 0.2rem;
     background-color: #FFFFD9;
+    box-shadow: 0.05rem 0.05rem 0.05rem #0f0f0f;    
     padding: 1rem;
     margin-bottom: 2rem;
 }
@@ -135,26 +136,10 @@
     margin-top: 5rem;
 }
 
-input[type="text"]:focus {   
-  border-color: #0f0f0f;
-  box-shadow: none;
-  outline: 0 none;
-}
-/*
-.review-form: :focus {
-    outline: #4CAF50 solid 10px;
-}*/
-
 .review-add-button {
     padding: 0.25rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .review-delete {
