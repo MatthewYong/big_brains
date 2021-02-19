@@ -27,6 +27,7 @@
 
 .cart-items {
     text-align: center;
+    text-transform: uppercase;
     margin-bottom: 1rem;
     margin-top: 3rem;
 }
@@ -57,25 +58,17 @@
 }
 
 .cart-update-button{
-    font-weight: 500;
-    color: #FFFFD9;
-    background-color: #c22943;
-    border: 0.1rem solid #AB8E66;
-    border-radius: 0.2rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f; 
-    text-transform: uppercase;
+    color: #0b991e;
+    background: none;
+    border: none;
 }
 
 .cart-update-button:hover {
     opacity: 0.9;
 }
 
-.cart-update-button:active {
-    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset;
-}
-
 .cart-delete-button {
-    font-size: 1.25rem;    
+    font-size: 1.5rem;    
     color: #971328;
     border: none;
     background: none;

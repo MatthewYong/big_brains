@@ -20,7 +20,7 @@ class BlogForm(forms.ModelForm):
         widgets = {
             'image_url': forms.TextInput(attrs={
                 'class': 'input',
-                'placeholder': 'https://www.image_url...'}),
+                'placeholder': 'https://www.example_image_url.com'}),
             'title': forms.TextInput(attrs={
                 'class': 'input',
                 'placeholder': 'Title of your Blog'}),
