@@ -29,10 +29,10 @@
                 <div class="col-2">
                     <p class="cart-item-header">Quantity</p>
                 </div>
-                <div class="col-1 offset-1">
+                <div class="col-1">
                     <p class="cart-item-header">Delete</p>
                 </div>
-                <div class="col-2">
+                <div class="col-2 offset-1">
                     <p class="cart-item-header">Subtotal</p>
                 </div>                
             </div>
@@ -59,7 +59,7 @@
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>
                     </div>                            
-                    <div class="col-1 offset-1 cart-items">   
+                    <div class="col-1 cart-items">   
                         <form action="{% url 'remove_from_cart' item.toy.id %}" method="POST">
                         {% csrf_token %}
                             <button class="cart-delete-button" type="submit">
@@ -68,7 +68,7 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>                                         
                     </div>
-                    <div class="col-2 cart-items">
+                    <div class="col-2 offset-1 cart-items">
                         <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
                     </div>                                               
                 </div>
