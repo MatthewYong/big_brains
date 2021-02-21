@@ -118,7 +118,7 @@
 
 .blog-detail-article {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 30vh;
 }
 
 
@@ -156,11 +156,9 @@
 }
 
 /*Blog edit*/
-
-
 .blog-delete-button {
     padding: 0.25rem;
-    margin-left: 5rem;
+    margin-left: 10vw;
 }
 
 .blog-delete-button:hover {
