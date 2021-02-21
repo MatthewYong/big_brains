@@ -210,6 +210,14 @@ nav {
 }
 
 /*Toasts messages*/
+.toast {
+    box-shadow: 0.1rem 0.1rem 0.1rem #A3A3A3; 
+}
+.toast-header {
+    color: #FFFFD9;
+    background-color: #971328;
+}
+
 .message-container {
     position: fixed;
     top: 7rem;
@@ -221,12 +229,7 @@ nav {
     font-weight: 600;
     text-transform: uppercase;
     color: #0f0f0f;
-    background-color: #ECECB1;
-}
-
-.toast-message-image {
-    width: 8rem;
-    height: 5rem;
+    background-color: #FFFFD9;
 }
 
 
