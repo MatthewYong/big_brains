@@ -414,7 +414,11 @@ footer a {
     margin-top: 2rem;
 }
 
-
+/*Login*/
+.login-button {
+    padding: 0.25rem;
+    margin-left: 2rem;
+}
 
 
 
