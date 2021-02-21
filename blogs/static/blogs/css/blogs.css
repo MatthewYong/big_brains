@@ -130,6 +130,17 @@
     margin-bottom: 3rem;
 }
 
+.blog-add-wrapper label { 
+    font-weight: 600;    
+    color: #971328;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.blog-add-wrapper input, .blog-add-wrapper textarea {
+    font-style: italic;
+}
+
 .blog-add-header {
     font-size: 2.5rem;
     font-weight: 500;
@@ -143,8 +154,6 @@
     padding: 0.25rem;
     margin-bottom: 5rem;
 }
-
-
 
 /*Blog edit*/
 
