@@ -377,14 +377,29 @@ footer a {
 }
 
 .auth-bg-block {
-    background-image:linear-gradient(#ECECB1, #ffffd9);    
+    background-image:linear-gradient(#ECECB1, #ffffd9);  
+    padding: 2rem;  
 }
 
-
-.login-header {
+.auth-header {
+    font-weight: 600;
     color: #971328;
-    margin-top: 5rem;
+    text-transform: uppercase;
+    margin-top: 10vh;
+    margin-bottom: 2rem;
 }
+
+/*Signup*/
+
+.signup-button {
+    padding: 0.25rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
 
 
 
