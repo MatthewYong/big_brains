@@ -14,7 +14,7 @@
             <p>
                 Read the latest blogs from educators or parents with experience and learn what is best for your children. If you have any questions about these articles, please contact don't hesitate to us.
             </p> 
-            <a href="{% url 'blog_add' %}">Write your article</a>
+            <a href="{% url 'blog_add' %}">Write your blog</a>
         </div>
     </div>
     {% for blog in blogs %}   
@@ -30,14 +30,16 @@
                     <img src="{{ MEDIA_URL }}no_image_available.jpg" class="blog-image" alt="no image">
                 </div>                
             {% endif %}
-            <div class="col-7">
+            <div class="col-6 blog-text">
                 <p class="blog-title lg-font">{{ blog.title }}</p>          
                 <p class="blog-description md-font">{{ blog.description }}</p> 
                 <p class="blog-author sm-font">by {{ blog.author_friendly }}</p>
+                <div class="blog-control">
                 {% if blog.author == request.user %}
-                    <a href="{% url 'blog_edit' blog.id %}">Edit</a>
+                    <a href="{% url 'blog_edit' blog.id %}">Edit</a> | 
                     <a href="{% url 'blog_delete' blog.id %}">Delete</a>
                 {% endif %}
+                </div>
             </div>    
         </div>  
     </a>                   

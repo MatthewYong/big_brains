@@ -1,22 +1,35 @@
 /*All blogs page*/
 .blog-header {
-    margin-top: 8rem;
+    margin-top: 25vh;
     margin-bottom: 8rem;
+}
+
+.blog-header a {
+    font-style: italic;
+    font-weight: 500;
+    color: #E52F4D;
+    text-transform: capitalize;
+}
+
+.blog-header a:hover {
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .blog-pagetitle {
     font-size: 3rem;
     font-weight: 900;
+    text-transform: uppercase;
     color: #971328;     
     border-bottom: 0.15rem solid #AB8E66;   
 }
 
 .blog-link {
+    color: #971328;     
     text-decoration: none;
 }
 
 .blog-box {
-    color: #0f0f0f;
     text-decoration: none;
     border: 0.13rem solid #A3A3A3;  
     box-shadow: 0.3rem 0.3rem 0.5rem #A3A3A3;  
@@ -25,14 +38,33 @@
 }
 
 .blog-box:hover {
-    color: #0f0f0f;
+    box-shadow: 0.3rem 0.3rem 0.5rem #AB8E66;  
+}
+
+.blog-box:hover a {
+    text-decoration: none;
 }
 
 .blog-image {
     display: block;
     padding: 1rem;
     width: 100%;
-    height: 25rem;
+    height: 35vh;
+}
+
+.blog-text {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-control a {
+    font-weight: 600;
+    color: #E52F4D;
+    text-transform: uppercase;
+}
+
+.blog-control a:hover {
+    border-bottom: 0.15rem solid #E52F4D;
 }
 
 .blog-title {
@@ -41,13 +73,16 @@
 }
 
 .blog-description {
+    font-style: italic;
     font-weight: 500;
+    color: #971328;
 }
 
 .blog-author {
     font-weight: 900;
     color: #AB8E66;
 }
+
 
 
 /*blog detail*/
