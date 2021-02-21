@@ -18,7 +18,7 @@
         </div>
     </div>
     {% for blog in blogs %}   
-    <a href="{% url 'blog_detail' blog.id %}" class="blog-link">
+    <a href="{% url 'blog_detail' blog.id %}" class="blog-link" id="blog-link">
         <div class="row blog-box">
             {% if blog.image_url %}            
                 <div class="col-6">
@@ -31,8 +31,8 @@
                 </div>                
             {% endif %}
             <div class="col-6 blog-text">
-                <p class="blog-title lg-font">{{ blog.title }}</p>          
-                <p class="blog-description md-font">{{ blog.description }}</p> 
+                <p class="blog-title md-font">{{ blog.title }}</p>          
+                <p class="blog-description sm-font">{{ blog.description }}</p> 
                 <p class="blog-author sm-font">by {{ blog.author_friendly }}</p>
                 <div class="blog-control">
                 {% if blog.author == request.user %}
