@@ -34,6 +34,10 @@ body {
     font-size: 2rem;
 }
 
+input:hover, textarea:hover {
+    background-color: rgba(255, 255, 217, 0.8);
+    border: 0.1rem solid #0f0f0f;
+}
 
 /*General button style*/
 .general-button{
@@ -385,17 +389,30 @@ footer a {
     font-weight: 600;
     color: #971328;
     text-transform: uppercase;
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-bottom: 2rem;
 }
 
 /*Signup*/
+.signup-header{
+    margin-bottom: 3rem;
+}
+
+.signup-header a {
+    font-weight: 600;
+    color: #971328;
+    text-transform: capitalize;
+}
+
+.signup-header a:hover {
+    color: #E52F4D;
+    text-decoration: none;
+}
 
 .signup-button {
     padding: 0.25rem;
     margin-top: 2rem;
 }
-
 
 
 
