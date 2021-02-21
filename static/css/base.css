@@ -317,7 +317,7 @@ footer a {
 
 /*Contact form*/
 .contact-form {
-    display: none;
+    display: block;
     position: fixed;
     top: 10vh;
     left: 25%;
@@ -362,7 +362,8 @@ footer a {
 }
 
 #contact-button {
-    margin-top: 1rem;
+    padding: 0.25rem;
+    margin-top: 1.5rem;
 }
 
 
