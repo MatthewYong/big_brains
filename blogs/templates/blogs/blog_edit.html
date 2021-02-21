@@ -12,17 +12,21 @@
         <div class="col-12">
             <form action="{% url 'blog_edit' blog.id %}" method="POST" id="blog-add-form">
                 {% csrf_token %}
-                <fieldset>
-                    <legend>Write your article</legend>
+                <fieldset class="blog-add-wrapper">
+                    <legend class="blog-add-header">Write your article</legend>
                     {{ blog_form.image_url | as_crispy_field }} 
                     {{ blog_form.title | as_crispy_field }}    
                     {{ blog_form.author_friendly | as_crispy_field }}
                     {{ blog_form.description | as_crispy_field }}      
                     {{ blog_form.article | as_crispy_field }}
                 </fieldset>
-                <div class="col-12">
-                    <button>Edit your article</button>
-                    <a href="{% url 'blog_delete' blog.id %}">Delete</a>
+                <div>
+                    <button class="general-button blog-add-button">
+                        Edit your article
+                    </button>
+                    <a class="general-button blog-delete-button"   href="{% url 'blog_delete' blog.id %}">
+                        <i class="far fa-trash-alt"></i> Delete
+                    </a>
                 </div>
             </form>
         </div>
