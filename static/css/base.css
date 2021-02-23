@@ -73,8 +73,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
-
 /*Animation of all underline throughout the website. Code inspired from https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
 a.underline-transition:before {
   content: "";
