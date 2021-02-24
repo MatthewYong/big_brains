@@ -1,6 +1,6 @@
 /*Hero section*/
 .image-hero {
-    background-image: url("/static/images/landing/image-banner1.jpg");
+    background-image: url("/static/images/landing/image-banner2.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -10,14 +10,28 @@
 }
 
 .banner-text {
-    font-size: 3rem;
     font-weight: 600;
-    color: #FFFFD9;  
-    background-color: #97132965;  
-    text-align: center;
-    margin-top: 20vh;
-    border: 0.2rem solid #AB8E66;
-    border-radius: 0.5rem;
+    color: #8F793E;   
+    margin-top: 15vh;
+}
+
+.banner-text-header{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.banner-button {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #8F793E;
+    text-transform: uppercase;
+    border: 0.10rem solid #8F793E;
+    padding: 0.5rem;
+    margin-top: 3rem;
+}
+
+.banner-button:hover {
+    text-decoration: none;
 }
 
 .landing-text span, .landing-text p {
