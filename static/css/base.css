@@ -310,7 +310,12 @@ footer a {
 
 .copyright {
     font-weight: 600;
-    margin-top: 5rem;
+    margin-top: 3rem;
+}
+
+.owner-social-media a:hover {
+    text-decoration: none;
+    color: #971328;
 }
 
 
