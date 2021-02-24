@@ -193,6 +193,7 @@ nav {
 
 /*Scroll to top button*/
 #scroll-top-button {
+    display: block;
     font-size: 1.5rem;
     color: #FFFFD9;
     background-color: #b9acae;

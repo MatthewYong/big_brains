@@ -9,11 +9,22 @@ $("document").ready(function () {
     });    */
 
 
-    /*On click scroll to top*/
+    //On click scroll to top
+    window.onscroll = function() {visiblebutton()};
+    function visiblebutton() {
+        if ($('window').scrollTop() > 10) {
+            $("#scroll-top-button").css("color", "black");
+        }
+    }
+  
+
+    //When clicked, window will scroll to the top page
     $('#scroll-top-button').on("click", function() {
         window.scrollTo(0,0)
     })
 });
+
+
 
 
 
