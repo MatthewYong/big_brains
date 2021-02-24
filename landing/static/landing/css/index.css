@@ -13,6 +13,7 @@
     font-weight: 600;
     color: #8F793E;   
     margin-top: 15vh;
+    margin-bottom: 5vh;
 }
 
 .banner-text-header{
@@ -31,8 +32,17 @@
 }
 
 .banner-button:hover {
+    color: #FFFFD9;
+    background-color: #971328;
     text-decoration: none;
+    border: 0.15rem solid #8F793E;
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f; 
 }
+
+.banner-button:active {
+    box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset;
+}
+
 
 .landing-text span, .landing-text p {
     text-transform: uppercase;
