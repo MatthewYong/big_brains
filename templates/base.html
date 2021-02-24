@@ -20,7 +20,7 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- AOS Scroll CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
 
     <!-- General CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -44,6 +44,7 @@
 
     <!--Stripe-->
     <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %}
 
     <title>Big Brains {% block extra_title %}{% endblock %}</title>
 </head>
@@ -107,7 +108,7 @@
     {% block content %}
     {% endblock %}
 
-    <button onclick="scrollWintop()" id="scroll-top-button"><i class="fas fa-arrow-up"></i></button>
+    <button id="scroll-top-button"><i class="fas fa-arrow-up"></i></button>
 
     <footer class="sm-font">
         <div class="container-fluid">
@@ -197,18 +198,11 @@
         </div>
     {% endif %}
     {% block postloadjs %}
+    <!-- Main JS -->
     <script src="{% static 'js/main.js' %}"></script>
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    
-    <!--AOS Scroll JS-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    {% endblock %}
 
-    <script>
-    AOS.init();
-    </script>    
+    <!-- AOS Scroll JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
     {% endblock %}
 
 
