@@ -96,7 +96,6 @@
 }
 
 
-
 .image-product-1 {
     background-image: url("/static/images/landing/image-product1.jpg");
 }
@@ -109,6 +108,7 @@
     background-image: url("/static/images/landing/image-product3.jpg");
 }
 
+/*Blog section*/
 .image-blog-1 {
     background-image: url("/static/images/landing/image-blog.jpg");
     background-size: cover;
@@ -118,6 +118,7 @@
     height: 10rem;
 }
 
+/*Payment*/
 .payment-section {
     margin-top: 5rem;
     margin-bottom: 10rem;
@@ -128,6 +129,25 @@
     color: #AB8E66;
 }
 
-.testjs {
-    border: 2rem solid red;
+.visa {
+    color: transparent;
+    background: linear-gradient(#172274 50%, #fcb70a 50%);
+    background-clip: text;
+    -webkit-background-clip: text;    
+}
+
+.master-card {
+    color: transparent;
+    background: linear-gradient(#eb001b 0, #ff5f00
+ 50%, #f79e1b 100%);
+    background-clip: text;
+    -webkit-background-clip: text;    
+}
+
+.paypal {
+    color: #3b7bbf ;
+}
+
+.stripe {
+    color: #5433FF ;
 }
