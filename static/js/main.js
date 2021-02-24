@@ -1,26 +1,27 @@
 $("document").ready(function () {
     AOS.init();
-    
+
+    //Show toast messages throughout the website
     $('.toast').toast('show');
-    
-    /*
-    $(".image-product-1").on("click", function () {
-        $(this).addClass("testjs");
-    });    */
 
 
-    //On click scroll to top
-    window.onscroll = function() {visiblebutton()};
-    function visiblebutton() {
-        if ($('window').scrollTop() > 10) {
-            $("#scroll-top-button").css("color", "black");
+
+    //When scrolled make button visible after 300px
+    //Within 300px button will be hide
+    window.onscroll = function () { scrollButtonVisible() };
+    function scrollButtonVisible() {
+        if ($('body,html').scrollTop() < 300) {
+            $("#scroll-top-button").css("display", "none");
+        } else {
+            if ($('body,html').scrollTop() > 300) {
+                $("#scroll-top-button").css("display", "block");
+            }
         }
     }
-  
 
     //When clicked, window will scroll to the top page
-    $('#scroll-top-button').on("click", function() {
-        window.scrollTo(0,0)
+    $('#scroll-top-button').on("click", function () {
+        window.scrollTo(0, 0);
     })
 });
 
