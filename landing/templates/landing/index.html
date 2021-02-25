@@ -65,7 +65,7 @@
         <!--Test carousel-->
         <div class="row owl-carousel owl-theme">
             {% for toy in toys %}  
-                <div class="col-12 landing-toybox-wrapper">
+                <div class="col-12 landing-box-wrapper">
                     <a href="{% url 'toy_detail' toy.id %}" class="mx-auto">  
                         {% if toy.image %}            
                             <div>
@@ -80,7 +80,7 @@
                         <p class="landing-toy-name sm-font">
                             {{ toy.name }}
                         </p>           
-                        <p class="landing-toy-price xs-font">
+                        <p class="landing-toy-description xs-font">
                             {{ toy.description }}
                         </p>                      
                         <p class="landing-toy-price xs-font">
