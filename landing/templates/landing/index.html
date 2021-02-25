@@ -3,7 +3,7 @@
 {% include "toys.html" %}
 
 {% block extracss %}
-    <link rel="stylesheet" href="{% static 'landing/css/index.css' %}">   
+    <link rel="stylesheet" href="{% static 'landing/css/index.css' %}">      
 
     <!--Owl carousel CDN & CSS-->
     <link rel="stylesheet" href="{% static 'landing/css/owl.carousel.css' %}">
@@ -42,7 +42,8 @@
             <div class="col-12 landing-hor"  data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
                 <span class="landing-decoration">Shop Now</span>
             </div>                
-        </div>     
+        </div>  
+        <!--   
         <div class="row landing-image">
             <div class="col-4">
                 <a href="{% url 'toys' %}">
@@ -59,18 +60,44 @@
                 <div class="image-product-3 image-wrapper" data-aos="zoom-in-right" 
      data-aos-duration="2000"></div>
             </div>                
-        </div>   
+        </div> -->  
+
         <!--Test carousel-->
         <div class="row owl-carousel owl-theme">
             {% for toy in toys %}  
-                <div class="col-4">
-                    <img src="{{ MEDIA_URL }}{{ toy.image }}" class="toy-image" 
-                alt="{{ toy.name }}">
-             
+                <div class="col-4 toy-box-wrapper">
+                    <a href="{% url 'toy_detail' toy.id %}" class="toy-box mx-auto">  
+                        {% if toy.image %}            
+                            <div>
+                                <img src="{{ MEDIA_URL }}{{ toy.image }}" class="toy-image" 
+                                alt="{{ toy.name }}">
+                            </div>
+                        {% else %}  
+                            <div>
+                                <img src="{{ MEDIA_URL }}no_image_available.jpg"  class="toy-image" alt="no image">
+                            </div>                
+                        {% endif %}
+                        <p class="toy-name md-font">{{ toy.name }}</p>           
+                        <p>{{ toy.age }}</p>                      
+                        <p class="toy-price md-font">£{{ toy.price }}</p>  
+                    </a>   
+                    <!--Add to cart button, code used from CI lesson 'Adding Products-->                  
+                    <form class="add-to-cart-form" action="{% url 'add_to_cart' toy.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="quantity-input">
+                            <input type="hidden" name="quantity" value="1" min="1" max="10" data-toy-id="{{ toy.id }}" id="id_qty_{{ toy.id }}">
+                        </div>
+                        <button class="general-button" type="submit">
+                            Add to cart
+                        </button>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}/{{ toy.id }}">
+                    </form>                              
                 </div>
             {% endfor %}    
         </div>            
 
+
+        
         <div class="row section-space">
             <!--Blogs-->
             <div class="col-12 landing-hor" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">

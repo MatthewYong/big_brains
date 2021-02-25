@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -26,6 +26,20 @@ def index(request):
     }
 
     return render(request, 'landing/index.html', context)
+
+
+def view_toy_detail(request, toy_id):
+    """
+    A view to redirect the user to the toy's detailed page
+    """
+
+    toy = get_object_or_404(Toy, pk=toy_id)
+
+    context = {
+        'toy': toy,
+    }
+
+    return render(request, 'toys/toy_detail.html', context)
 
 
 def tempview(request):
