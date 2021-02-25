@@ -1,13 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
+{% include "toys.html" %}
 
 {% block extracss %}
     <link rel="stylesheet" href="{% static 'landing/css/index.css' %}">   
+
+    <!--Owl carousel CDN & CSS-->
+    <link rel="stylesheet" href="{% static 'landing/css/owl.carousel.css' %}">
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" integrity="sha512-RWhcC19d8A3vE7kpXq6Ze4GcPfGe3DQWuenhXAbcGiZOaqGojLtWwit1eeM9jLGHFv8hnwpX3blJKGjTsf2HxQ==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" integrity="sha512-f28cvdA4Bq3dC9X9wNmSx21rjWI+5piIW/uoc2LuQ67asKxfQjUow2MkcCNcfJiaLrHcGbed1wzYe3dlY4w9gA==" crossorigin="anonymous" />     
 {% endblock %}
 
 {% block content %}
     <div class="image-hero">        
         <div class="container-fluid">
+            <!--Banner-->
             <div class="row">
                 <div class="col-5 offset-1 banner-text xs-font" data-aos="fade-right" data-aos-easing="ease-in" data-aos-duration="1000">
                     <p class="banner-text-header">
@@ -26,6 +37,7 @@
         </div>
     </div>
     <div class="container landing-text lg-font mx-auto">
+        <!--Toys-->
         <div class="row section-space">
             <div class="col-12 landing-hor"  data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
                 <span class="landing-decoration">Shop Now</span>
@@ -48,7 +60,19 @@
      data-aos-duration="2000"></div>
             </div>                
         </div>   
+        <!--Test carousel-->
+        <div class="row owl-carousel owl-theme">
+            {% for toy in toys %}  
+                <div class="col-4">
+                    <img src="{{ MEDIA_URL }}{{ toy.image }}" class="toy-image" 
+                alt="{{ toy.name }}">
+             
+                </div>
+            {% endfor %}    
+        </div>            
+
         <div class="row section-space">
+            <!--Blogs-->
             <div class="col-12 landing-hor" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
                 <span class="landing-decoration">Big Brain's Blogs</span>
             </div>                
@@ -61,7 +85,11 @@
                 <div class="image-blog-1"></div>
             </div>                
             <div class="col-4">
-                <div class="image-blog-1"></div>
+                <a href="{% url 'blogs' %}">
+                    <div class="image-blog-1 image-wrapper" data-aos="zoom-in-left" 
+        data-aos-duration="2000">
+                    </div>
+                </a>                
             </div>                
         </div>  
         <div class="row section-space">
@@ -69,6 +97,7 @@
                 <span class="landing-decoration">Pay easy with</span>
             </div>                
         </div>       
+        <!--Payment methods-->
         <div class="row payment-section"> 
             <div class="col-2 offset-2 payment-method" data-aos="flip-up" data-aos-duration="1500">
                 <a href="https://www.visa.co.uk/" class="visa" target="_blank" rel="noopener">
@@ -97,7 +126,11 @@
         </div>                             
     </div>
 
+{% endblock %}
 
 
+{% block extrajs %}
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg==" crossorigin="anonymous"></script> 
+       
 {% endblock %}

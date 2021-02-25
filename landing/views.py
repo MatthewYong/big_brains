@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
 
+from toys.models import Toy
+
 
 def index(request):
     """
@@ -17,7 +19,13 @@ def index(request):
                   ['kfm.yong@gmail.com'],
                   fail_silently=False)
 
-    return render(request, 'landing/index.html')
+    toys = Toy.objects.all()
+
+    context = {
+        'toys': toys,
+    }
+
+    return render(request, 'landing/index.html', context)
 
 
 def tempview(request):
