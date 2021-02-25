@@ -1,6 +1,25 @@
 $("document").ready(function () {
     AOS.init();
 
+    //Test owl carousel
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:5,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
+
+
     //Show toast messages throughout the website
     $('.toast').toast('show');
 
@@ -23,6 +42,8 @@ $("document").ready(function () {
     $('#scroll-top-button').on("click", function () {
         window.scrollTo(0, 0);
     })
+
+
 });
 
 
