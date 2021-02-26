@@ -27,6 +27,10 @@ $("document").ready(function () {
 
     //Test owl carousel
     $('.owl-carousel').owlCarousel({
+        autoPlay:true,
+        autoPlaySpeed:2000,
+        autoPlayTimeout:2000,
+        autoPlayHoverPause:true,
         items:3,
         loop:true,
         margin:5,
