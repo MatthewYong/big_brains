@@ -43,50 +43,28 @@
                 <span class="landing-decoration">Shop Now</span>
             </div>                
         </div>  
-        <!--   
-        <div class="row landing-image">
-            <div class="col-4">
-                <a href="{% url 'toys' %}">
-                    <div class="image-product-1 image-wrapper" data-aos="zoom-in-left" 
-        data-aos-duration="2000">
-                    </div>
-                </a>
-            </div>
-            <div class="col-4">
-                <div class="image-product-2 image-wrapper" data-aos="zoom-in-up" 
-     data-aos-duration="2000"></div>
-            </div>                
-            <div class="col-4">
-                <div class="image-product-3 image-wrapper" data-aos="zoom-in-right" 
-     data-aos-duration="2000"></div>
-            </div>                
-        </div> -->  
-
         <!--Test carousel-->
-        <div class="row owl-carousel owl-theme">
+        <div class="row owl-carousel owl-theme" >
             {% for toy in toys %}  
-                <div class="col-12 landing-box-wrapper">
+                <div class="col-12 landing-toy-box-wrapper" >
                     <a href="{% url 'toy_detail' toy.id %}" class="mx-auto">  
                         {% if toy.image %}            
                             <div>
-                                <img src="{{ MEDIA_URL }}{{ toy.image }}" class="landing-image-wrapper" 
+                                <img src="{{ MEDIA_URL }}{{ toy.image }}" class="landing-toy-image-wrapper" 
                                 alt="{{ toy.name }}">
                             </div>
                         {% else %}  
                             <div>
-                                <img src="{{ MEDIA_URL }}no_image_available.jpg"  class="landing-image-wrapper" alt="no image">
+                                <img src="{{ MEDIA_URL }}no_image_available.jpg"  class="landing-toy-image-wrapper" alt="no image">
                             </div>                
                         {% endif %}
-                        <p class="landing-toy-name sm-font">
+                        <div class="sm-font">
                             {{ toy.name }}
-                        </p>           
-                        <p class="landing-toy-description xs-font">
-                            {{ toy.description }}
-                        </p>                      
-                        <p class="landing-toy-price xs-font">
+                        </div>                              
+                        <div class="sm-font">
                             £{{ toy.price }}
-                        </p>  
-                    </a>                                
+                        </div>  
+                    </a>                           
                 </div>
             {% endfor %}    
         </div>            

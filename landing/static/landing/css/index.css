@@ -43,7 +43,6 @@
     box-shadow: 0.1rem 0.1rem 0.1rem #0f0f0f inset;
 }
 
-
 .landing-text span, .landing-text p {
     text-transform: uppercase;
     text-align: center;
@@ -72,63 +71,39 @@
     margin: auto; 
 }
 
-
 /*toys and blogs section*/
 .section-space {
     margin-top: 10rem;
 }
 
-.landing-image {
-    margin-top: 5rem;
-}
-
-
-.landing-box-wrapper {
+.landing-toy-box-wrapper {
     display: block;
+    text-align: center;
+    text-transform: uppercase;
     width: 100%;
     height: 35vh;
     margin-top: 3rem;
+    
 }
 
-.landing-box-wrapper a {
+.landing-toy-box-wrapper a {
     font-weight: 600;
-    color: #0f0f0f;
+    color: #971328;
     text-decoration: none;
 }
 
+.landing-toy-box-wrapper:hover {
+    border: 0.15rem solid #8F793E;  
+}
 
-
-.landing-image-wrapper {
+.landing-toy-image-wrapper {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 20vh; 
+    height: 25vh; 
 }
 
-
-
-.landing-toy-name {
-
-}
-
-.landing-toy-description {
-
-}
-
-
-
-.image-product-1 {
-    background-image: url("/static/images/landing/image-product1.jpg");
-}
-
-.image-product-2 {
-    background-image: url("/static/images/landing/image-product2.jpg");
-}
-
-.image-product-3 {
-    background-image: url("/static/images/landing/image-product3.jpg");
-}
 
 /*Blog section*/
 .image-blog-1 {
