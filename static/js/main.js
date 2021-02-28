@@ -64,7 +64,9 @@ $("document").ready(function () {
     //Glidejs Carousel for landing page
     var carouselConfig = {
     type: 'carousel',
-    perView: 2
+    perView: 3,
+    autoplay:2000,
+    gap:0,
     }
 
     new Glide('.glide', carouselConfig).mount();

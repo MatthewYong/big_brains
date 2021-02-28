@@ -104,6 +104,9 @@
     height: 25vh; 
 }
 
+
+
+/*glidejs css*/
 .glide {
     text-align: center;
     margin-top: 10rem;
@@ -113,6 +116,14 @@
     color: #0f0f0f;
 }
 
+
+.glide__slide img {
+    text-align: center;
+    display: block;
+    width: 20vw;
+    height: 30vh;
+    border: 0.15rem solid #8F793E;
+}
 
 
 
