@@ -131,12 +131,6 @@ WSGI_APPLICATION = 'big_brains.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://# sykxfuerltnkje:f87d66629b60b02a9ca028f2c76ff62ec4ddcdc5deb02238fa2fa43e60242# 16a@ec2-108-128-104-50.eu-west-1.compute.amazonaws.com:5432/d90ddvpq85lkf')
-# }
-
-
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))

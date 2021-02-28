@@ -61,8 +61,17 @@ $("document").ready(function () {
         }
     });
 
+    //Glidejs Carousel for landing page
+    var carouselConfig = {
+    type: 'carousel',
+    perView: 2
+    }
+
+    new Glide('.glide', carouselConfig).mount();
 
 });
+
+
 
 
 

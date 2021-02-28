@@ -71,7 +71,7 @@
     margin: auto; 
 }
 
-/*toys and blogs section*/
+/*toys section*/
 .section-space {
     margin-top: 10rem;
 }
@@ -103,6 +103,19 @@
     width: 100%;
     height: 25vh; 
 }
+
+.glide {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.glide__arrows button {
+    color: #0f0f0f;
+}
+
+
+
+
 
 
 /*Blog section*/
