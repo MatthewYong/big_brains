@@ -65,7 +65,8 @@ $("document").ready(function () {
     var carouselConfig = {
     type: 'carousel',
     perView: 3,
-    autoplay:2000,
+    focusAt: 'center',
+    autoplay: 3000,
     gap:0,
     }
 

@@ -112,8 +112,16 @@
     margin-top: 10rem;
 }
 
+.glide__bullets button {
+    color: #971328;
+    background-color: #971328;
+    margin-top: 10rem;
+}
+
+
 .glide__arrows button {
     color: #0f0f0f;
+    background-color: #971328;    
 }
 
 
@@ -126,6 +134,15 @@
 }
 
 
+.glide__slide {
+    filter: blur(5px);
+    opacity: 0.8;
+}
+
+.glide__slide--active {   
+    filter: none;
+    opacity: 1;
+}
 
 
 
