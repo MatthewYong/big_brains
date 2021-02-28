@@ -162,6 +162,14 @@
     background-color: #ffff !important;
 }
 
+.owl-item {
+    filter: blur(5px);
+}
+
+.owl-item.active.center {
+    filter: none;
+}
+
 .landing-blog-box-wrapper {
     display: block;
     text-align: center;
@@ -198,11 +206,6 @@
     text-transform: capitalize;
     padding: 1.5rem;
 }
-
-
-
-
-
 
 /*Payment*/
 .payment-section {
