@@ -71,7 +71,7 @@
     margin: auto; 
 }
 
-/*toys section*/
+/*toys section owl carousel*/
 .section-space {
     margin-top: 10rem;
 }
@@ -103,6 +103,15 @@
     width: 100%;
     height: 25vh; 
 }
+/*
+.testcarousel {
+    filter: blur(5px);
+}
+
+.testcarousel:active {
+    filter: none;
+}*/
+
 
 
 
@@ -130,7 +139,6 @@
     display: block;
     width: 20vw;
     height: 30vh;
-    border: 0.15rem solid #8F793E;
 }
 
 
@@ -142,8 +150,12 @@
 .glide__slide--active {   
     filter: none;
     opacity: 1;
+    transform: scale(1.1);
 }
 
+.glide__slides {
+    overflow: visible;
+}
 
 
 /*Blog section*/

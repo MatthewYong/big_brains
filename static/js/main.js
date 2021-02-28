@@ -38,36 +38,39 @@ $("document").ready(function () {
     })
 
 
-    //Test owl carousel
+    //Owl carousel for toy products
     $('.owl-carousel').owlCarousel({
-        autoPlay:true,
-        autoPlaySpeed:2000,
-        autoPlayTimeout:2000,
-        autoPlayHoverPause:true,
-        items:3,
-        loop:true,
+        autoplay:true,
+        autoplaySpeed:2000,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        center:true,
         margin:5,
         nav:true,
+        dots:true,
         responsive:{
             0:{
-                items:1
+                items:1,
+                loop:false
             },
             600:{
-                items:3
+                items:3,
+                loop:true
             },
             1000:{
-                items:5
+                items:3,
+                loop:true
             }
         }
     });
 
-    //Glidejs Carousel for landing page
+    //Glidejs carousel for blogs
     var carouselConfig = {
     type: 'carousel',
     perView: 3,
     focusAt: 'center',
     autoplay: 3000,
-    gap:0,
+    gap: 50,
     }
 
     new Glide('.glide', carouselConfig).mount();
