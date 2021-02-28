@@ -72,18 +72,6 @@
 }
 
 /*toys section owl carousel*/
-.owl-next, .owl-prev {
-    color: #971328 !important;
-    margin: 1rem !important;
-    transform: scale(1.5) !important;
-}
-
-.owl-next:hover, .owl-prev:hover {
-    color: #E52F4D !important;
-    background-color: #ffff !important;
-}
-
-
 .section-space {
     margin-top: 10rem;
 }
@@ -163,6 +151,17 @@
 
 
 /*Blog section*/
+.owl-next, .owl-prev {
+    color: #971328 !important;
+    margin: 1rem !important;
+    transform: scale(1.5) !important;
+}
+
+.owl-next:hover, .owl-prev:hover {
+    color: #E52F4D !important;
+    background-color: #ffff !important;
+}
+
 .landing-blog-box-wrapper {
     display: block;
     text-align: center;
@@ -200,15 +199,6 @@
     padding: 1.5rem;
 }
 
-
-/*
-.testcarousel {
-    filter: blur(5px);
-}
-
-.testcarousel:active {
-    filter: none;
-}*/
 
 
 

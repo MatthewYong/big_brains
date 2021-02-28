@@ -46,8 +46,9 @@ $("document").ready(function () {
         autoplayHoverPause:true,
         center:true,
         margin:5,
-        nav:true,
+        nav:false,
         dots:true,
+        animateOut: 'fadeOut',
         responsive:{
             0:{
                 items:1,
@@ -70,14 +71,15 @@ $("document").ready(function () {
     $('#blog-carousel').owlCarousel({
         items:1,
         center:true,
-        margin:5,
+        margin:50,
         nav:true,
         dots:false,
         loop:true,
+        autoWidth:true,
     });
 
 
-    
+
 
     //Glidejs carousel for blogs
     var carouselConfig = {

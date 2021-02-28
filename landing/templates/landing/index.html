@@ -111,7 +111,7 @@
         <!--Blogs carousel-->
         <div class="row owl-carousel owl-theme" id="blog-carousel">
             {% for blog in blogs %}  
-                <div class="col-12 landing-blog-box-wrapper mx-auto testcarousel">
+                <div class="col-12 landing-blog-box-wrapper mx-auto">
                     <a href="{% url 'blog_detail' blog.id %}">  
                         <div class="landing-blog-title sm-font">
                             "{{ blog.title }}"
