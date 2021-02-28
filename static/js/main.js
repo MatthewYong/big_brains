@@ -7,15 +7,15 @@ $("document").ready(function () {
 
 
     //Show and hide contact popup when link is clicked
-    $('#show-contact-form').click(function() {
+    $('#show-contact-form').click(function () {
         $(".contact-form").css("display", "block");
         return false;
     });
 
-    $('#hide-contact-form').click(function() {
+    $('#hide-contact-form').click(function () {
         $(".contact-form").css("display", "none");
         return false;
-    });    
+    });
 
 
     //When scrolled make button visible after 300px
@@ -40,58 +40,46 @@ $("document").ready(function () {
 
     //Owl carousel for toy products
     $('#toy-carousel').owlCarousel({
-        autoplay:true,
-        autoplaySpeed:2000,
-        autoplayTimeout:4000,
-        autoplayHoverPause:true,
-        center:true,
-        margin:5,
-        nav:false,
-        dots:true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        center: true,
+        margin: 5,
+        nav: false,
+        dots: true,
         animateOut: 'fadeOut',
-        responsive:{
-            0:{
-                items:1,
-                loop:false
+        responsive: {
+            0: {
+                items: 1,
+                loop: false
             },
-            600:{
-                items:3,
-                loop:true
+            600: {
+                items: 3,
+                loop: true
             },
-            1000:{
-                items:3,
-                dotsEach:10,                
-                loop:true
+            1000: {
+                items: 3,
+                dotsEach: 10,
+                loop: true
             }
         }
     });
 
 
-//Owl carousel for blogs
+    //Owl carousel for blogs
     $('#blog-carousel').owlCarousel({
-        items:1,
-        center:true,
-        margin:50,
-        nav:true,
-        dots:false,
-        loop:true,
-        autoWidth:true,
+        items: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        autoplayTimeout: 6000,       
+        center: true,
+        margin: 50,
+        nav: true,
+        dots: false,
+        loop: true,
+        autoWidth: true,
     });
-
-
-
-
-    //Glidejs carousel for blogs
-    var carouselConfig = {
-    type: 'carousel',
-    perView: 3,
-    focusAt: 'center',
-    autoplay: 3000,
-    gap: 50,
-    }
-
-    new Glide('.glide', carouselConfig).mount();
-
 });
 
 
