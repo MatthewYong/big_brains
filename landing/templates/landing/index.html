@@ -111,21 +111,21 @@
         <!--Blogs carousel-->
         <div class="row owl-carousel owl-theme" id="blog-carousel">
             {% for blog in blogs %}  
-                <div class="col-12 landing-toy-box-wrapper testcarousel" >
-                    <a href="{% url 'blog_detail' blog.id %}" class="mx-auto">  
+                <div class="col-12 landing-blog-box-wrapper mx-auto testcarousel">
+                    <a href="{% url 'blog_detail' blog.id %}">  
+                        <div class="landing-blog-title sm-font">
+                            "{{ blog.title }}"
+                        </div>                           
                         {% if blog.image_url %}            
                             <div>
-                                <img src="{{ blog.image_url }}" class="landing-toy-image-wrapper" 
+                                <img src="{{ blog.image_url }}" class="landing-blog-image-wrapper" 
                                 alt="{{ blog.name }}">
                             </div>
                         {% else %}  
                             <div>
-                                <img src="{{ MEDIA_URL }}no_image_available.jpg"  class="landing-toy-image-wrapper" alt="no image">
+                                <img src="{{ MEDIA_URL }}no_image_available.jpg"  class="landing-blog-image-wrapper" alt="no image">
                             </div>                
-                        {% endif %}
-                        <div class="sm-font">
-                            {{ blog.title }}
-                        </div>                               
+                        {% endif %}                            
                     </a>                           
                 </div>
             {% endfor %}    

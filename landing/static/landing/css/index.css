@@ -150,16 +150,41 @@
 
 
 /*Blog section*/
-.image-blog-1 {
-    background-image: url("/static/images/landing/image-blog.jpg");
+.landing-blog-box-wrapper {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0.15rem solid #8F793E;  
+    width: 30vw;
+    height: 50vh;
+    margin-top: 3rem;
+    
+}
+
+.landing-blog-box-wrapper a {
+    font-weight: 600;
+    color: #971328;
+    text-decoration: none;
+    
+}
+
+.landing-blog-box-wrapper:hover {
+    border: 0.15rem solid #8F793E;  
+}
+
+.landing-blog-image-wrapper {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 10rem;
+    width: 30vw;
+    height: 30vh; 
 }
 
-
+.landing-blog-title {
+    font-style: italic;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
 
 
 /*

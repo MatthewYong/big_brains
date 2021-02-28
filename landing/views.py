@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -8,8 +8,8 @@ from blogs.models import Blog
 
 def index(request):
     """
-    A view that shows the landing page and sends
-    an email to the user
+    A view that shows the landing page, includes the models
+    toys and blogs and sends an email to the user
     """
 
     if request.method == 'POST':
