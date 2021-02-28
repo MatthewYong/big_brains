@@ -5,6 +5,19 @@ $("document").ready(function () {
     //Show toast messages throughout the website
     $('.toast').toast('show');
 
+
+    //Show and hide contact popup when link is clicked
+    $('#show-contact-form').click(function() {
+        $(".contact-form").css("display", "block");
+        return false;
+    });
+
+    $('#hide-contact-form').click(function() {
+        $(".contact-form").css("display", "none");
+        return false;
+    });    
+
+
     //When scrolled make button visible after 300px
     //Within 300px button will be hide
     window.onscroll = function () { scrollButtonVisible() };
@@ -47,6 +60,7 @@ $("document").ready(function () {
             }
         }
     });
+
 
 });
 
