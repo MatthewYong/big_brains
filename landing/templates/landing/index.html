@@ -46,10 +46,10 @@
                 <span class="landing-decoration">Shop Now</span>
             </div>                
         </div>  
-        <!--Test carousel-->
-        <div class="row owl-carousel owl-theme">
+        <!--Toys carousel-->
+        <div class="row owl-carousel owl-theme" id="toy-carousel">
             {% for toy in toys %}  
-                <div class="col-12 landing-toy-box-wrapper testcarousel" >
+                <div class="col-12 landing-toy-box-wrapper" >
                     <a href="{% url 'toy_detail' toy.id %}" class="mx-auto">  
                         {% if toy.image %}            
                             <div>
@@ -108,6 +108,32 @@
                 <span class="landing-decoration">Big Brain's Blogs</span>
             </div>                
         </div>    
+        <!--Blogs carousel-->
+        <div class="row owl-carousel owl-theme" id="blog-carousel">
+            {% for blog in blogs %}  
+                <div class="col-12 landing-toy-box-wrapper testcarousel" >
+                    <a href="{% url 'blog_detail' blog.id %}" class="mx-auto">  
+                        {% if blog.image %}            
+                            <div>
+                                <img src="{{ MEDIA_URL }}{{ blog.image }}" class="landing-toy-image-wrapper" 
+                                alt="{{ toy.name }}">
+                            </div>
+                        {% else %}  
+                            <div>
+                                <img src="{{ MEDIA_URL }}no_image_available.jpg"  class="landing-toy-image-wrapper" alt="no image">
+                            </div>                
+                        {% endif %}
+                        <div class="sm-font">
+                            {{ blog.title }}
+                        </div>                               
+                    </a>                           
+                </div>
+            {% endfor %}    
+        </div>
+
+
+
+
         <div class="row landing-image">
             <div class="col-4">
                 <div class="image-blog-1"></div>
@@ -117,8 +143,7 @@
             </div>                
             <div class="col-4">
                 <a href="{% url 'blogs' %}">
-                    <div class="image-blog-1 image-wrapper" data-aos="zoom-in-left" 
-        data-aos-duration="2000">
+                    <div class="image-blog-1 image-wrapper">
                     </div>
                 </a>                
             </div>                

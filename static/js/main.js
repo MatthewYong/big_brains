@@ -39,7 +39,7 @@ $("document").ready(function () {
 
 
     //Owl carousel for toy products
-    $('.owl-carousel').owlCarousel({
+    $('#toy-carousel').owlCarousel({
         autoplay:true,
         autoplaySpeed:2000,
         autoplayTimeout:4000,
@@ -59,6 +59,7 @@ $("document").ready(function () {
             },
             1000:{
                 items:3,
+                dotsEach:10,                
                 loop:true
             }
         }

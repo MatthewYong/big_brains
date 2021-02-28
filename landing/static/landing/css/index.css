@@ -103,15 +103,6 @@
     width: 100%;
     height: 25vh; 
 }
-/*
-.testcarousel {
-    filter: blur(5px);
-}
-
-.testcarousel:active {
-    filter: none;
-}*/
-
 
 
 
@@ -167,6 +158,22 @@
     width: 100%;
     height: 10rem;
 }
+
+
+
+
+/*
+.testcarousel {
+    filter: blur(5px);
+}
+
+.testcarousel:active {
+    filter: none;
+}*/
+
+
+
+
 
 /*Payment*/
 .payment-section {

@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 from toys.models import Toy
+from blogs.models import Blog
 
 
 def index(request):
@@ -20,9 +21,11 @@ def index(request):
                   fail_silently=False)
 
     toys = Toy.objects.all()
+    blogs = Blog.objects.all()
 
     context = {
         'toys': toys,
+        'blogs': blogs,
     }
 
     return render(request, 'landing/index.html', context)
