@@ -113,10 +113,10 @@
             {% for blog in blogs %}  
                 <div class="col-12 landing-toy-box-wrapper testcarousel" >
                     <a href="{% url 'blog_detail' blog.id %}" class="mx-auto">  
-                        {% if blog.image %}            
+                        {% if blog.image_url %}            
                             <div>
-                                <img src="{{ MEDIA_URL }}{{ blog.image }}" class="landing-toy-image-wrapper" 
-                                alt="{{ toy.name }}">
+                                <img src="{{ blog.image_url }}" class="landing-toy-image-wrapper" 
+                                alt="{{ blog.name }}">
                             </div>
                         {% else %}  
                             <div>
@@ -131,23 +131,6 @@
             {% endfor %}    
         </div>
 
-
-
-
-        <div class="row landing-image">
-            <div class="col-4">
-                <div class="image-blog-1"></div>
-            </div>
-            <div class="col-4">
-                <div class="image-blog-1"></div>
-            </div>                
-            <div class="col-4">
-                <a href="{% url 'blogs' %}">
-                    <div class="image-blog-1 image-wrapper">
-                    </div>
-                </a>                
-            </div>                
-        </div>  
         <div class="row section-space">
             <div class="col-12 landing-hor" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
                 <span class="landing-decoration">Pay easy with</span>

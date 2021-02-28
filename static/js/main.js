@@ -65,6 +65,38 @@ $("document").ready(function () {
         }
     });
 
+
+//Owl carousel for blogs
+    $('#blog-carousel').owlCarousel({
+        autoplay:true,
+        autoplaySpeed:2000,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        center:true,
+        margin:5,
+        nav:true,
+        dots:true,
+        responsive:{
+            0:{
+                items:1,
+                loop:false
+            },
+            600:{
+                items:3,
+                loop:true
+            },
+            1000:{
+                items:3,
+                dotsEach:10,                
+                loop:true
+            }
+        }
+    });
+
+
+
+
+
     //Glidejs carousel for blogs
     var carouselConfig = {
     type: 'carousel',
