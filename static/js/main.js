@@ -72,12 +72,12 @@ $("document").ready(function () {
         center:true,
         margin:5,
         nav:true,
-        dots:true,
+        dots:false,
+        loop:true,
     });
 
 
-
-
+    
 
     //Glidejs carousel for blogs
     var carouselConfig = {

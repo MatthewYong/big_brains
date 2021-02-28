@@ -115,7 +115,7 @@
                     <a href="{% url 'blog_detail' blog.id %}">  
                         <div class="landing-blog-title sm-font">
                             "{{ blog.title }}"
-                        </div>                           
+                        </div>                                                  
                         {% if blog.image_url %}            
                             <div>
                                 <img src="{{ blog.image_url }}" class="landing-blog-image-wrapper" 
@@ -125,8 +125,8 @@
                             <div>
                                 <img src="{{ MEDIA_URL }}no_image_available.jpg"  class="landing-blog-image-wrapper" alt="no image">
                             </div>                
-                        {% endif %}                            
-                    </a>                           
+                        {% endif %}                   
+                    </a>
                 </div>
             {% endfor %}    
         </div>

@@ -72,6 +72,18 @@
 }
 
 /*toys section owl carousel*/
+.owl-next, .owl-prev {
+    color: #971328 !important;
+    margin: 1rem !important;
+    transform: scale(1.5) !important;
+}
+
+.owl-next:hover, .owl-prev:hover {
+    color: #E52F4D !important;
+    background-color: #ffff !important;
+}
+
+
 .section-space {
     margin-top: 10rem;
 }
@@ -88,12 +100,13 @@
 
 .landing-toy-box-wrapper a {
     font-weight: 600;
-    color: #971328;
+    color: #0f0f0f;
     text-decoration: none;
 }
 
 .landing-toy-box-wrapper:hover {
-    border: 0.15rem solid #8F793E;  
+    border: 0.15rem solid #8F793E; 
+    opacity: 0.8; 
 }
 
 .landing-toy-image-wrapper {
@@ -154,36 +167,37 @@
     display: block;
     text-align: center;
     text-transform: uppercase;
-    border: 0.15rem solid #8F793E;  
+    box-shadow: 0.3rem 0.3rem 0.5rem #A3A3A3;  
+    border-radius: 0.2rem;
     width: 30vw;
     height: 50vh;
     margin-top: 3rem;
-    
+    margin-bottom: 1rem;
 }
 
 .landing-blog-box-wrapper a {
-    font-weight: 600;
-    color: #971328;
+    font-weight: 500;
+    color: #8F793E;
     text-decoration: none;
-    
 }
 
-.landing-blog-box-wrapper:hover {
-    border: 0.15rem solid #8F793E;  
+.landing-blog-box-wrapper, .landing-blog-box-wrapper a:hover {
+    font-weight: 600;
+    opacity: 0.8;  
 }
 
 .landing-blog-image-wrapper {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 30vw;
-    height: 30vh; 
+    height: 35vh; 
+    padding: 1.5rem;
 }
 
 .landing-blog-title {
     font-style: italic;
     text-transform: capitalize;
-    margin-bottom: 3rem;
+    padding: 1.5rem;
 }
 
 
