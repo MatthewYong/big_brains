@@ -50,7 +50,7 @@
         <div class="row owl-carousel owl-theme" id="toy-carousel">
             {% for toy in toys %}  
                 <div class="col-12 landing-toy-box-wrapper" >
-                    <a href="{% url 'toy_detail' toy.id %}" class="mx-auto">  
+                    <a href="{% url 'toy_detail' toy.id %}" class="mx-auto" target="_blank">  
                         {% if toy.image %}            
                             <div>
                                 <img src="{{ MEDIA_URL }}{{ toy.image }}" class="landing-toy-image-wrapper" 
@@ -81,7 +81,7 @@
         <div class="row owl-carousel owl-theme" id="blog-carousel">
             {% for blog in blogs %}  
                 <div class="col-12 landing-blog-box-wrapper mx-auto">
-                    <a href="{% url 'blog_detail' blog.id %}">  
+                    <a href="{% url 'blog_detail' blog.id %}" target="_blank">  
                         <div class="landing-blog-title sm-font">
                             "{{ blog.title }}"
                         </div>                                                  
