@@ -19,13 +19,13 @@ class TestBlogsView(TestCase):
         A test to prove that the view gets a specific blog
         and returns it to its own template
         """
-        create_user = User.objects.create_user(
+        test_blog_user = User.objects.create_user(
             username='test_name',
             email='test_email@email.com',
             password=None)
 
         blog = Blog.objects.create(
-            author=create_user,
+            author=test_blog_user,
             title='New Toy',
             author_friendly='12.95',
             description='Funny',
