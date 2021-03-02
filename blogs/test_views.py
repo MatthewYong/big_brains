@@ -19,17 +19,20 @@ class TestBlogsView(TestCase):
         A test to prove that the view gets a specific blog
         and returns it to its own template
         """
-        create_user = User.objects.create(pk=1)
-        user_pk = User.objects.get(pk=1)
+        create_user = User.objects.create_user(
+            username='test_name',
+            email='test_email@email.com',
+            password=None)
 
         blog = Blog.objects.create(
-            author=user_pk,
+            author=create_user,
             title='New Toy',
             author_friendly='12.95',
             description='Funny',
             article='New Toy',
             image_url='New Toy',
         )
+        print(blog.id)
         response = self.client.get(f'/blogs/{blog.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'blogs/blog_detail.html')
