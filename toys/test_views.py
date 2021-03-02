@@ -26,12 +26,3 @@ class TestToysViews(TestCase):
         response = self.client.get(f'/toys/{toy.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'toys/toy_detail.html')
-
-    def test_search_toy(self):
-        """
-        A test to prove that the view can search for a specific
-        toy using a queryset
-        """
-        toys_list = list(Toy.objects.all())
-        toys = Toy.objects.all()
-        self.assertQuerysetEqual(toys, toys_list)
