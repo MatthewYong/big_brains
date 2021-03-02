@@ -32,7 +32,7 @@ class TestBlogsView(TestCase):
             article='New Toy',
             image_url='New Toy',
         )
-        print(blog.id)
-        response = self.client.get(f'/blogs/{blog.id}/')
+
+        response = self.client.get(f'/blogs/{blog.id}')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'blogs/blog_detail.html')
