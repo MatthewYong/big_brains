@@ -33,6 +33,7 @@ def add_toy_review(request, toy_id):
                 Please double check your information.')
 
 
+@login_required
 def delete_toy_review(request, review_id):
     """
     A view to delete a review from a specific user
