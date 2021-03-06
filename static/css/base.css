@@ -383,7 +383,6 @@ footer a {
 
 /*Media screen max-width 1366px*/
 @media only screen and (max-width: 1366px){
-
     #scroll-top-button {
         display: none !important;
     }
@@ -405,6 +404,19 @@ footer a {
         font-size: 1rem;
     }
 
+    .social-media-wrapper {
+        display: none;
+    }       
+
+}
+
+
+/*Media screen max-width 576px*/
+@media only screen and (max-width: 576px){
+    .copyright{
+        font-size: 1rem;
+    }
+
 }
 
 
@@ -418,11 +430,12 @@ footer a {
         font-size: 1rem;
     }
  
-        .nav-search {
+    .nav-search {
         display: none;
     }
 
     #logo {
         font-size: 1.5rem;
     }    
+
 }
