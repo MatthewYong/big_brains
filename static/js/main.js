@@ -54,13 +54,12 @@ $("document").ready(function () {
                 items: 1,
                 loop: false
             },
-            600: {
-                items: 3,
+            800: {
+                items: 2,
                 loop: true
             },
-            1000: {
+            1200: {
                 items: 3,
-                dotsEach: 10,
                 loop: true
             }
         }
