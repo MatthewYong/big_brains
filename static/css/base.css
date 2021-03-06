@@ -125,12 +125,6 @@ a.underline-transition:hover:before {
 }
 
 /*Navigation menu*/
-nav {
-    height: 6rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
 .navbar-brand {
     font-family:'Prata', serif;
     font-weight: 600;

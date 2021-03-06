@@ -16,7 +16,7 @@
 
     {% block corecss %}
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- AOS Scroll CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
@@ -88,7 +88,7 @@
                     </a>
                 </div>
                 <div>
-                    <form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'toys' %}">
+                    <form class="form-inline my-2 my-lg-0 justify-content-center" method="GET" action="{% url 'toys' %}">
                         {% csrf_token %}
                         <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search"
                             aria-label="Search">
@@ -99,6 +99,7 @@
         </nav>
         <hr class="navbar-separator">
     </header>
+    
 
     {% block content %}
     {% endblock %}
