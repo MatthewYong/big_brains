@@ -157,7 +157,7 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 35vh; 
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
 }
 
 .landing-blog-title {
@@ -206,8 +206,6 @@
 
 
 
-
-
 /*Media screen max-width 1560px*/
 @media only screen and (max-width: 1560px){
     .banner-text-header {
@@ -232,7 +230,19 @@
         height: 35vh; 
     }
 
+    /*Blogs*/
+    
+    .landing-blog-box-wrapper {
+        text-align: center;
+        width: 90vw;
+        height: 75vh;
+    }
 
+    .landing-blog-image-wrapper {
+        height: 50vh; 
+    }    
+
+}
 
 /*Media screen max-width 767px*/
 @media only screen and (max-width: 767px){
@@ -281,6 +291,17 @@
         font-size: 1rem;
     }
 
+    /*Blogs*/
+    
+    .landing-blog-box-wrapper {
+        width: 90vw;
+        height: 70vh;
+    }
+
+    .landing-blog-image-wrapper {
+        height: 45vh; 
+    }
+
     /*Payment-method*/
 
     .payment-method {
@@ -288,15 +309,11 @@
     }
 
 
-
-
 }
 
 
 /*Media screen max-height 414px*/
     @media only screen and (max-height: 414px){
-
-
 
         
     /*Toys*/
@@ -312,4 +329,16 @@
     .sm-font {
         font-size: 1rem;
     }
+
+    /*Blogs*/
+    
+    .landing-blog-box-wrapper {
+        width: 80vw;
+        height: 100vh;
+    }
+
+    .landing-blog-image-wrapper {
+        height: 75vh; 
+    }
+
 }

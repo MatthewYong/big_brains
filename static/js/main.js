@@ -68,16 +68,26 @@ $("document").ready(function () {
 
     //Owl carousel for blogs
     $('#blog-carousel').owlCarousel({
-        items: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        autoplayTimeout: 6000,       
+        items: 1,     
         center: true,
-        margin: 50,
         nav: true,
         dots: false,
         loop: true,
-        autoWidth: true,
+        autoWidth: false,        
+        responsive: {
+            0: {
+                items: 1,
+            },
+            800: {
+                items: 1,              
+            },
+            1200: {
+                autoWidth: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                autoplayTimeout: 6000,                  
+            }
+        }        
     });
 });
 
