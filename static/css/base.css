@@ -330,8 +330,8 @@ footer a {
     display: none;
     position: fixed;
     top: 10vh;
-    left: 25%;
-    width: 50%;
+    left: 12.5vw;
+    width: 75vw;
     text-transform: uppercase;
     font-weight: 500;
     color: #ECECB1;
@@ -406,7 +406,37 @@ footer a {
 
     .social-media-wrapper {
         display: none;
-    }       
+    }  
+    
+    /*Contact form*/
+    .contact-form {
+        top: 5vh;
+        left: 0;
+        width: 100vw;
+        padding: 2rem;
+        margin-top: 0rem;
+    }    
+
+    .contact-form input {
+
+        height: 1rem;
+    }
+
+     .contact-form h1 {
+        font-size: 2rem;     
+    }
+
+    .contact-form div, .contact-form input {
+        font-size: 1rem;
+    }
+
+    .contact-form h1 {
+        display: none;
+    }
+
+    #hide-contact-form {
+        font-size: 1rem;
+    }
 
 }
 
