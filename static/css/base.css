@@ -507,3 +507,46 @@ footer a {
 .error-text a:hover {
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+/*Media screen max-width 767px*/
+@media only screen and (max-width: 767px){
+    #logo{
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .search-form-button {
+        font-size: 1rem;
+    }
+
+}
+
+
+/*Media screen max-height 414px*/
+    @media only screen and (max-height: 414px){
+    #logo{
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .search-form-button {
+        font-size: 1rem;
+    }
+ 
+        .nav-search {
+        display: none;
+    }
+}
