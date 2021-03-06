@@ -5,7 +5,12 @@
     {% block extra_head %}
     {% endblock %}
   </head>
-  <body>
+
+    {% block extracss %}
+        <link rel="stylesheet" href="{% static 'css/allauth.css' %}">
+    {% endblock %}
+
+  <body>     
     {% block body %}
 
     {% if messages %}
