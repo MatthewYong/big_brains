@@ -202,3 +202,59 @@
 .stripe {
     color: #5433FF ;
 }
+
+
+
+
+
+
+/*Media screen max-width 1560px*/
+@media only screen and (max-width: 1560px){
+    .banner-text-header {
+        font-size: 3.5rem;
+    }
+
+}
+
+
+/*Media screen max-width 1200px*/
+@media only screen and (max-width: 1200px){
+    .banner-text-header {
+        font-size: 2rem;
+    }
+
+
+/*Media screen max-width 767px*/
+@media only screen and (max-width: 767px){
+    .banner-text-header {
+        font-size: 1.5rem;
+    }
+
+
+
+}
+
+
+/*Media screen max-width 576px*/
+@media only screen and (max-width: 576px){
+    .banner-text-header {
+        font-size: 1rem;
+    }
+
+    .banner-text {
+        font-size: 0.75rem;
+    }
+
+    .banner-button {
+        font-size: 0.75rem;
+        padding: 0.1rem;
+
+    }
+
+}
+
+
+/*Media screen max-height 414px*/
+    @media only screen and (max-height: 414px){
+
+}
