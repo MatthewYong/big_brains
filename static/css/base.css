@@ -381,6 +381,16 @@ footer a {
 
 
 
+/*Media screen max-width 1366px*/
+@media only screen and (max-width: 1366px){
+
+    #scroll-top-button {
+        display: none !important;
+    }
+
+}
+
+
 /*Media screen max-width 767px*/
 @media only screen and (max-width: 767px){
     #logo{
@@ -400,10 +410,6 @@ footer a {
 
 /*Media screen max-height 414px*/
     @media only screen and (max-height: 414px){
-    #logo{
-        font-size: 1.5rem;
-    }
-
     .nav-item {
         font-size: 1rem;
     }
@@ -415,4 +421,8 @@ footer a {
         .nav-search {
         display: none;
     }
+
+    #logo {
+        font-size: 1.5rem;
+    }    
 }
