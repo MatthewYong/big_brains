@@ -127,12 +127,24 @@ a.underline-transition:hover:before {
 /*Navigation menu*/
 nav {
     height: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .navbar-brand {
     font-family:'Prata', serif;
     font-weight: 600;
     font-size: 3rem;
+}
+
+.navbar-collapse {
+    text-align: center;
+    background: #971328;  
+}
+
+.navbar-collapse a {
+    text-transform: uppercase;
+    color: #FFFF !important;    
 }
 
 .nav-color {
