@@ -73,7 +73,7 @@
 
 /*toys section owl carousel*/
 .section-space {
-    margin-top: 10rem;
+    margin-top: 10vh;
 }
 
 .landing-toy-box-wrapper {
@@ -238,7 +238,7 @@
 /*Media screen max-width 576px*/
 @media only screen and (max-width: 576px){
     .banner-text-header {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .banner-text {
@@ -248,8 +248,16 @@
     .banner-button {
         font-size: 0.75rem;
         padding: 0.1rem;
-
     }
+
+    /*Toys*/
+    .landing-text span {
+        font-size: 1rem;
+    }
+
+
+
+
 
 }
 
