@@ -5,10 +5,51 @@
 
 .profile-order {
     text-transform: uppercase;
-    margin-top: 10vh;
-    margin-bottom: 3rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .profile-order span {
     font-weight: 600;
+}
+
+
+
+/*Media screen max-width 1560px*/
+@media only screen and (max-width: 1560px){
+
+
+}
+
+
+/*Media screen max-width 1200px*/
+@media only screen and (max-width: 1200px){
+ 
+
+}
+
+/*Media screen max-width 767px*/
+@media only screen and (max-width: 767px){
+    .cart-items-hide {
+        display: none;
+    }
+
+}
+
+
+/*Media screen max-width 576px*/
+@media only screen and (max-width: 576px){
+    .profile-order {
+        font-size: 1rem;
+    }
+
+    .cart-items p {
+        font-size: 1rem;
+    }
+}
+
+
+/*Media screen max-height 414px*/
+    @media only screen and (max-height: 414px){
+
 }
