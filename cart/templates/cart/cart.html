@@ -38,18 +38,18 @@
             </div>
             {% for item in cart_items %}                 
                 <div class="row">                   
-                    <div class="col-2">
+                    <div class="col-12 col-md-2">
                         <a href="{% url 'toy_detail' item.toy.id %}">
                             <img src="{{ MEDIA_URL }}{{ item.toy.image }}"    class="cart-image" alt="">
                         </a>
                     </div>
-                    <div class="col-3 cart-items">
+                    <div class="col-12 col-md-3 cart-items">
                         <p>{{ item.toy.name }}</p>
                     </div>
-                    <div class="col-1 cart-items">
+                    <div class="col-md-1 cart-items cart-item-price">
                         <p>£{{ item.toy.price }}</p>
                     </div>   
-                    <div class="col-2 cart-items">
+                    <div class="col-6 col-md-2 cart-items">
                         <form action="{% url 'update_cart' item.toy.id %}" method="POST">
                             {% csrf_token %}
                                 <input class="cart-quantity" type="number" value="{{ item.quantity }}" min="0" max="10" name="update_quantity">
@@ -58,8 +58,8 @@
                                 </button>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>
-                    </div>                            
-                    <div class="col-1 cart-items">   
+                    </div>                           
+                    <div class="col-6 col-md-1 cart-items">   
                         <form action="{% url 'remove_from_cart' item.toy.id %}" method="POST">
                         {% csrf_token %}
                             <button class="cart-delete-button" type="submit">
@@ -68,18 +68,20 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>                                         
                     </div>
-                    <div class="col-2 offset-1 cart-items">
+                    <div class="col-12 col-md-2 offset-md-1 cart-items">
                         <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
                     </div>                                               
                 </div>
                 <hr>
             {% endfor %} 
             <div class="row cart-total">
-                <div class="col-2 offset-8">
-                    <p class="cart-item-header">Total</p>
+                <div class="col-6 col-md-2 offset-md-8">
+                    <p class="cart-total-header">Total</p>
                 </div>
-                <div class="col-2">
+                <div class="col-6 col-md-2">
                     <p>£{{ total }}</p>
+                </div>
+                <div class="col-12 col-md-2 offset-md-10">
                     <a href="{% url 'checkout' %}">
                         <button class="general-button cart-checkout-button">Checkout</button>
                     </a>

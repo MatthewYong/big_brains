@@ -164,17 +164,6 @@
 }
 
 
-
-
-
-
-/*Media screen max-width 1560px*/
-@media only screen and (max-width: 1560px) {
-
-
-}
-
-
 /*Media screen max-width 1200px*/
 @media only screen and (max-width: 1200px){
     .toy-name, .toy-price {
@@ -203,13 +192,6 @@
     .review-header {
         font-size: 1.5rem;
     }
-
-}
-
-
-/*Media screen max-width 576px*/
-@media only screen and (max-width: 576px){
-
 
 }
 
