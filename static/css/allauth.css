@@ -83,3 +83,35 @@
     border-radius: 0.2rem;
     opacity: 0.9;
 }
+
+
+
+/*Media screen max-width 1560px*/
+@media only screen and (max-width: 1560px){
+
+
+}
+
+
+/*Media screen max-width 1200px*/
+@media only screen and (max-width: 1200px){
+     
+
+}
+
+/*Media screen max-width 767px*/
+@media only screen and (max-width: 767px){
+
+}
+
+
+/*Media screen max-width 576px*/
+@media only screen and (max-width: 576px){
+
+}
+
+
+/*Media screen max-height 414px*/
+    @media only screen and (max-height: 414px){
+
+}

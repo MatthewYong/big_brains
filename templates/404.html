@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/error.css' %}">  
+{% endblock %}
+
 {% block content %}
 
 <div class="image-bg-error error-content">

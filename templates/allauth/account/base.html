@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/allauth.css' %}">  
+{% endblock %}
 
 {% block content %}
     <div class="container">
