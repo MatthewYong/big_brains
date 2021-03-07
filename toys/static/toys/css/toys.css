@@ -206,5 +206,15 @@
         font-size: 1rem;
     }
 
+    .toy-image {
+        width: 50%;
+        height: auto;
+        margin-left: 25%;
+    }
+
+    .general-button {
+        font-size: 0.75rem;
+    }
+
 }
 
