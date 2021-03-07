@@ -133,6 +133,10 @@ select:invalid {
         font-size: 2rem;
     }
 
+    .cart-items-header p {
+        font-size: 1rem;
+    }
+
     .checkout-continue {
         font-size: 1rem;
     }

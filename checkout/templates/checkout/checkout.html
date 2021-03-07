@@ -19,23 +19,23 @@
             </div>
         </div>
         <div class="row cart-items-header lg-font">
-            <div class="col-2 offset-1"></div>
-            <div class="col-3">
+            <div class="col-md-2 offset-md-1"></div>
+            <div class="col-md-3 cart-hide">
                 <p class="cart-item-header">Toy</p>
             </div>
-            <div class="col-1">
-                <p class="cart-item-header">Price</p>
+            <div class="col-md-1">
+                <p class="cart-item-header cart-hide">Price</p>
             </div>
-            <div class="col-2">
+            <div class="col-4 offset-4 col-md-2 offset-md-0">
                 <p class="cart-item-header">Quantity</p>
             </div>
-            <div class="col-2">
+            <div class="col-4 col-md-2">
                 <p class="cart-item-header">Subtotal</p>
             </div>                
         </div>          
         {% for item in cart_items %}                 
         <div class="row md-font">                   
-            <div class="col-4 col-md-2 offset-md-1">
+            <div class="col-md-2 offset-md-1  cart-hide">
                 <a href="{% url 'toy_detail' item.toy.id %}">
                     <img src="{{ MEDIA_URL }}{{ item.toy.image }}"    class="cart-image" alt="">
                 </a>
@@ -46,7 +46,7 @@
             <div class="col-md-1 cart-items cart-hide">
                 <p>£{{ item.toy.price }}</p>
             </div>   
-            <div class="col-md-2 cart-items cart-hide">
+            <div class="col-4 col-md-2 cart-items">
                 <p>{{ item.quantity }}</p>
             </div>                        
             <div class="col-4 col-md-2 cart-items">

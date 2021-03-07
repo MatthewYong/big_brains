@@ -14,20 +14,6 @@
 }
 
 
-
-/*Media screen max-width 1560px*/
-@media only screen and (max-width: 1560px){
-
-
-}
-
-
-/*Media screen max-width 1200px*/
-@media only screen and (max-width: 1200px){
- 
-
-}
-
 /*Media screen max-width 767px*/
 @media only screen and (max-width: 767px){
     .cart-items-hide {
@@ -48,8 +34,3 @@
     }
 }
 
-
-/*Media screen max-height 414px*/
-    @media only screen and (max-height: 414px){
-
-}
