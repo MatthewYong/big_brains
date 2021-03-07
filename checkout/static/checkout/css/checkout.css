@@ -166,6 +166,11 @@ select:invalid {
         font-size: 1rem;
     }
 
+    /*Checkout Success*/
+    .checkout-success-button { 
+        font-size: 1rem;
+    }
+
 }
 
 
@@ -193,6 +198,11 @@ select:invalid {
         display: block;
         width: 100%;
         height: auto;
+    }
+
+    /*Checkout success*/
+    .checkout-success-message {
+        font-size: 1rem;
     }
 
 }
