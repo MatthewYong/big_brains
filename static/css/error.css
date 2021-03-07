@@ -11,7 +11,7 @@
 .error-header{
     font-size: 7rem;
     padding-top: 10vh;
-    margin-bottom: 4rem;
+    margin-bottom: 4vh;
 }
 
 .error-content{
@@ -35,11 +35,83 @@
     text-align: center;
     border: 0.2rem solid #AB8E66;   
     padding: 1rem;
-    margin-top: 3rem;
+    margin-top: 3vh;
 }
 
 .error-text a:hover {
     text-decoration: none;
+}
+
+
+
+/*Media screen max-width 1200px*/
+@media only screen and (max-width: 1200px){
+    .error-header{
+        font-size: 5rem;
+        padding-top: 5vh;
+        margin-bottom: 4vh;
+    }
+
+    .md-font {
+        font-size: 1.25rem;
+    }
+
+    .error-link p{  
+        padding: 0.5rem;
+    }
+
+}
+
+/*Media screen max-width 767px*/
+@media only screen and (max-width: 767px){
+    .image-bg-error {
+       margin-top: -4vh;
+    }
+}
+
+
+/*Media screen max-width 576px*/
+@media only screen and (max-width: 576px){
+    .image-bg-error {
+       margin-top: -6vh;
+    }
+
+    .error-header{
+        font-size: 4rem;
+        padding-top: 5vh;
+        margin-bottom: 4vh;
+    }
+
+    .md-font {
+        font-size: 1rem;
+    }
+
+    .error-link p{  
+        padding: 0.5rem;
+    }
+}
+
+
+/*Media screen max-height 414px*/
+    @media only screen and (max-height: 414px){
+    .image-bg-error {
+       margin-top: -10vh;
+    }
+
+    .error-header{
+        font-size: 4rem;
+        padding-top: 5vh;
+        margin-bottom: 4vh;
+    }
+
+    .md-font {
+        font-size: 1rem;
+    }
+
+    .error-link p{  
+        padding: 0.5rem;
+    }
+
 }
 
 

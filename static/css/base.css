@@ -404,8 +404,8 @@ footer a {
 
 /*Media screen max-width 767px*/
 @media only screen and (max-width: 767px){
-    #logo{
-        font-size: 1.5rem;
+    .navbar-toggler {
+        font-size: 1rem;
     }
 
      .nav-item {
@@ -419,6 +419,10 @@ footer a {
     .social-media-wrapper {
         display: none;
     }  
+
+    #logo{
+        font-size: 1.5rem;
+    }    
     
     /*Contact form*/
     .contact-form {
