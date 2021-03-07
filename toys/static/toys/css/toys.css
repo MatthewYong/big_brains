@@ -3,8 +3,8 @@
     text-transform: uppercase;
     font-weight: 600;
     text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 5rem;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
 }
 
 .toypage-header a {
@@ -23,7 +23,8 @@
     background-color: #ffff;
     border: 0.1rem solid #ffff;
     text-transform: uppercase;
-    padding: 0.25rem;
+    margin-top: 0;
+    
 }
 
 .toy-filter-button:hover {
@@ -160,5 +161,50 @@
 .review-login a {
     color: #971328;
     font-weight: 600;
+}
+
+
+
+
+
+
+/*Media screen max-width 1560px*/
+@media only screen and (max-width: 1560px) {
+
+
+}
+
+
+/*Media screen max-width 1200px*/
+@media only screen and (max-width: 1200px){
+
+}
+
+/*Media screen max-width 767px*/
+@media only screen and (max-width: 767px){
+    .toy-name, .toy-price {
+        font-size: 1.25rem;
+    }
+
+    .toypage-header, .dropdown-menu {
+        font-size: 0.75rem;
+    }
+
+}
+
+
+/*Media screen max-width 576px*/
+@media only screen and (max-width: 576px){
+
+
+}
+
+
+/*Media screen max-height 414px*/
+    @media only screen and (max-height: 414px){
+    .toy-name, .toy-price {
+        font-size: 1rem;
+    }
+
 }
 

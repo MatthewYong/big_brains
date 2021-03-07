@@ -45,7 +45,7 @@
     {% endif %}
     <div class="row">
         {% for toy in toys %}  
-        <div class="col-4 toy-box-wrapper">
+        <div class="col-12 col-md-4 toy-box-wrapper">
             <a href="{% url 'toy_detail' toy.id %}" class="toy-box mx-auto">  
                 {% if toy.image %}            
                     <div>
