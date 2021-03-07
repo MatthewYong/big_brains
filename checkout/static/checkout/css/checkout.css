@@ -53,7 +53,7 @@ Code is tweaked to match to the website's theme, but mainly used from CI checkou
     font-size: 3rem;
     font-weight: 500;
     margin-top: 10vh;
-    margin-bottom: 5rem;
+    margin-bottom: 8vh;
 }
 
 .checkout-form-header {
@@ -124,4 +124,83 @@ select:invalid {
     padding: 0.25rem;
     margin-top: 3rem;
     margin-bottom: 30vh;
+}
+
+
+
+
+
+
+/*Media screen max-width 1560px*/
+@media only screen and (max-width: 1560px){
+
+
+}
+
+
+/*Media screen max-width 1200px*/
+@media only screen and (max-width: 1200px){
+   
+
+}
+
+/*Media screen max-width 767px*/
+@media only screen and (max-width: 767px){
+    .checkout-header {
+        font-size: 2rem;
+    }
+
+    .checkout-continue {
+        font-size: 1rem;
+    }
+
+    .cart-items {
+        margin-top: 0;
+    }
+
+    .cart-hide {
+        display: none;
+    }
+
+    #submit-button {
+        font-size: 1rem;
+    }
+
+}
+
+
+/*Media screen max-width 576px*/
+@media only screen and (max-width: 576px){
+    .checkout-header {
+        font-size: 1.5rem;
+        margin-top: 3vh;
+        margin-bottom: 5vh;
+    }
+        
+    .checkout-continue {
+        font-size: .9rem;
+    }
+
+    .cart-items {
+        font-size: 0.75rem;
+    }
+
+    .cart-total p {
+        font-size: 1rem;
+    }
+
+    .cart-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+/*Media screen max-height 414px*/
+    @media only screen and (max-height: 414px){
+
+
+
 }

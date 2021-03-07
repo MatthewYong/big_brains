@@ -101,14 +101,6 @@
 
 
 
-
-/*Media screen max-width 1560px*/
-@media only screen and (max-width: 1560px) {
-
-
-}
-
-
 /*Media screen max-width 1200px*/
 @media only screen and (max-width: 1200px){
     .cart-header, .cart-header-empty {
@@ -145,14 +137,9 @@
 
 /*Media screen max-width 576px*/
 @media only screen and (max-width: 576px){
-
-
-}
-
-
-/*Media screen max-height 414px*/
-    @media only screen and (max-height: 414px){
-
+    .cart-header-empty, .cart-header-empty p, .cart-total p {
+        font-size: 1.25rem;
+    }
 }
 
 

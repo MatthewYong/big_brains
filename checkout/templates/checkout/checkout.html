@@ -35,31 +35,31 @@
         </div>          
         {% for item in cart_items %}                 
         <div class="row md-font">                   
-            <div class="col-2 offset-1">
+            <div class="col-4 col-md-2 offset-md-1">
                 <a href="{% url 'toy_detail' item.toy.id %}">
                     <img src="{{ MEDIA_URL }}{{ item.toy.image }}"    class="cart-image" alt="">
                 </a>
             </div>
-            <div class="col-3 cart-items">
+            <div class="col-4 col-md-3 cart-items">
                 <p>{{ item.toy.name }}</p>
             </div>
-            <div class="col-1 cart-items">
+            <div class="col-md-1 cart-items cart-hide">
                 <p>£{{ item.toy.price }}</p>
             </div>   
-            <div class="col-2 cart-items">
+            <div class="col-md-2 cart-items cart-hide">
                 <p>{{ item.quantity }}</p>
             </div>                        
-            <div class="col-2 cart-items">
+            <div class="col-4 col-md-2 cart-items">
                 <p>£{{ item.toy.price | cart_subtotal:item.quantity }}</p>
             </div>                                               
         </div>
         <hr>
         {% endfor %}                 
         <div class="row cart-total">
-            <div class="col-2 offset-7">
-                <p class="cart-item-header">Total</p>
+            <div class="col-4 offset-4 col-md-2 offset-md-7">
+                <p class="cart-total-header">Total</p>
             </div>
-            <div class="col-2">
+            <div class="col-4 col-md-2">
                 <p>£{{ total }}</p>
             </div>
         </div>
