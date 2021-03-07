@@ -18,7 +18,7 @@
         </div>         
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
             <a href="{{ MEDIA_URL }}{{ toy.image }}" target="_blank" class="toy-box mx-auto">  
                 {% if toy.image %}            
                     <div>
@@ -32,7 +32,7 @@
                 {% endif %}
             </a>                    
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
             <p class="toy-name lg-font">{{ toy.name }}</p>           
             <p>{{ toy.age }} | Item # {{ toy.sku }}</p>                      
             <p class="toy-price md-font">£{{ toy.price }}</p>  

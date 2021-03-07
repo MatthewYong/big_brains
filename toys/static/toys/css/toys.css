@@ -177,7 +177,13 @@
 
 /*Media screen max-width 1200px*/
 @media only screen and (max-width: 1200px){
+    .toy-name, .toy-price {
+        font-size: 1rem;
+    }
 
+    .toy-price {
+        margin-bottom: 2vh;
+    }
 }
 
 /*Media screen max-width 767px*/
@@ -185,9 +191,17 @@
     .toy-name, .toy-price {
         font-size: 1.25rem;
     }
+    
+    .toy-description {
+        font-size: 1rem;
+    }
 
     .toypage-header, .dropdown-menu {
         font-size: 0.75rem;
+    }
+
+    .review-header {
+        font-size: 1.5rem;
     }
 
 }
@@ -208,7 +222,6 @@
 
     .toy-image {
         width: 50%;
-        height: auto;
         margin-left: 25%;
     }
 
@@ -216,5 +229,8 @@
         font-size: 0.75rem;
     }
 
+    .review-header {
+        font-size: 1.5rem;
+    }
 }
 
