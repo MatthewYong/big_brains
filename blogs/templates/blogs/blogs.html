@@ -9,7 +9,7 @@
 
 <div class="container">
     <div class="row blog-header md-font">
-        <div class="col-8">
+        <div class="col-12 col-md-8">
             <p class="blog-pagetitle">Educational Blogs</p>
             <p>
                 Read the latest blogs from educators or parents with experience and learn what is best for your children. If you have any questions about these articles, please contact don't hesitate to us.
@@ -23,16 +23,16 @@
     <a href="{% url 'blog_detail' blog.id %}" class="blog-link" id="blog-link">
         <div class="row blog-box">
             {% if blog.image_url %}            
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <img src="{{ blog.image_url }}" class="blog-image" 
                     alt="{{ blog.title }}">
                 </div>
             {% else %}  
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <img src="{{ MEDIA_URL }}no_image_available.jpg" class="blog-image" alt="no image">
                 </div>                
             {% endif %}
-            <div class="col-6 blog-text">
+            <div class="col-12 col-md-6 blog-text">
                 <p class="blog-title md-font">{{ blog.title }}</p>          
                 <p class="blog-description sm-font">{{ blog.description }}</p> 
                 <p class="blog-author sm-font">by {{ blog.author_friendly }}</p>
