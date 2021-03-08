@@ -9,24 +9,24 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-8 offset-2 blogpage-detail-header">
+        <div class="col-12 col-md-8 offset-md-2 blogpage-detail-header">
             <p>{{ blog.title }}</p>
         </div>
     </div>
     <div class="row">
         {% if blog.image_url %}            
-            <div class="col-8 offset-2">
+            <div class="col-12 col-md-8 offset-md-2">
                 <img src="{{ blog.image_url }}" class="blog-detail-image" 
                 alt="{{ blog.title }}">
             </div>
         {% else %}  
-            <div class="col-8 offset-2">
+            <div class="col-12 col-md-8 offset-md-2">
                 <img src="{{ MEDIA_URL }}no_image_available.jpg" class="blog-detail-image" alt="no image">
             </div>                
         {% endif %}
     </div>  
     <div class="row">
-        <div class="col-8 offset-2">    
+        <div class="col-12 col-md-8 offset-md-2">    
             <p class="blog-detail-author sm-font">{{ blog.author_friendly }}</p>
             <p class="blog-detail-date xs-font">{{ blog.date }}</p>   
             <p class="blog-detail-article sm-font">{{ blog.article }}</p>
