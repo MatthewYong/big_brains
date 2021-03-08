@@ -297,11 +297,11 @@
     }
 
     .landing-toy-box-wrapper {
-        height: 35vh;
+        height: 40vh;
     }
 
     .landing-toy-image-wrapper {
-        height: 20vh; 
+        height: 40vh; 
     }
 
     .sm-font {
@@ -316,7 +316,7 @@
     }
 
     .landing-blog-image-wrapper {
-        height: 45vh; 
+        height: 40vh; 
     }
 
     /*Payment-method*/
