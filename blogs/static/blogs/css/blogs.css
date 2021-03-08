@@ -257,6 +257,15 @@
     .blog-add-header {
         font-size: 1.5rem;
     }
+
+    /*Blog edit*/
+    .blog-add-button {
+        font-size: 0.75rem;
+    }
+
+    .blog-delete-button {
+        font-size: 0.75rem;
+    }
 }
 
 
