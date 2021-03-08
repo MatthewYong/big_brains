@@ -126,8 +126,8 @@
 
 .blog-add-wrapper {
     width: 75%;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-top: 5vh;
+    margin-bottom: 3;
 }
 
 .blog-add-wrapper label { 
@@ -235,8 +235,6 @@
     .blogpage-detail-header {
         font-size: 1.5rem;
     }
-
-
 }
 
 
@@ -249,11 +247,15 @@
     /*Blog detail*/
     .blogpage-detail-header {
         font-size: 1.25rem;
-        
     }   
     
     .blog-detail-image {
         height: 35vh;   
+    }
+
+    /*Blog add*/      
+    .blog-add-header {
+        font-size: 1.5rem;
     }
 }
 
