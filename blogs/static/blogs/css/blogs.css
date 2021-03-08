@@ -174,7 +174,10 @@
 
 /*Media screen max-width 1560px*/
 @media only screen and (max-width: 1560px){
-
+    .blog-image {
+        width: 35vw;
+        height: 30vh;
+    }    
 }
 
 
@@ -187,7 +190,12 @@
     .blog-header {
         margin-top: 15vh;
         margin-bottom: 5vh;
-    }        
+    }    
+    
+    .blog-image {
+        width: 30vw;
+        height: 30vh;
+    }    
 
 }
 
@@ -197,10 +205,17 @@
         font-size: 1rem;
     }
 
+    .sm-font {
+        font-size: 1rem;
+    }
+
     .blog-pagetitle {
         font-size: 2rem; 
     }
 
+    .blog-image {
+        width: 100%;
+    }    
 
 }
 
@@ -222,5 +237,10 @@
     .blog-pagetitle {
         font-size: 1.5rem; 
     }
+
+    .blog-image {
+        height: 75vh;
+    }
+
 
 }
