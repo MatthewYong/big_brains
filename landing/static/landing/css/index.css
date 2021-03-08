@@ -221,6 +221,11 @@
         font-size: 2rem;
     }
 
+
+    .banner-button {
+        font-size: 1.5rem;
+    }       
+
     /*Toys*/
     .landing-toy-box-wrapper {
         height: 45vh;
@@ -253,6 +258,10 @@
     .banner-text-header {
         font-size: 1.5rem;
     }
+
+    .banner-button {
+        font-size: 1rem;
+    }    
 
     /*Payment-method*/
 
