@@ -6,7 +6,7 @@ The goal of the website is for user to improve their child’s development. The 
 
 ![alt text][logo]
 
-[logo]: https://raw.githubusercontent.com/MatthewYong/
+[logo]: https://github.com/MatthewYong/big_brains/blob/master/static/images/readme/image-landing-device.png?raw=true
 
 ## Table of Contents
 - [UX](#ux)
