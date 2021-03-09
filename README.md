@@ -30,6 +30,26 @@ To understand what the result of the website needs to be, we need to define the 
 The strategy plane defines the developer’s objective and the user needs (goals).
 
 #### User Stories
+As a **user** I want to:
+1.  Buy toys
+2.	Be informed of latest toys
+3.	Contact the website owner
+4.	Pay safely
+5.	Check my purchase history
+6.	Register my profile
+7.	Login to my profile
+
+As a **developer** I want to:
+1.  Gain more knowledge on Django
+2.	Create a full-stack framework
+3.	Learn more on databases, such as MySQL
+
+As an **admin** I want to:
+
+1.	Add products/services
+2.	Manage products/services
+3.	Remove users
+4.	Check user’s purchase history
 
 
 ### Scope Plane
