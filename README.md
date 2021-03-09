@@ -70,13 +70,18 @@ The strategy plane defines the developer’s objective and the user needs (goals
 
 ## Credits
 ### Content
-
+- All general text are written by myself
+- All toy description are taken from [Learningresources.co.uk](https://www.learningresources.co.uk)
+- All blog stories are taken from [Edutopia.org](https://www.edutopia.org)
+- To maintain consistency through all my Code Institute projects, a similar structure for the Readme file has been used from my previous projects
 
 ### Media
-
+- All photos for this project are used from:
+    - [Unsplash.com](https://unsplash.com)
+    - [Learningresources.co.uk](https://www.learningresources.co.uk)
+    - [Edutopia.org](https://www.edutopia.org)    
 
 ### Source of Codes
-
 
 ### Acknowledgement
 The completion of this project could not have been possible without support and the extensive knowledge of other people. My appreciation goes to:
