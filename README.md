@@ -53,6 +53,20 @@ As an **admin** I want to:
 
 
 ### Scope Plane
+The scope plane defines the features that are and are not possible to include on the website.
+This will be further explained in the next chapter. A summary of the included and not included features are:
+
+| Features (included) | Future features (not included)|
+| :------------- | :---------- |
+|1. Navigation menu | 1. Edit review|
+|2. Banner | 2. Add toys as admin through website instead through Django portal|
+|3. Landing page|
+|4. Toy view & detail pages |
+|5. Blog view, add & edit pages |
+|6. Cart & Checkout pages |
+|7. Login & registration pages |
+|8. Profile page |
+|9. Add toy review |
 
 ### Structure Plane
 
