@@ -70,19 +70,49 @@ This will be further explained in the next chapter. A summary of the included an
 
 ### Structure Plane
 
-
+The structure plane defines the information architecture and interaction design with the user. 
 
 #### Interaction Design
+The following definitions has been used for this website:
+- First impression of the website needs to be as simple and clear as possible
+- No more than three clicks are required for the user to reach the page
+- The type of information architecture that will be used is the ‘Hierarchical Tree’, see below:
 
+![alt text][wireframe tree]
+
+[wireframe tree]: https://raw.githubusercontent.com/MatthewYong/
 
 #### Information architecture
 
+This project has 4 collections in the database. The database structure in MongoDB has been set up as follows:
+
+![alt text][diagram]
+
+[diagram]: https://raw.githubusercontent.com/MatthewYong/
+
+
+
 
 ### Skeleton Plane
+The skeleton plane defines a basic visual design of the website through, for example, a wireframe.  
+The wireframes for this project are made with Balsamiq can be downloaded from the following link:
 
+- [Wireframe - Desktop version](https://github.com/MatthewYong/
+- [Wireframe - Tablet version](https://github.com/MatthewYong/
+- [Wireframe - Mobile version](https://github.com/MatthewYong/
+
+Below you can find an example of a wireframe of the landing page.
 
 ### Surface Plane
+The surface plane defines the appearance of the website. This website needs to attract and encourage users to focus on the website's content.
+The following design style has been used:
 
+| Design Style | Design Choice|
+| :------------- | :---------- |
+Font: Open Sans | A font with an improved readability|
+Text colour: #0F0F0 | A dark color|
+Background colour: #FFFF| To enhance text and images |
+Contrast ratio: 19.16 | A high ratio to express the visibility of the text (source: contrast-ratio.com)|
 
 ## Features
 
