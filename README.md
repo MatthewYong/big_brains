@@ -24,7 +24,7 @@ The goal of the website is for user to improve their child’s development. The 
 
 
 ## UX
-To understand what the result of the website needs to be, we need to define the development process of each stage. This can be done by analysing and breaking down the problem into five planes:
+To understand what the result of the website needs to be, we need to define the development process of each stage. This can be done by analyzing and breaking down the problem into five planes:
 
 ### Strategy Plane
 The strategy plane defines the developer’s objective and the user needs (goals).
@@ -137,7 +137,7 @@ A summary of the features was described in the scope plane. This chapter will ex
 | :------------- | :---------- |
 |1. Navigation menu | 1. Allows user to quick access different pages of the website|
 |2. Banner image with link to toys page | 2. Allows users to quick access the toys page |
-|3. Landing page | 3. Allows users to identify which toys are availalbe and which blogs can be read|
+|3. Landing page | 3. Allows users to identify which toys are available and which blogs can be read|
 |4. Toy pages | 4. Allows users to view all the toys|
 |5. Blogs pages | 5. Allows users to, besides reading all the blogs, add, edit and delete their own blogs|
 |6. Cart & Checkout pages | 6. Allows users to add toys to the cart and checkout from the cart by completing the payment|
@@ -151,8 +151,8 @@ A summary of the features was described in the scope plane. This chapter will ex
 |1. Edit review | This feature allows users to edit their own reviews, instead of deleting and rewriting their reviews|
 |2. Adding toys through website| This feature allows the owner to add new toys through the website instead of the main portal
 |3. Webhook handling with delay | This feature prevents a payment being taken from the user before the order has gone through|
-|4. Order confirmation by email | This feature allows users to receive an confirmation by email when the order is completed|
-|5. More JavaScript to attact customers | This feature enhance the site experience for users|
+|4. Order confirmation by email | This feature allows users to receive a confirmation by email when the order is completed|
+|5. More JavaScript to attract more customers | This feature enhances the site experience for users|
 
 
 ## Technologies Used
@@ -181,7 +181,7 @@ A summary of the features was described in the scope plane. This chapter will ex
 The following codes were inspired or taken from:
 - [Code Institute](https://codeinstitute.net/): The project is mainly based on the Boutique Ado example project from the module Full-stack Framework with Django. The following codes are derived or used in this project:
     - The Stripe payments in the Checkout app
-    - The context.py & templatetags in the Cart app
+    - The context.py & templatetags-cart_tools.py in the Cart app
     - All settings to deploy to AWS & Heroku
 - [W3schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp*/): Hiding the quantity arrow in the input field. Code used on line 69 in base.css
 - [CSS Tricks](): Animating underlines. Code used on line 76 in base.css
