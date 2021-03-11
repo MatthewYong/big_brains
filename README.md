@@ -30,7 +30,7 @@ To understand what the result of the website needs to be, we need to define the 
 The strategy plane defines the developer’s objective and the user needs (goals).
 
 #### User Stories
-As a **user** I want to:
+As a **User** I want to:
 1.  Buy toys
 2.	Be informed of latest toys
 3.	Contact the website owner
@@ -39,12 +39,12 @@ As a **user** I want to:
 6.	Register my profile
 7.	Login to my profile
 
-As a **developer** I want to:
+As a **Developer** I want to:
 1.  Gain more knowledge on Django
 2.	Create a full-stack framework
 3.	Learn more on databases, such as MySQL
 
-As an **admin** I want to:
+As an **Admin** I want to:
 
 1.	Add products/services
 2.	Manage products/services
@@ -59,10 +59,10 @@ This will be further explained in the next chapter. A summary of the included an
 | Features (included) | Future features (not included)|
 | :------------- | :---------- |
 |1. Navigation menu | 1. Edit review|
-|2. Banner | 2. Add toys as admin through website instead through Django portal|
-|3. Landing page|
-|4. Toy view & detail pages |
-|5. Blog view, add & edit pages |
+|2. Banner | 2. Admin page for owners to add toys directly on the website instead of the Django portal|
+|3. Landing page| 3. Webhook handling with delay
+|4. Toy view & detail pages | 4. Order confirmation by mail
+|5. Blog view, add & edit pages | 5. More JavaScript to attract customers
 |6. Cart & Checkout pages |
 |7. Login & registration pages |
 |8. Profile page |
@@ -80,7 +80,7 @@ The following definitions has been used for this website:
 
 ![alt text][wireframe tree]
 
-[wireframe tree]: https://raw.githubusercontent.com/MatthewYong/
+[wireframe tree]: https://github.com/MatthewYong/big_brains/blob/master/static/wireframes/image-wireframe-tree.jpg?raw=true
 
 #### Information architecture
 
