@@ -97,7 +97,7 @@ Databases have been setup for the following apps:
 An example of the Toy's database can be found below:
 
 | **Name** | **Field Type** | **Validation** |
---- | --- | --- | --- 
+--- | --- | --- 
  age | ForeignKey |  null=True, blank=True, on_delete=models.SET_NULL
  sku | CharField | max_length=200, null=True, blank=True
  name | CharField | max_length=200
