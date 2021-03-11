@@ -84,13 +84,27 @@ The following definitions has been used for this website:
 
 #### Information architecture
 
-This project has 4 collections in the database. The database structure in MongoDB has been set up as follows:
+The initial database used for this project is sqlite3. During production the database was changed at the deployment stage to PostgreSQL with Heroku as add-on.
 
-![alt text][diagram]
+Databases have been setup for the following apps:
 
-[diagram]: https://raw.githubusercontent.com/MatthewYong/
+- Toys
+- Blogs
+- Profiles
+- Reviews
+- Checkout
 
+An example of the Toy's database can be found below:
 
+| **Name** | **Field Type** | **Validation** |
+--- | --- | --- | --- 
+ age | ForeignKey |  null=True, blank=True, on_delete=models.SET_NULL
+ sku | CharField | max_length=200, null=True, blank=True
+ name | CharField | max_length=200
+ description | CharField | max_length=2000
+ price | DecimalField | max_digits=6, decimal_places=2
+ image_url | URLField | max_length=1024, null=True, blank=True
+ image | ImageField | null=True, blank=True
 
 
 ### Skeleton Plane
