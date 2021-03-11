@@ -115,10 +115,19 @@ Background colour: #FFFF| To enhance text and images |
 Contrast ratio: 19.16 | A high ratio to express the visibility of the text (source: contrast-ratio.com)|
 
 ## Features
-
+A summary of the features was described in the scope plane. This chapter will explain what the purpose is of each feature and what will be left to implement for the future.
 
 ### Existing Features
-
+| Features (included) | Explanation|
+| :------------- | :---------- |
+|1. Navigation menu | 1. Allows user to quick access different pages of the website|
+|2. Hero image with link to add recipe | 2. Allows users to quick access the add recipe page |
+|3. Landing page with category recipes | 3. Allows users to quick access a specific recipe category|
+|4. Add recipe page | 4. Allows users to add their recipe by filling out the recipe form|
+|5. Edit button/recipe page | 5. Allows users to edit their own recipes|
+|6. Login page | 6. Allows users to login to their profile|
+|7. Registration page | 7. Allows users to create a new profile
+|8. User's profile page | 8. Allows users to view all of their own recipes
 
 ### Features Left to Implement
 
@@ -134,10 +143,10 @@ Contrast ratio: 19.16 | A high ratio to express the visibility of the text (sour
 
 ## Credits
 ### Content
-- All general text are written by myself
 - All toy description are taken from [Learningresources.co.uk](https://www.learningresources.co.uk)
 - All blog stories are taken from [Edutopia.org](https://www.edutopia.org)
 - To maintain consistency through all my Code Institute projects, a similar structure for the Readme file has been used from my previous projects
+- All remaining text is written by myself
 
 ### Media
 - All photos for this project are used from:
@@ -146,10 +155,20 @@ Contrast ratio: 19.16 | A high ratio to express the visibility of the text (sour
     - [Edutopia.org](https://www.edutopia.org)    
 
 ### Source of Codes
+The following codes were inspired or taken from:
+- [Code Institute](https://codeinstitute.net/): The project is mainly based on the Boutique Ado example project from the module Full-stack Framework with Django. The following codes are derived or used in this project:
+    - The Stripe payments in the Checkout app
+    - The context.py & templatetags in the Cart app
+    - All settings to deploy to AWS & Heroku
+- [W3schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp*/): Hiding the quantity arrow in the input field. Code used on line 69 in base.css
+- [CSS Tricks](): Animating underlines. Code used on line 76 in base.css
+- [AOS Animate on Scroll](https://michalsnik.github.io/aos/): Animating fade in headers on landing page. Code used on landing.html
+- [Owl Carousel 2 ](https://owlcarousel2.github.io/OwlCarousel2/demos/demos.html): Code derived for Toys and Blogs carousel on landing page. Code used on landing.html and main.js
+
 
 ### Acknowledgement
 The completion of this project could not have been possible without support and the extensive knowledge of other people. My appreciation goes to:
-- Gerard (Gerry) McBride, my mentor, for giving me tips on testing in Djagno and guidance throughout the project
+- Gerard (Gerry) McBride, my mentor, for giving me tips on testing in Django and guidance throughout the project
 - Code Institute, for the valuable lessons through videos and exercises, mainly the last project lesson Boutique Ado from Chris-ckz8780
 - Stack Overflow, for giving me code support 
 - Slack community for giving me new ideas and code support
