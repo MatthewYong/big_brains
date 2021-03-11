@@ -146,6 +146,13 @@ A summary of the features was described in the scope plane. This chapter will ex
 |9. Toy reviews | 9. Allows users to view and add a review for a specific toy
 
 ### Features Left to Implement
+| Features (not included) | Explanation|
+| :------------- | :---------- |
+|1. Edit review | This feature allows users to edit their own reviews, instead of deleting and rewriting their reviews|
+|2. Adding toys through website| This feature allows the owner to add new toys through the website instead of the main portal
+|3. Webhook handling with delay | This feature prevents a payment being taken from the user before the order has gone through|
+|4. Order confirmation by email | This feature allows users to receive an confirmation by email when the order is completed|
+|5. More JavaScript to attact customers | This feature enhance the site experience for users|
 
 
 ## Technologies Used
