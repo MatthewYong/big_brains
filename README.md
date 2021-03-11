@@ -86,7 +86,7 @@ The following definitions has been used for this website:
 
 The initial database used for this project is sqlite3. During production the database was changed at the deployment stage to PostgreSQL with Heroku as add-on.
 
-Databases have been setup for the following apps:
+Databases have been setup in models.py of the following apps:
 
 - Toys
 - Blogs
@@ -106,6 +106,7 @@ An example of the Toy's database can be found below:
  image_url | URLField | max_length=1024, null=True, blank=True
  image | ImageField | null=True, blank=True
 
+More about the Django database models can be found [here](https://docs.djangoproject.com/en/3.1/topics/db/models/#field-options).
 
 ### Skeleton Plane
 The skeleton plane defines a basic visual design of the website through, for example, a wireframe.  
@@ -126,7 +127,7 @@ The following design style has been used:
 Font: Open Sans | A font with an improved readability|
 Text colour: #0F0F0 | A dark color|
 Background colour: #FFFF| To enhance text and images |
-Contrast ratio: 19.16 | A high ratio to express the visibility of the text (source: contrast-ratio.com)|
+Contrast ratio: 21 | A high ratio to express the visibility of the text (source: contrast-ratio.com)|
 
 ## Features
 A summary of the features was described in the scope plane. This chapter will explain what the purpose is of each feature and what will be left to implement for the future.
@@ -135,13 +136,14 @@ A summary of the features was described in the scope plane. This chapter will ex
 | Features (included) | Explanation|
 | :------------- | :---------- |
 |1. Navigation menu | 1. Allows user to quick access different pages of the website|
-|2. Hero image with link to add recipe | 2. Allows users to quick access the add recipe page |
-|3. Landing page with category recipes | 3. Allows users to quick access a specific recipe category|
-|4. Add recipe page | 4. Allows users to add their recipe by filling out the recipe form|
-|5. Edit button/recipe page | 5. Allows users to edit their own recipes|
-|6. Login page | 6. Allows users to login to their profile|
-|7. Registration page | 7. Allows users to create a new profile
-|8. User's profile page | 8. Allows users to view all of their own recipes
+|2. Banner image with link to toys page | 2. Allows users to quick access the toys page |
+|3. Landing page | 3. Allows users to identify which toys are availalbe and which blogs can be read|
+|4. Toy pages | 4. Allows users to view all the toys|
+|5. Blogs pages | 5. Allows users to, besides reading all the blogs, add, edit and delete their own blogs|
+|6. Cart & Checkout pages | 6. Allows users to add toys to the cart and checkout from the cart by completing the payment|
+|7. Login & Registration pages | 7. Allows users to create a new profile
+|8. User's profile page | 8. Allows users to view all its purchase history
+|9. Toy reviews | 9. Allows users to view and add a review for a specific toy
 
 ### Features Left to Implement
 
