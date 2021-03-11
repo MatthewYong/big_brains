@@ -156,7 +156,52 @@ A summary of the features was described in the scope plane. This chapter will ex
 
 
 ## Technologies Used
+The following technologies have been used to achieve this project:
 
+Resources
+- [HTML](https://www.w3.org/TR/html52/) is used as the main writing language of this project
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) is used for styling the HTML text
+- [JavaScript](https://www.javascript.com/) is used for Stripe payments, scroll-to-top button, owl carousel and hiding and showing contact form
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) is used as templating language for Python and its depending framework Django
+- [Jquery](https://jquery.com/) is used for simplifying JavaScript commands
+
+Styling
+- [FontAwesome](https://fontawesome.com/) is used to improve the visual design of the website
+- [Contrast-ratio.com](https://contrast-ratio.com/) is used to test the visibility of the text with the background color
+- [Google fonts](https://fonts.google.com/) is used for the style the font
+- [AOS](https://michalsnik.github.io/aos/) is used to animate the headers on the landing page when scrolling
+- [OwlCarousel2](https://owlcarousel2.github.io/OwlCarousel2/) is used for the toys and blogs on the landing page
+
+Framework, Libraries & API
+- [Django](https://www.djangoproject.com/ is used as main web framework for the website
+- [Django Crispyforms](https://django-crispy-forms.readthedocs.io/en/latest/#) is used for simplifying forms through Python
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) is used for user login and user registration
+- [Bootstrap](https://getbootstrap.com/) is used for its grid system and navigation bar
+- [Stripe](https://stripe.com/) is used for the payment system in the checkout app
+- [Gunicorn](https://gunicorn.org/) is used for the deployment to Heroku
+- [Psycopg2](https://pypi.org/project/psycopg2/) is used as an adapter for PostgreSQL with Django 
+
+Database & Platform
+- [sqlite3](https://www.sqlite.org/download.html) is used for storing data from the store. Specifically, for this website: storing of user order information, blogs, toys and toy reviews
+- [PostgreSQL](https://www.postgresql.org/) is used for the same purpose as sqlite3, but is used for production
+- [Heroku](https://heroku.com/) is used for deploying the app through its cloud platform
+- [AWS S3](https://aws.amazon.com/) is used to store static and media files in production
+
+Images
+- [Adobe Photoshop CC 2020](https://www.adobe.com/uk/products/photoshop) is used to crop the images and deleting white background
+- [Tinyjpg.com](https://tinyjpg.com/) is used to reduce the size of the JPG images
+- [Tinypng.com](https://tinypng.com/) is used to reduce the size of the PNG images
+
+Wireframe
+- [Balsamic](https://balsamiq.com/) is used to draw wireframes for the skeleton plane and making the visual design of the structure plane
+
+Testing
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) is used to test the responsiveness of the website and to debug any problems
+- [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) is used to determine any overflow on the website
+- [Validator.w3.org](https://validator.w3.org/) is used to validate the HTML code
+- [Jigsaw.w3.org/css-validator](https://jigsaw.w3.org/css-validator/validator.html.en) is used to validate the CSS code
+- [JSHint](https://jshint.com/) is used to validate the JavaScript code
+- [Pep8](http://pep8online.com/) is used to validate the Python code
 ## Testing
 
 
