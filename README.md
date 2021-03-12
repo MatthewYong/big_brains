@@ -129,6 +129,10 @@ Text colour: #0F0F0 | A dark color|
 Background colour: #FFFF| To enhance text and images |
 Contrast ratio: 21 | A high ratio to express the visibility of the text (source: contrast-ratio.com)|
 
+Color scheme
+
+
+
 ## Features
 A summary of the features was described in the scope plane. This chapter will explain what the purpose is of each feature and what will be left to implement for the future.
 
