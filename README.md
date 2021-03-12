@@ -112,9 +112,9 @@ More about the Django database models can be found [here](https://docs.djangopro
 The skeleton plane defines a basic visual design of the website through, for example, a wireframe.  
 The wireframes for this project are made with Balsamiq can be downloaded from the following link:
 
-- [Wireframe - Desktop version](https://github.com/MatthewYong/
-- [Wireframe - Tablet version](https://github.com/MatthewYong/
-- [Wireframe - Mobile version](https://github.com/MatthewYong/
+- [Wireframe - Desktop version](https://github.com/MatthewYong/big_brains/raw/master/static/wireframes/Wireframe%20-%20Desktop.pdf)
+- [Wireframe - Tablet version](https://github.com/MatthewYong/big_brains/raw/master/static/wireframes/Wireframe%20-%20Tablet.pdf)
+- [Wireframe - Mobile version](https://github.com/MatthewYong/big_brains/raw/master/static/wireframes/Wireframe%20-%20Mobile.pdf)
 
 Below you can find an example of a wireframe of the landing page.
 
