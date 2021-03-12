@@ -80,7 +80,7 @@ The following definitions has been used for this website:
 
 ![alt text][wireframe tree]
 
-[wireframe tree]: https://github.com/MatthewYong/big_brains/blob/master/static/wireframes/image-wireframe-tree.jpg?raw=true
+[wireframe tree]: https://github.com/MatthewYong/big_brains/blob/master/static/images/readme/image-wireframe-tree.jpg?raw=true
 
 #### Information architecture
 
@@ -129,8 +129,11 @@ Text colour: #0F0F0 | A dark color|
 Background colour: #FFFF| To enhance text and images |
 Contrast ratio: 21 | A high ratio to express the visibility of the text (source: contrast-ratio.com)|
 
-Color scheme
+#### Color Scheme
 
+![alt text][color scheme]
+
+[color scheme]: https://github.com/MatthewYong/big_brains/blob/master/static/images/readme/image-colorscheme.png?raw=true
 
 
 ## Features
