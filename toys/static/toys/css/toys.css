@@ -192,9 +192,14 @@
     .review-header {
         font-size: 1.5rem;
     }
-
 }
 
+/*Media screen max-width 576px*/
+    @media only screen and (max-width: 576px){
+    .review-wrapper {
+        width: 100%;    
+    }
+}
 
 /*Media screen max-height 414px*/
     @media only screen and (max-height: 414px){
