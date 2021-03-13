@@ -222,6 +222,9 @@ The following chapter explains how to:
 - Python (version 3.0)
 - Heroku account
 - Github account
+- Stripe account
+- Gmail account
+- AWS account
 
 ### Cloning the Repository
 To work with a local copy of this project the following steps needs to be taken:
@@ -243,28 +246,41 @@ To work with the local copy that is created the following steps needs to be take
 1. To install all the required libraries of the project go to the workspace of your local copy
 2. In the terminal window of your IDE type in: **pip3 install -r requirements.txt**
 
+#### Step 2: Setting Up Environment Variables
+Depending on the IDE, the user has to make sure that the Environment Variables are properly setup. The following Environment Variables have been set up in **GitPod** to ensure that the project keys and project files are respectively taken from and migrated to the correct source. 
 
-#### Step 2: Migrating the Database
+
+| Name | Value|
+| :------------- | :---------- |
+|1. DEVELOPMENT | True|
+|2. SECRET_KEY | *'Your Secret Key'*|
+|2. STRIPE_PUBLIC_KEY | *'Your Stripe Public key'* |
+|3. STRIPE_SECRET_KEY | *'Your Stripe Secret key'* |
+|4. STRIPE_WH_SECRET | *'Your Stripe WH Secret key'* |
+
+For more information about Stripe API keys, please read the [Stripe API keys documentation](https://stripe.com/docs/keys).
+
+
+#### Step 3: Migrating the Database
 1. In the terminal window of your IDE type in: **python3 manage.py makemigrations**
 2. In the terminal window of your IDE type in: **python3 manage.py migrate**
 
+#### Step 4: Create SuperUser
+1. In the terminal window of your IDE type in: **python3 manage.py createsuperuser**
+2. Enter the credentials of the Superuser to access the Django Admin panel
 
-#### Step 3: Loading Fixtures
-1. In the terminal window of your IDE type in: **./manage.py loaddata <file>.json**. 
+#### Step 5: Loading Fixtures
+1. In the terminal window of your IDE type in: **./manage.py loaddata 'Fixture_Filename'.json**
 2. Make sure to that load the fixtures in the following order:
     - Categories
     - Toys
     - Blogs
+3. Please note that a SuperUser has to be created **first**, in order to load the *blogs.json* fixture
 
-#### Step 4: Create Superuser
-1. In the terminal window of your IDE type in: **python3 manage.py createsuperuser**
-2. Enter the details of the Superuser to access the Django Admin panel 
-
-#### Step 5: Run the App
+#### Step 6: Run the App
 1. Open your terminal window in your IDE
 2. Type in **python3 app.py** to run the app
-
-
+3. To access the Djanog Admin panel, add **/admin** at the end of the URL link and login with your credentials
 
 
 
