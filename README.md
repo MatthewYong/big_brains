@@ -365,11 +365,11 @@ Important note: Do **NOT** save and commit this change, this is a temporary proc
 2. The live link is available from the address bar
 
 #### Storing Static and Media files with AWS
-For storing static and media files in AWS S3 bucket, please refer to the 
-[AWS S3 Bucket documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html). The media files have to be taken from the repository and manually placed into the AWS S3 bucket.
+For setting up the AWS S3 bucket please refer to the 
+[AWS S3 Bucket documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html) and the [S3BotoStorage documentation](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html). The media files have to be taken from the repository and manually placed into the AWS S3 bucket.
 
 #### Gmail
-For sending emails via the Google server, please refer to 
+To obtain the **EMAIL_HOST_PASS**, please refer to 
 [Google SMTP documentation](https://support.google.com/a/answer/176600?hl=en#zippy=%2Cuse-the-gmail-smtp-server).
 
 
