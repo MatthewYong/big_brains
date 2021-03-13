@@ -213,6 +213,57 @@ Testing
 
 
 ## Deployment
+The following chapter explains how to:
+    - Clone a Repository from Github
+    - Work with a Local Copy
+    - Deployment on Heroku and file storage on AWS
+
+### Requirements
+- Python (version 3.0)
+- Heroku account
+- Github account
+
+### Cloning the Repository
+To work with a local copy of this project the following steps needs to be taken:
+
+1. Go to the main page of the GitHub repository and click on the dropdown menu **Code**
+![alt text][copy-clone]
+
+[copy-clone]: https://raw.githubusercontent.com/MatthewYong/recipes-connected/master/static/images/readme-images/image-dropdown-clone.png
+
+2. Copy the URL and go to your local IDE
+
+3. In the terminal of your IDE type in **git clone** and the paste the URL copied from step 2
+4. Press Enter and the clone will be created
+
+
+### Working with a Local Copy
+To work with the local copy that is created the following steps needs to be taken:
+
+#### Step 1: Installing the Requirements
+1. To install all the required libraries of the project go to the workspace of your local copy
+2. In the terminal window of your IDE type in: **pip3 install -r requirements.txt**
+
+
+#### Step 2: Migrating the Database
+1. In the terminal window of your IDE type in: **python3 manage.py makemigrations**
+2. In the terminal window of your IDE type in: **python3 manage.py migrate**
+
+
+#### Step 3: Loading Fixtures
+1. In the terminal window of your IDE type in: **python3 manage.py load fixtures**
+2. In the terminal window of your IDE type in: **python3 manage.py migrate**
+
+#### Step 4: Create Superuser
+1. In the terminal window of your IDE type in: **python3 manage.py createsuperuser**
+2. Enter the details of the Superuser to access the Django Admin panel 
+
+#### Step 5: Run the App
+1. Open your terminal window in your IDE
+2. Type in **python3 app.py** to run the app
+
+
+
 
 
 ## Credits
