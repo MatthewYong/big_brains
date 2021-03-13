@@ -229,8 +229,7 @@ To work with a local copy of this project the following steps needs to be taken:
 1. Go to the main page of the GitHub repository and click on the dropdown menu **Code**
 ![alt text][copy-clone]
 
-[copy-clone]: https://raw.githubusercontent.com/MatthewYong/recipes-connected/master/static/images/readme-images/image-dropdown-clone.png
-
+[copy-clone]: https://github.com/MatthewYong/big_brains/blob/master/static/images/readme/image-dropdown-clone.jpg?raw=true
 2. Copy the URL and go to your local IDE
 
 3. In the terminal of your IDE type in **git clone** and the paste the URL copied from step 2
@@ -251,8 +250,11 @@ To work with the local copy that is created the following steps needs to be take
 
 
 #### Step 3: Loading Fixtures
-1. In the terminal window of your IDE type in: **python3 manage.py load fixtures**
-2. In the terminal window of your IDE type in: **python3 manage.py migrate**
+1. In the terminal window of your IDE type in: **./manage.py loaddata <file>.json**. 
+2. Make sure to that load the fixtures in the following order:
+    - Categories
+    - Toys
+    - Blogs
 
 #### Step 4: Create Superuser
 1. In the terminal window of your IDE type in: **python3 manage.py createsuperuser**
@@ -261,6 +263,7 @@ To work with the local copy that is created the following steps needs to be take
 #### Step 5: Run the App
 1. Open your terminal window in your IDE
 2. Type in **python3 app.py** to run the app
+
 
 
 
