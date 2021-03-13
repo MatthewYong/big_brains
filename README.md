@@ -338,7 +338,7 @@ else:
         'default': dj_database_url.parse("Your Postgres database URL")     
     }
 ```
-Important note: Do **NOT** save and commit this change, this is a temporary procedure to push the files to PostgreSQL database.
+Important note: Do **NOT** save and commit this change, this is a temporary procedure to push the files to PostgreSQL database. Commiting this file will expose the PostgreSQL Database URL.
 
 #### Step 5: Migrating to PostgreSQL Database
 1. In the terminal window of your IDE type in: **python3 manage.py makemigrations**
