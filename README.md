@@ -283,6 +283,51 @@ For more information about Stripe API keys, please read the [Stripe API keys doc
 3. To access the Djanog Admin panel, add **/admin** at the end of the URL link and login with your credentials
 
 
+### Heroku Deployment
+To host this project on Heroku the following steps needs to be taken:
+
+#### Step 1: Setting Up Heroku
+1. Create a Heroku account
+2. Create a new app and select your region
+
+#### Step 2: Preparing Local Workspace for Heroku
+In the terminal window of your local IDE type in the following:
+file. This file is needed so that Heroku knows which files needs to be installed
+1. **python app.py > Procfile** to create a Procfile. This file is needed so that Heroku knows which file is needed as its entry point to get the app up and running
+2. **pip3 install psycopg2-binary** to use PostgreSQL as the database
+3. **pip3 install gunicorn** to install Gunicorn, which will act as the webserver and replace our development server once the app is deployed to Heroku
+4. **pip3 freeze --local > requirements.txt** to store the packages into a file that tells Heroku what to install
+
+
+
+
+
+#### Step 3: Pushing files to Heroku 
+1. In the terminal window of your local IDE type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password
+2. Commit all your files and type in the same terminal window **git push heroku master**. Now all your files are committed to Heroku
+
+#### Step 4: Setting the Configuration Variables in Heroku
+1. Go back to your Heroku account and go to **settings**
+2. Click on **Reveal Config Vars** to reveal the keys and the values
+3. Set the keys and values as follow:
+    (**KEY: VALUE**)
+    - AWS_ACCESS_KEY_ID: *'Your Key'*
+    - AWS_SECRET_ACCESS_KEY: *'Your Key'*
+    - DATABASE_URL: *'Your Key'*
+    - EMAIL_HOST_PASS: *'Your Key'*
+    - EMAIL_HOST_USER: *'Your Email'*
+    - SECRET_KEY: *'Your Key'*
+    - STRIPE_PUBLIC_KEY: *'Your Key'*
+    - STRIPE_SECRET_KEY: *'Your Key'*
+    - STRIPE_WH_SECRET: *'Your Key'*
+    - USE_AWS: *True*
+
+
+#### Step 5: Open App in Heroku
+1. Click on **Open app** in the right corner of your Heroku account, the application will open in a new window
+2. The live link is available from the address bar
+
+
 
 
 ## Credits
