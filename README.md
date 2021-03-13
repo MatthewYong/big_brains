@@ -294,19 +294,12 @@ To host this project on Heroku the following steps needs to be taken:
 In the terminal window of your local IDE type in the following:
 file. This file is needed so that Heroku knows which files needs to be installed
 1. **python app.py > Procfile** to create a Procfile. This file is needed so that Heroku knows which file is needed as its entry point to get the app up and running
-2. **pip3 install psycopg2-binary** to use PostgreSQL as the database
-3. **pip3 install gunicorn** to install Gunicorn, which will act as the webserver and replace our development server once the app is deployed to Heroku
-4. **pip3 freeze --local > requirements.txt** to store the packages into a file that tells Heroku what to install
+2. Inside the Procfile enter: *web: gunicorn big_brains.wsgi:application* and then save the file
+3. **pip3 install psycopg2-binary** to use PostgreSQL as the database
+4. **pip3 install gunicorn** to install Gunicorn, which will act as the webserver and replace our development server once the app is deployed to Heroku
+5. **pip3 freeze --local > requirements.txt** to store the packages into a file that tells Heroku what to install
 
-
-
-
-
-#### Step 3: Pushing files to Heroku 
-1. In the terminal window of your local IDE type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password
-2. Commit all your files and type in the same terminal window **git push heroku master**. Now all your files are committed to Heroku
-
-#### Step 4: Setting the Configuration Variables in Heroku
+#### Step 3: Setting the Configuration Variables in Heroku
 1. Go back to your Heroku account and go to **settings**
 2. Click on **Reveal Config Vars** to reveal the keys and the values
 3. Set the keys and values as follow:
@@ -322,12 +315,62 @@ file. This file is needed so that Heroku knows which files needs to be installed
     - STRIPE_WH_SECRET: *'Your Key'*
     - USE_AWS: *True*
 
+#### Step 4: Preparing migration to PostgreSQL Database
+1. Go back to your Heroku account and go to **Resources**
+2. Search for Heroku PostgreSQL and add to Heroku
+3. Go back to the IDE and comment out the Default configuration:
+```
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+```
+4. Then add:
+```
+ DATABASES = {     
+        'default': dj_database_url.parse("Your Postgres database URL")     
+    }
+```
+Important note: Do **NOT** save and commit this change, this is a temporary procedure to push the files to PostgreSQL database.
 
-#### Step 5: Open App in Heroku
+#### Step 5: Migrating to PostgreSQL Database
+1. In the terminal window of your IDE type in: **python3 manage.py makemigrations**
+2. In the terminal window of your IDE type in: **python3 manage.py migrate**
+
+#### Step 6: Create SuperUser
+1. In the terminal window of your IDE type in: **python3 manage.py createsuperuser**
+2. Enter the credentials of the Superuser to access the Django Admin panel
+
+#### Step 7: Loading Fixtures
+1. In the terminal window of your IDE type in: **./manage.py loaddata 'Fixture_Filename'.json**
+2. Make sure to that load the fixtures in the following order:
+    - Categories
+    - Toys
+    - Blogs
+3. Please note that a SuperUser has to be created **first**, in order to load the *blogs.json* fixture
+
+#### Step 8: Pushing files to Heroku 
+1. In the terminal window of your local IDE type in **heroku login** or **heroku login -i** and fill in your heroku credentials and password
+2. Commit all your files and type in the same terminal window **git push heroku master**. Now all your files are committed to Heroku
+
+#### Step 9: Open App in Heroku
 1. Click on **Open app** in the right corner of your Heroku account, the application will open in a new window
 2. The live link is available from the address bar
 
+#### Storing Static and Media files with AWS
+For storing static and media files in AWS S3 bucket, please refer to the 
+[AWS S3 Bucket documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html). The media files have to be taken from the repository and manually placed into the AWS S3 bucket.
 
+#### Gmail
+For sending emails via the Google server, please refer to 
+[Google SMTP documentation](https://support.google.com/a/answer/176600?hl=en#zippy=%2Cuse-the-gmail-smtp-server).
 
 
 ## Credits
