@@ -215,13 +215,13 @@ Testing
 ## Deployment
 
 
-
 ## Credits
 ### Content
-- All toy description are taken from [Learningresources.co.uk](https://www.learningresources.co.uk)
-- All blog stories are taken from [Edutopia.org](https://www.edutopia.org)
-- To maintain consistency through all my Code Institute projects, a similar structure for the Readme file has been used from my previous projects
+- All the toy's descriptions are taken from [Learningresources.co.uk](https://www.learningresources.co.uk)
+- All the blog stories are taken from [Edutopia.org](https://www.edutopia.org)
 - All remaining text is written by myself
+- To maintain consistency through all my Code Institute projects, a similar structure for the Readme file has been used from my previous projects
+
 
 ### Media
 - All photos for this project are used from:
