@@ -1,12 +1,14 @@
 # Big Brains | Testing
 
 
+
 ## Table of Contents
 - [Manual Testing](#manual-testing)
     * [Navigation Testing](#navigation-testing)
     * [Browser and Mobile Devices Testing](#browser-and-mobile-devices-testing)
 - [Python Testing](#python-testing)
 - [Key Issues and Code Validation](#key-issues-and-code-validation)
+
 
 
 ## Manual Testing
@@ -147,8 +149,26 @@ The following test scenarios confirms that the website is behaving accordingly, 
 3. Verified that link does not exist, and 404 page will show
 
 
+### Browser and Mobile Devices Testing
+All the test scenarios have been carried out in the browsers and mobile devices as listed below. No problems were found regarding the responsiveness, overflow and the functionality.
+
+#### Browser Testing
+- Google Chrome - version 89.0.4389.90 (64-bit)
+- Mozilla Firefox - version 86.0 (64-bit)
+- Microsoft Edge - version 89.0.774.54 (64-bit)
+- Internet Explorer - version 11.719.18362.0
+
+#### Mobile Device Testing through Chrome DevTools
+- Moto G4 
+- Galaxy S5
+- iPhone 5/SE/6/7/8/Plus/X
+- iPad (Normal & Pro)
+
+
+
 ## Python Testing
 A total of 8 python tests are written for this project. The test were covered in a report and are written for the following apps:
+
 
 ### Landing
 ```
@@ -166,6 +186,7 @@ landing/views.py                    15      3    80%
 ----------------------------------------------------
 TOTAL                               30      6    80%
 ```
+
 
 ### Toys
 ```
@@ -188,6 +209,7 @@ toys/views.py                                   30     11    63%
 TOTAL                                           98     17    83%
 ```
 
+
 ### Blogs
 
 ```
@@ -208,6 +230,7 @@ blogs/views.py                        51     32    37%
 ------------------------------------------------------
 TOTAL                                112     36    68%
 ```
+
 
 ### Cart
 
@@ -230,6 +253,7 @@ cart/views.py                        41     34    17%
 TOTAL                                75     42    44%
 ```
 
+
 ### Profiles
 ```
 Name                                                               Stmts   Miss  Cover
@@ -249,21 +273,6 @@ profiles/views.py                                                     10      0 
 TOTAL                                                                 51      4    92%
 ```
 
-
-### Browser and Mobile Devices Testing
-All the test scenarios have been carried out in the browsers and mobile devices as listed below. No problems were found regarding the responsiveness, overflow and the functionality.
-
-#### Browser Testing
-- Google Chrome - version 89.0.4389.90 (64-bit)
-- Mozilla Firefox - version 86.0 (64-bit)
-- Microsoft Edge - version 89.0.774.54 (64-bit)
-- Internet Explorer - version 11.719.18362.0
-
-#### Mobile Device Testing through Chrome DevTools
-- Moto G4 
-- Galaxy S5
-- iPhone 5/SE/6/7/8/Plus/X
-- iPad (Normal & Pro)
 
 
 ## Key Issues and Code Validation
@@ -286,7 +295,7 @@ All the test scenarios have been carried out in the browsers and mobile devices 
 - These warnings can be ignored as they are needed for JQuery and Stripe
 
 ### Pep8 Online Validator
-- No errors were found on all the apps
+- No errors were found on the custom apps
 - Several warnings were found with a message that indicates that the **'line is too long'**. The warning won't affect the application and can be ignored
 
 ### Browser and Mobile testing
