@@ -71,6 +71,19 @@ The following test scenarios confirms that the website is behaving accordingly, 
 5. Go to Profile page
 6. Verified that the order has been fulfilled added to the Profile page
 
+#### Add Review
+1. Login to an account
+2. Go to a detail page of any toy
+3. Fill in the form and click on **ADD REVIEW**
+4. Verified that the review has been added
+
+#### Delete Review
+1. Login to an account
+2. Go to a detail page of any toy
+3. Fill in the form and click on **ADD REVIEW**
+4. Go to the review that has been added and click on **DELETE REVIEW** 
+4. Verified that the review has been deleted
+
 #### User Profile - All Orders
 1. Login to account
 2. Add a toy to the cart
@@ -169,8 +182,9 @@ All the test scenarios have been carried out in the browsers and mobile devices 
     - Two undefined variables: **$** and **Stripe**
 - These errors can be ignored as they are needed for JQuery and Stripe
 
-
-
+### Pep8 Online Validator
+- No errors were found on all the apps
+- Three warnings were found with a message that indicates that the **'line is too long'**. The warning won't affect the application and can be ignored
 
 ### Browser and Mobile testing
 - No issues were found on Google Chrome, Mozilla Firefox, Microsoft Edge and Internet Explorer
