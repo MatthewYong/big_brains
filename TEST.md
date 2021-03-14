@@ -2,114 +2,11 @@
 
 
 ## Table of Contents
-- [Python Testing](#python-testing)
 - [Manual Testing](#manual-testing)
     * [Navigation Testing](#navigation-testing)
     * [Browser and Mobile Devices Testing](#browser-and-mobile-devices-testing)
+- [Python Testing](#python-testing)
 - [Key Issues and Code Validation](#key-issues-and-code-validation)
-
-
-## Python Testing
-A total of 8 python tests are written for this project. The test were covered in a report and are written for the following apps:
-
-### Landing
-```
-Name                             Stmts   Miss  Cover
-----------------------------------------------------
-landing/__init__.py                  0      0   100%
-landing/admin.py                     1      0   100%
-landing/apps.py                      3      3     0%
-landing/migrations/__init__.py       0      0   100%
-landing/models.py                    1      0   100%
-landing/test_views.py                6      0   100%
-landing/tests.py                     1      0   100%
-landing/urls.py                      3      0   100%
-landing/views.py                    15      3    80%
-----------------------------------------------------
-TOTAL                               30      6    80%
-```
-
-### Toys
-```
-Name                                         Stmts   Miss  Cover
-----------------------------------------------------------------
-toys/__init__.py                                 0      0   100%
-toys/admin.py                                    9      0   100%
-toys/apps.py                                     3      3     0%
-toys/migrations/0001_initial.py                  6      0   100%
-toys/migrations/0002_auto_20210117_1450.py       4      0   100%
-toys/migrations/0003_auto_20210117_1553.py       4      0   100%
-toys/migrations/0004_auto_20210119_2010.py       4      0   100%
-toys/migrations/__init__.py                      0      0   100%
-toys/models.py                                  22      3    86%
-toys/test_views.py                              12      0   100%
-toys/tests.py                                    1      0   100%
-toys/urls.py                                     3      0   100%
-toys/views.py                                   30     11    63%
-----------------------------------------------------------------
-TOTAL                                           98     17    83%
-```
-
-### Blogs
-
-```
-Name                               Stmts   Miss  Cover
-------------------------------------------------------
-blogs/__init__.py                      0      0   100%
-blogs/admin.py                         6      0   100%
-blogs/apps.py                          3      3     0%
-blogs/forms.py                         8      0   100%
-blogs/migrations/0001_initial.py       7      0   100%
-blogs/migrations/__init__.py           0      0   100%
-blogs/models.py                       12      1    92%
-blogs/test_forms.py                    8      0   100%
-blogs/test_views.py                   14      0   100%
-blogs/tests.py                         0      0   100%
-blogs/urls.py                          3      0   100%
-blogs/views.py                        51     32    37%
-------------------------------------------------------
-TOTAL                                112     36    68%
-```
-
-### Cart
-
-```
-Name                              Stmts   Miss  Cover
------------------------------------------------------
-cart/__init__.py                      0      0   100%
-cart/admin.py                         1      0   100%
-cart/apps.py                          3      3     0%
-cart/context.py                      14      4    71%
-cart/migrations/__init__.py           0      0   100%
-cart/models.py                        1      0   100%
-cart/templatetags/__init__.py         0      0   100%
-cart/templatetags/cart_tools.py       5      1    80%
-cart/test_views.py                    6      0   100%
-cart/tests.py                         1      0   100%
-cart/urls.py                          3      0   100%
-cart/views.py                        41     34    17%
------------------------------------------------------
-TOTAL                                75     42    44%
-```
-
-### Profiles
-```
-Name                                                               Stmts   Miss  Cover
---------------------------------------------------------------------------------------
-profiles/__init__.py                                                   0      0   100%
-profiles/admin.py                                                      1      0   100%
-profiles/apps.py                                                       3      3     0%
-profiles/migrations/0001_initial.py                                    7      0   100%
-profiles/migrations/0002_remove_profile_profile_email_address.py       4      0   100%
-profiles/migrations/__init__.py                                        0      0   100%
-profiles/models.py                                                    13      1    92%
-profiles/test_views.py                                                 9      0   100%
-profiles/tests.py                                                      1      0   100%
-profiles/urls.py                                                       3      0   100%
-profiles/views.py                                                     10      0   100%
---------------------------------------------------------------------------------------
-TOTAL                                                                 51      4    92%
-```
 
 
 ## Manual Testing
@@ -248,6 +145,109 @@ The following test scenarios confirms that the website is behaving accordingly, 
 1. Open any page on the website
 2. Add extra text to the address bar to change the URL
 3. Verified that link does not exist, and 404 page will show
+
+
+## Python Testing
+A total of 8 python tests are written for this project. The test were covered in a report and are written for the following apps:
+
+### Landing
+```
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+landing/__init__.py                  0      0   100%
+landing/admin.py                     1      0   100%
+landing/apps.py                      3      3     0%
+landing/migrations/__init__.py       0      0   100%
+landing/models.py                    1      0   100%
+landing/test_views.py                6      0   100%
+landing/tests.py                     1      0   100%
+landing/urls.py                      3      0   100%
+landing/views.py                    15      3    80%
+----------------------------------------------------
+TOTAL                               30      6    80%
+```
+
+### Toys
+```
+Name                                         Stmts   Miss  Cover
+----------------------------------------------------------------
+toys/__init__.py                                 0      0   100%
+toys/admin.py                                    9      0   100%
+toys/apps.py                                     3      3     0%
+toys/migrations/0001_initial.py                  6      0   100%
+toys/migrations/0002_auto_20210117_1450.py       4      0   100%
+toys/migrations/0003_auto_20210117_1553.py       4      0   100%
+toys/migrations/0004_auto_20210119_2010.py       4      0   100%
+toys/migrations/__init__.py                      0      0   100%
+toys/models.py                                  22      3    86%
+toys/test_views.py                              12      0   100%
+toys/tests.py                                    1      0   100%
+toys/urls.py                                     3      0   100%
+toys/views.py                                   30     11    63%
+----------------------------------------------------------------
+TOTAL                                           98     17    83%
+```
+
+### Blogs
+
+```
+Name                               Stmts   Miss  Cover
+------------------------------------------------------
+blogs/__init__.py                      0      0   100%
+blogs/admin.py                         6      0   100%
+blogs/apps.py                          3      3     0%
+blogs/forms.py                         8      0   100%
+blogs/migrations/0001_initial.py       7      0   100%
+blogs/migrations/__init__.py           0      0   100%
+blogs/models.py                       12      1    92%
+blogs/test_forms.py                    8      0   100%
+blogs/test_views.py                   14      0   100%
+blogs/tests.py                         0      0   100%
+blogs/urls.py                          3      0   100%
+blogs/views.py                        51     32    37%
+------------------------------------------------------
+TOTAL                                112     36    68%
+```
+
+### Cart
+
+```
+Name                              Stmts   Miss  Cover
+-----------------------------------------------------
+cart/__init__.py                      0      0   100%
+cart/admin.py                         1      0   100%
+cart/apps.py                          3      3     0%
+cart/context.py                      14      4    71%
+cart/migrations/__init__.py           0      0   100%
+cart/models.py                        1      0   100%
+cart/templatetags/__init__.py         0      0   100%
+cart/templatetags/cart_tools.py       5      1    80%
+cart/test_views.py                    6      0   100%
+cart/tests.py                         1      0   100%
+cart/urls.py                          3      0   100%
+cart/views.py                        41     34    17%
+-----------------------------------------------------
+TOTAL                                75     42    44%
+```
+
+### Profiles
+```
+Name                                                               Stmts   Miss  Cover
+--------------------------------------------------------------------------------------
+profiles/__init__.py                                                   0      0   100%
+profiles/admin.py                                                      1      0   100%
+profiles/apps.py                                                       3      3     0%
+profiles/migrations/0001_initial.py                                    7      0   100%
+profiles/migrations/0002_remove_profile_profile_email_address.py       4      0   100%
+profiles/migrations/__init__.py                                        0      0   100%
+profiles/models.py                                                    13      1    92%
+profiles/test_views.py                                                 9      0   100%
+profiles/tests.py                                                      1      0   100%
+profiles/urls.py                                                       3      0   100%
+profiles/views.py                                                     10      0   100%
+--------------------------------------------------------------------------------------
+TOTAL                                                                 51      4    92%
+```
 
 
 ### Browser and Mobile Devices Testing
