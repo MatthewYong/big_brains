@@ -169,7 +169,7 @@ All the test scenarios have been carried out in the browsers and mobile devices 
 
 ### W3C CSS Validator
 - No manual coded related errors or warnings were found on base.css, index.css, blogs.css, checkout.css, toys.css, cart.css, profile.css, allauth.css and error.css
-- Errors and warnings that were found are related to Bootstrap and can be ignored
+- Errors and warnings that were found are related to the apis Bootstrap and AOS and can be ignored
 
 ### JSHint Validator
 #### main.js
