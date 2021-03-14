@@ -3,24 +3,24 @@
   "model": "toys.age",
   "pk": 2,
   "fields": {
-    "name": "Ages 0-2",
-    "frontend_name": "Ages 0-2"
+    "name": "Ages_0-2",
+    "frontend_name": "Ages_0-2"
   }
 },
 {
   "model": "toys.age",
   "pk": 3,
   "fields": {
-    "name": "Ages 3-7",
-    "frontend_name": "Ages 3-7"
+    "name": "Ages_3-7",
+    "frontend_name": "Ages_3-7"
   }
 },
 {
   "model": "toys.age",
   "pk": 4,
   "fields": {
-    "name": "Ages 7-12",
-    "frontend_name": "Ages 7-12"
+    "name": "Ages_7-12",
+    "frontend_name": "Ages _7-12"
   }
 },
 {
