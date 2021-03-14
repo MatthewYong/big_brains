@@ -54,12 +54,21 @@ The following test scenarios confirms that the website is behaving accordingly, 
 2. Click on button **ADD TO CART**
 3. Verified that a popup window with the text 'ADDED TO CART' will show
 4. Click on the Cart icon
-5. Click on button **Add Your Recipe**
-6. Verified that the toy has been added to the page
+5. Verified that the toy has been added to the cart
 
+#### Update Toy Quantity in Cart
+1. Add a toy to the cart
+2. Go to the cart page 
+3. Change the quantity and click on the update icon 
+4. Verified that the quantity has been updated
 
-
-
+#### Complete an Order from the Toy's Cart
+1. Add a toy to the cart
+2. Go to the cart page and click on **CHECKOUT**
+3. Fill in the form and use the Stripe test payment method **4242 4242 4242 4242**
+4. Click on **BUY NOW**
+5. Go to Profile page
+6. Verified that the order has been fulfilled added to the Profile page
 
 #### User Profile - All Orders
 1. Login to account
@@ -73,22 +82,20 @@ The following test scenarios confirms that the website is behaving accordingly, 
 #### Add Blog
 1. On Add Blog page:
 2. Fill in all required fields on the form
-2. Click on button **ADD ARTICLE**
-3. Verified that that a window will pop up with the text **'Recipe is Added!'**
-4. Verified in All Recipes page that the recipe has been added
-5. Verified that the added recipe exists in the related category
+3. Click on button **ADD ARTICLE**
+4. Verified that the Blog has been added to the website 
 
 #### Edit Blog
 1. Add a blog to the website and go to the all blogs page
 2. Click on button **EDIT**
 3. Make changes to the form
 4. Click on button **EDIT YOUR ARTICLE**
-5. Verified that the recipe is updated
+5. Verified that the blog is updated
 
 #### Delete Blog
 1. Add a blog to the website and go to the all blogs page
 2. Click on button **DELETE** of the blog that it is added
-3. Verified that the recipe is deleted in all recipes page
+3. Verified that the blog is deleted in all blogs page
 
 #### Send Email through Contact Form
 1. On any page click on **CONTACT** in the footer
