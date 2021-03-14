@@ -147,3 +147,23 @@ All the test scenarios have been carried out in the browsers and mobile devices 
 - Galaxy S5
 - iPhone 5/SE/6/7/8/Plus/X
 - iPad (Normal & Pro)
+
+
+## Key Issues and Code Validation
+### W3C Markup Validator
+- No errors or warnings were found on index.html, toys.html, toy_detail.html, blog_add.html, blog_detail.html, blog_edit.html, blogs.html, cart.html, checkout.html, checkout_success.html, login.html, logout.html, signup.html, profile.html, 500.html and 404.html
+
+### W3C CSS Validator
+- No manual coded related errors or warnings were found on style.css, index.css, recipe.css, loginregister.css and error.css
+- Errors and warnings that were found are related to Bootstrap and can be ignored
+
+### JSHint Validator
+- No errors or warnings were found on recipe.js
+
+### Pep8 Online Validator
+- No errors were found on app.py
+- Two warning were found with a message that indicates that the **'line is too long'**. The warning won't affect the application and can be ignored
+
+### Browser and Mobile testing
+- No issues were found on Google Chrome, Mozilla Firefox, Microsoft Edge and Internet Explorer
+- No issues were found on any mobile devices
