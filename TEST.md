@@ -167,7 +167,7 @@ All the test scenarios have been carried out in the browsers and mobile devices 
 
 
 ## Python Testing
-A total of 8 python tests are written for this project. The test were covered in a report and are written for the following apps:
+A total of 8 python tests were written for this project. The tests were written and covered for the following apps:
 
 
 ### Landing
