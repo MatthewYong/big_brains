@@ -5,6 +5,7 @@
 - [Manual Testing](#manual-testing)
     * [Navigation Testing](#navigation-testing)
     * [Browser and Mobile Devices Testing](#browser-and-mobile-devices-testing)
+- [Python Testing](#manual-testing)
 - [Key Issues and Code Validation](#key-issues-and-code-validation)
 
 
@@ -154,15 +155,22 @@ All the test scenarios have been carried out in the browsers and mobile devices 
 - No errors or warnings were found on index.html, toys.html, toy_detail.html, blog_add.html, blog_detail.html, blog_edit.html, blogs.html, cart.html, checkout.html, checkout_success.html, login.html, logout.html, signup.html, profile.html, 500.html and 404.html
 
 ### W3C CSS Validator
-- No manual coded related errors or warnings were found on style.css, index.css, recipe.css, loginregister.css and error.css
+- No manual coded related errors or warnings were found on base.css, index.css, blogs.css, checkout.css, toys.css, cart.css, profile.css, allauth.css and error.css
 - Errors and warnings that were found are related to Bootstrap and can be ignored
 
 ### JSHint Validator
-- No errors or warnings were found on recipe.js
+#### main.js
+- The following errors and warnings were found on main.js:
+    - Two undefined variables: **$** and **AOS**
+- These errors can be ignored as they are needed for JQuery and AOS
 
-### Pep8 Online Validator
-- No errors were found on app.py
-- Two warning were found with a message that indicates that the **'line is too long'**. The warning won't affect the application and can be ignored
+#### stripe.js
+- The following errors and warnings were found on stripe.js:
+    - Two undefined variables: **$** and **Stripe**
+- These errors can be ignored as they are needed for JQuery and Stripe
+
+
+
 
 ### Browser and Mobile testing
 - No issues were found on Google Chrome, Mozilla Firefox, Microsoft Edge and Internet Explorer

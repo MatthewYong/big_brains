@@ -20,7 +20,7 @@ $("document").ready(function () {
 
     //When scrolled make button visible after 300px
     //Within 300px button will be hide
-    window.onscroll = function () { scrollButtonVisible() };
+    window.onscroll = function () { scrollButtonVisible(); };
     function scrollButtonVisible() {
         if ($('body,html').scrollTop() < 300) {
             $("#scroll-top-button").css("display", "none");
@@ -35,7 +35,7 @@ $("document").ready(function () {
     //When clicked, window will scroll to the top page
     $('#scroll-top-button').on("click", function () {
         window.scrollTo(0, 0);
-    })
+    });
 
 
     //Owl carousel for toy products
@@ -68,26 +68,26 @@ $("document").ready(function () {
 
     //Owl carousel for blogs
     $('#blog-carousel').owlCarousel({
-        items: 1,     
+        items: 1,
         center: true,
         nav: true,
         dots: false,
         loop: true,
-        autoWidth: false,        
+        autoWidth: false,
         responsive: {
             0: {
                 items: 1,
             },
             800: {
-                items: 1,              
+                items: 1,
             },
             1200: {
                 autoWidth: true,
                 autoplay: true,
                 autoplaySpeed: 4000,
-                autoplayTimeout: 6000,                  
+                autoplayTimeout: 6000,
             }
-        }        
+        }
     });
 });
 
