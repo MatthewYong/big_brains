@@ -2,11 +2,114 @@
 
 
 ## Table of Contents
+- [Python Testing](#python-testing)
 - [Manual Testing](#manual-testing)
     * [Navigation Testing](#navigation-testing)
     * [Browser and Mobile Devices Testing](#browser-and-mobile-devices-testing)
-- [Python Testing](#manual-testing)
 - [Key Issues and Code Validation](#key-issues-and-code-validation)
+
+
+## Python Testing
+A total of 8 python tests are written for this project. The test were covered in a report and are written for the following apps:
+
+### Landing
+```
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+landing/__init__.py                  0      0   100%
+landing/admin.py                     1      0   100%
+landing/apps.py                      3      3     0%
+landing/migrations/__init__.py       0      0   100%
+landing/models.py                    1      0   100%
+landing/test_views.py                6      0   100%
+landing/tests.py                     1      0   100%
+landing/urls.py                      3      0   100%
+landing/views.py                    15      3    80%
+----------------------------------------------------
+TOTAL                               30      6    80%
+```
+
+### Toys
+```
+Name                                         Stmts   Miss  Cover
+----------------------------------------------------------------
+toys/__init__.py                                 0      0   100%
+toys/admin.py                                    9      0   100%
+toys/apps.py                                     3      3     0%
+toys/migrations/0001_initial.py                  6      0   100%
+toys/migrations/0002_auto_20210117_1450.py       4      0   100%
+toys/migrations/0003_auto_20210117_1553.py       4      0   100%
+toys/migrations/0004_auto_20210119_2010.py       4      0   100%
+toys/migrations/__init__.py                      0      0   100%
+toys/models.py                                  22      3    86%
+toys/test_views.py                              12      0   100%
+toys/tests.py                                    1      0   100%
+toys/urls.py                                     3      0   100%
+toys/views.py                                   30     11    63%
+----------------------------------------------------------------
+TOTAL                                           98     17    83%
+```
+
+### Blogs
+
+```
+Name                               Stmts   Miss  Cover
+------------------------------------------------------
+blogs/__init__.py                      0      0   100%
+blogs/admin.py                         6      0   100%
+blogs/apps.py                          3      3     0%
+blogs/forms.py                         8      0   100%
+blogs/migrations/0001_initial.py       7      0   100%
+blogs/migrations/__init__.py           0      0   100%
+blogs/models.py                       12      1    92%
+blogs/test_forms.py                    8      0   100%
+blogs/test_views.py                   14      0   100%
+blogs/tests.py                         0      0   100%
+blogs/urls.py                          3      0   100%
+blogs/views.py                        51     32    37%
+------------------------------------------------------
+TOTAL                                112     36    68%
+```
+
+### Cart
+
+```
+Name                              Stmts   Miss  Cover
+-----------------------------------------------------
+cart/__init__.py                      0      0   100%
+cart/admin.py                         1      0   100%
+cart/apps.py                          3      3     0%
+cart/context.py                      14      4    71%
+cart/migrations/__init__.py           0      0   100%
+cart/models.py                        1      0   100%
+cart/templatetags/__init__.py         0      0   100%
+cart/templatetags/cart_tools.py       5      1    80%
+cart/test_views.py                    6      0   100%
+cart/tests.py                         1      0   100%
+cart/urls.py                          3      0   100%
+cart/views.py                        41     34    17%
+-----------------------------------------------------
+TOTAL                                75     42    44%
+```
+
+### Profiles
+```
+Name                                                               Stmts   Miss  Cover
+--------------------------------------------------------------------------------------
+profiles/__init__.py                                                   0      0   100%
+profiles/admin.py                                                      1      0   100%
+profiles/apps.py                                                       3      3     0%
+profiles/migrations/0001_initial.py                                    7      0   100%
+profiles/migrations/0002_remove_profile_profile_email_address.py       4      0   100%
+profiles/migrations/__init__.py                                        0      0   100%
+profiles/models.py                                                    13      1    92%
+profiles/test_views.py                                                 9      0   100%
+profiles/tests.py                                                      1      0   100%
+profiles/urls.py                                                       3      0   100%
+profiles/views.py                                                     10      0   100%
+--------------------------------------------------------------------------------------
+TOTAL                                                                 51      4    92%
+```
 
 
 ## Manual Testing
@@ -25,7 +128,7 @@ The following test scenarios confirms that the website is behaving accordingly, 
 4. Verified that the Blog detail page will open
 
 #### Access each Payment method on the Landing page
-1. On the landing page select one of the payment method
+1. On the landing page select one of the payment methods
 2. Verified that this will open the target page
 3. Repeated step 1 and 2 for remaining elements
 
@@ -43,7 +146,7 @@ The following test scenarios confirms that the website is behaving accordingly, 
 1. On any page click on **CONTACT** in the footer
 2. Verified that this will open a form
 
-#### Scroll To Top button
+#### Scroll-To-Top button
 1. On any page scroll down the page until a button with an upward arrow pops up
 2. Click and the button
 3. Verified that the screen will scroll to the top
@@ -100,14 +203,14 @@ The following test scenarios confirms that the website is behaving accordingly, 
 4. Verified that the Blog has been added to the website 
 
 #### Edit Blog
-1. Add a blog to the website and go to the all blogs page
+1. Add a blog to the website and go to all blogs page
 2. Click on button **EDIT**
 3. Make changes to the form
 4. Click on button **EDIT YOUR ARTICLE**
 5. Verified that the blog is updated
 
 #### Delete Blog
-1. Add a blog to the website and go to the all blogs page
+1. Add a blog to the website and go to the blogs page
 2. Click on button **DELETE** of the blog that it is added
 3. Verified that the blog is deleted in all blogs page
 
@@ -127,7 +230,7 @@ The following test scenarios confirms that the website is behaving accordingly, 
 #### Login - Successful
 1. Click on **Login** button in navigation menu
 2. Fill in your username and password
-3. Verified that login was succesful and redirected to landing page
+3. Verified that login was successful and redirected to landing page
 
 #### Login - Unsuccessful
 1. Click on **Login** button in navigation menu
@@ -144,7 +247,7 @@ The following test scenarios confirms that the website is behaving accordingly, 
 #### 404 Error Testing
 1. Open any page on the website
 2. Add extra text to the address bar to change the URL
-3. Verified that link does not exist and 404 page will show
+3. Verified that link does not exist, and 404 page will show
 
 
 ### Browser and Mobile Devices Testing
@@ -169,7 +272,7 @@ All the test scenarios have been carried out in the browsers and mobile devices 
 
 ### W3C CSS Validator
 - No manual coded related errors or warnings were found on base.css, index.css, blogs.css, checkout.css, toys.css, cart.css, profile.css, allauth.css and error.css
-- Errors and warnings that were found are related to the apis Bootstrap and AOS and can be ignored
+- Errors and warnings that were found are related to the APIs Bootstrap and AOS and can be ignored
 
 ### JSHint Validator
 #### main.js
@@ -178,13 +281,13 @@ All the test scenarios have been carried out in the browsers and mobile devices 
 - These errors can be ignored as they are needed for JQuery and AOS
 
 #### stripe.js
-- The following errors and warnings were found on stripe.js:
+- The following warnings were found on stripe.js:
     - Two undefined variables: **$** and **Stripe**
-- These errors can be ignored as they are needed for JQuery and Stripe
+- These warnings can be ignored as they are needed for JQuery and Stripe
 
 ### Pep8 Online Validator
 - No errors were found on all the apps
-- Three warnings were found with a message that indicates that the **'line is too long'**. The warning won't affect the application and can be ignored
+- Several warnings were found with a message that indicates that the **'line is too long'**. The warning won't affect the application and can be ignored
 
 ### Browser and Mobile testing
 - No issues were found on Google Chrome, Mozilla Firefox, Microsoft Edge and Internet Explorer
