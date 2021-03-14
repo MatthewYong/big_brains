@@ -330,7 +330,7 @@ footer a {
     display: none;
     position: fixed;
     z-index: 9999;
-    top: 10vh;
+    top: 3vh;
     left: 12.5vw;
     width: 75vw;
     overflow-y: scroll;
@@ -340,8 +340,8 @@ footer a {
     color: #ECECB1;
     background-color: #971329fa;    
     border: 0.2rem solid  #AB8E66;
-    padding: 2rem;
-    margin-top: 5rem;
+    padding: 1.5rem;
+    margin-top: 3rem;
 }
 
 .contact-form::-webkit-scrollbar {
