@@ -120,9 +120,7 @@ Below you can find an example of a wireframe of the landing page:
 
 ![alt text][wireframe landing]
 
-[wireframe landing]: 
-
-
+[wireframe landing]: https://github.com/MatthewYong/big_brains/blob/master/static/images/readme/image-wireframe-landing.jpg?raw=true
 
 
 ### Surface Plane
