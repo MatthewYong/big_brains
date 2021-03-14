@@ -214,7 +214,10 @@ Testing
 - [Jigsaw.w3.org/css-validator](https://jigsaw.w3.org/css-validator/validator.html.en) is used to validate the CSS code
 - [JSHint](https://jshint.com/) is used to validate the JavaScript code
 - [Pep8](http://pep8online.com/) is used to validate the Python code
+
+
 ## Testing
+The test procedures and the key issues of the tests are written in the file[TEST.md](https://github.com/MatthewYong/big_brains/blob/master/TEST.md).
 
 
 ## Deployment
