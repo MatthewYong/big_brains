@@ -78,11 +78,11 @@
     color: #AB8E66;
 }
 
-#blog-link {
+.blog-link {
     color: #971328;
 }
 
-#blog-link:hover {
+.blog-link:hover {
     text-decoration: none;
 }
 
