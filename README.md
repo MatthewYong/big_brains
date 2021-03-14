@@ -116,7 +116,14 @@ The wireframes for this project are made with Balsamiq can be downloaded from th
 - [Wireframe - Tablet version](https://github.com/MatthewYong/big_brains/raw/master/static/wireframes/Wireframe%20-%20Tablet.pdf)
 - [Wireframe - Mobile version](https://github.com/MatthewYong/big_brains/raw/master/static/wireframes/Wireframe%20-%20Mobile.pdf)
 
-Below you can find an example of a wireframe of the landing page.
+Below you can find an example of a wireframe of the landing page:
+
+![alt text][wireframe landing]
+
+[wireframe landing]: 
+
+
+
 
 ### Surface Plane
 The surface plane defines the appearance of the website. This website needs to attract and encourage users to focus on the website's content.
