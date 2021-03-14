@@ -102,3 +102,48 @@ The following test scenarios confirms that the website is behaving accordingly, 
 2. Fill in the form and click on **SEND**
 3. Verified that an email will be received 
 
+
+### Login, Logout, Registration Testing
+#### Registration - Successful
+1. Click on **SIGNUP** in navigation menu
+2. Choose an email, username and password
+3. Click on **SIGN UP** button in the form
+4. Verified that profile has been created and redirected to landing page
+
+#### Login - Successful
+1. Click on **Login** button in navigation menu
+2. Fill in your username and password
+3. Verified that login was succesful and redirected to landing page
+
+#### Login - Unsuccessful
+1. Click on **Login** button in navigation menu
+2. Fill in a wrong username and/or password
+3. Verified that login failed and that a text message **'The username and/or password you specified are not correct.'** will appear above the login input 
+
+#### Logout
+1. Login into account
+2. Click on logout button in navigation menu
+3. Verified that this will open the login page 
+4. Verified that a text message **'YOU HAVE SIGNED OUT.'** will appear as a popup window
+5. Verified that Signup and Login will appearin the navigation menu
+
+#### 404 Error Testing
+1. Open any page on the website
+2. Add extra text to the address bar to change the URL
+3. Verified that link does not exist and 404 page will show
+
+
+### Browser and Mobile Devices Testing
+All the test scenarios have been carried out in the browsers and mobile devices as listed below. No problems were found regarding the responsiveness, overflow and the functionality.
+
+#### Browser Testing
+- Google Chrome - version 89.0.4389.90 (64-bit)
+- Mozilla Firefox - version 86.0 (64-bit)
+- Microsoft Edge - version 89.0.774.54 (64-bit)
+- Internet Explorer - version 11.719.18362.0
+
+#### Mobile Device Testing through Chrome DevTools
+- Moto G4 
+- Galaxy S5
+- iPhone 5/SE/6/7/8/Plus/X
+- iPad (Normal & Pro)
