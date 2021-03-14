@@ -121,9 +121,13 @@ select:invalid {
 }
 
 .checkout-success-button {
-    padding: 0.25rem;
-    margin-top: 3rem;
-    margin-bottom: 30vh;
+    margin-top: 5vh;
+    margin-bottom: 40vh;    
+}
+
+.checkout-success-button a:hover {
+    color: #fefde5;
+    text-decoration: none;   
 }
 
 
