@@ -188,11 +188,11 @@
 }
 
 .master-card {
-    -webkit-background-clip: text;  
     color: transparent;
     background: linear-gradient(#eb001b 0, #ff5f00
  50%, #f79e1b 100%);
     background-clip: text;
+    -webkit-background-clip: text;      
 }
 
 .paypal {
