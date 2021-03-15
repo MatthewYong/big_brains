@@ -286,13 +286,19 @@ TOTAL                                                                 51      4 
 ### JSHint Validator
 #### main.js
 - The following errors and warnings were found on main.js:
-    - Two undefined variables: **$** and **AOS**
+    - Undefined variables: **$** and **AOS**
 - These errors can be ignored as they are needed for JQuery and AOS
+
+#### index.js
+- The following warnings were found on main.js:
+    - Undefined variable: **$**
+- These errors can be ignored as they are needed for JQuery
 
 #### stripe.js
 - The following warnings were found on stripe.js:
-    - Two undefined variables: **$** and **Stripe**
+    - Undefined variables: **$** and **Stripe**
 - These warnings can be ignored as they are needed for JQuery and Stripe
+
 
 ### Pep8 Online Validator
 - No errors were found on the custom apps
