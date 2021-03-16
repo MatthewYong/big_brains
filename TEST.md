@@ -276,6 +276,9 @@ TOTAL                                                                 51      4 
 
 
 ## Key Issues and Code Validation
+### Manual Testing Issues
+During the last mentor session we noticed that the 'Scroll to top' button was not working on one of my mentor's computer. It was working fine on his mac on and on mine computer. After the session I figured out that button was hidden for a certain screen width as a result of the responsiveness. I fixed this by hiding the button for screen width of 767px and lower.
+
 ### W3C Markup Validator
 - No errors or warnings were found on index.html, toys.html, toy_detail.html, blog_add.html, blog_detail.html, blog_edit.html, blogs.html, cart.html, checkout.html, checkout_success.html, login.html, logout.html, signup.html, profile.html, 500.html and 404.html
 
