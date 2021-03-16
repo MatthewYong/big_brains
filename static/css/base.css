@@ -384,16 +384,8 @@ footer a {
 }
 
 
-
-
-
-
 /*Media screen max-width 1366px*/
-@media only screen and (max-width: 1366px){
-    #scroll-top-button {
-        display: none !important;
-    }
-    
+@media only screen and (max-width: 1366px){  
     /*Contact form*/
     .contact-form {
         margin-top: 0rem;
@@ -404,6 +396,10 @@ footer a {
 
 /*Media screen max-width 767px*/
 @media only screen and (max-width: 767px){
+    #scroll-top-button {
+        display: none !important;
+    }
+    
     .navbar-toggler {
         font-size: 1rem;
     }
