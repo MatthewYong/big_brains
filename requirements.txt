@@ -1,7 +1,8 @@
 asgiref==3.3.1
 boto3==1.17.3
 botocore==1.20.3
-cryptography==3.3.2
+coverage==5.5
+cryptography==3.3.1
 dj-database-url==0.5.0
 Django==3.1.5
 django-allauth==0.44.0
